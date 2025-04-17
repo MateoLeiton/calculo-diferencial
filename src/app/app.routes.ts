@@ -22,14 +22,19 @@ export const routes: Routes = [
           import('./pages/limites/limites.component').then(m => m.LimitesComponent),
       },
       {
-        path: 'continuidad',
-        loadComponent: () =>
-          import('./pages/continuidad/continuidad.component').then(m => m.ContinuidadComponent),
-      },
-      {
         path: 'derivadas',
         loadComponent: () =>
           import('./pages/derivadas/derivadas.component').then(m => m.DerivadasComponent),
+      },
+      {
+        path: 'aplicacion-derivadas',
+        loadComponent: () =>
+          import('./pages/aplicacion-derivadas/aplicacion-derivadas.component').then(m => m.AplicacionDerivadasComponent),
+      },
+      {
+        path: 'informacion',
+        loadComponent: () =>
+          import('./pages/informacion/informacion.component').then(m => m.InformacionComponent),
       },
       {
         path: '',
