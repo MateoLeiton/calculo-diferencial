@@ -41,6 +41,11 @@ export const routes: Routes = [
         redirectTo: 'inicio',
         pathMatch: 'full',
       },
+      {
+        path: 'ia-tools',
+        loadComponent: () => import('./components/ia-tools/ia-tools.component').then(m => m.IaToolsComponent)
+      }
+      
     ],
   },
 ];

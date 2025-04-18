@@ -2,3 +2,18 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+.mat-list-item.menu-link .mat-line {
+    color: #F0B429 !important;
+    font-weight: bold;
+  }
+  
+  .mat-list-item.menu-link:hover .mat-line {
+    color: #FFD700 !important;
+  }
+  
+  .mat-list-item.menu-link.active .mat-line {
+    color: #FFFFFF !important;
+  }
+  

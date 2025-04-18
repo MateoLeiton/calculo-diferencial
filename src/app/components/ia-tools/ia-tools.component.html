@@ -1,0 +1,16 @@
+<mat-card class="card">
+    <h2>Comprobador de ejercicios con IA</h2>
+  
+    <mat-form-field appearance="outline" class="input-field">
+      <mat-label>Ingresa un ejercicio matemático</mat-label>
+      <textarea matInput [(ngModel)]="ejercicio" rows="4"></textarea>
+    </mat-form-field>
+  
+    <button mat-raised-button color="primary" (click)="enviarEjercicio()">Comprobar</button>
+  
+    <mat-card class="respuesta" *ngIf="resultado">
+      <h3>Respuesta:</h3>
+      <p>{{ resultado }}</p>
+    </mat-card>
+  </mat-card>
+  
