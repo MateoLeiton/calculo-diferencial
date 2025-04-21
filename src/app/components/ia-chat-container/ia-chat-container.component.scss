@@ -1,0 +1,9 @@
+/* src/app/components/ia-chat-container/ia-chat-container.component.scss */
+.chat-container {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  display: flex;
+  gap: 10px;
+  z-index: 9999;
+}

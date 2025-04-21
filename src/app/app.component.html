@@ -1,2 +1,7 @@
 <!-- app.component.html -->
+
+<!-- Router outlet principal -->
 <router-outlet></router-outlet>
+
+<!-- Mostrar chat solo en rutas seleccionadas -->
+<app-ia-chat-container *ngIf="showIaChats"></app-ia-chat-container>

@@ -1,0 +1,16 @@
+<!-- src/app/components/ia-chat-widget/ia-chat-widget.component.html -->
+<div class="chat-widget">
+  <div class="chat-toggle" [ngStyle]="{ backgroundColor: color }" (click)="toggleChat()">
+    {{ isOpen ? 'Minimizar' : minimizedLabel }}
+  </div>
+
+  <div class="chat-box" *ngIf="isOpen" [ngStyle]="{ borderColor: color }">
+    <div class="chat-header" [ngStyle]="{ backgroundColor: color }">
+      {{ title }}
+    </div>
+    <div class="chat-body">
+      <p>Aquí irá la interfaz con la IA correspondiente.</p>
+      <p>Ejemplo: Área de entrada de texto y respuesta.</p>
+    </div>
+  </div>
+</div>

@@ -44,8 +44,17 @@ export const routes: Routes = [
       {
         path: 'ia-tools',
         loadComponent: () => import('./components/ia-tools/ia-tools.component').then(m => m.IaToolsComponent)
+      },
+
+      {
+        path: 'ia-widget',
+        loadComponent: () => import('./components/ia-chat-widget/ia-chat-widget.component').then(m => m.IaChatWidgetComponent)
+      },
+      {
+        path: 'ia-chat',
+        loadComponent: () => import('./components/ia-chat-container/ia-chat-container.component').then(m => m.IaChatContainerComponent)
       }
-      
+
     ],
   },
 ];

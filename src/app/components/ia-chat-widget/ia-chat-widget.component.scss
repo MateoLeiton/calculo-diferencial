@@ -1,0 +1,37 @@
+/* src/app/components/ia-chat-widget/ia-chat-widget.component.scss */
+.chat-widget {
+  width: 300px;
+  transition: all 0.3s ease-in-out;
+  z-index: 9999;
+
+  .chat-toggle {
+    color: white;
+    padding: 10px;
+    border-radius: 8px 8px 0 0;
+    text-align: center;
+    cursor: pointer;
+    font-weight: bold;
+  }
+
+  .chat-box {
+    background: white;
+    border: 2px solid;
+    border-top: none;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+
+    .chat-header {
+      padding: 8px;
+      color: white;
+      font-weight: bold;
+      border-radius: 0 0 0 0;
+    }
+
+    .chat-body {
+      padding: 15px;
+      max-height: 300px;
+      overflow-y: auto;
+      font-size: 14px;
+    }
+  }
+}

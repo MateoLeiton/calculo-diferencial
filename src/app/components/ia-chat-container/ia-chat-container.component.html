@@ -1,0 +1,9 @@
+<!-- src/app/components/ia-chat-container/ia-chat-container.component.html -->
+<div class="chat-container">
+  <app-ia-chat-widget
+    *ngFor="let chat of chats"
+    [title]="chat.title"
+    [color]="chat.color"
+    [minimizedLabel]="chat.minimizedLabel">
+  </app-ia-chat-widget>
+</div>
