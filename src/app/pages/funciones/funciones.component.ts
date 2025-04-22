@@ -1,12 +1,23 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http'; // <- IMPORTANTE
+import { FuncionesDataService } from '../../services/data/funciones-data.service';
 
 @Component({
-  standalone: true,
   selector: 'app-funciones',
-  imports: [],
+  standalone: true,
+  imports: [CommonModule, HttpClientModule], // <- AGREGA HttpClientModule AQUÍ
   templateUrl: './funciones.component.html',
-  styleUrl: './funciones.component.scss'
+  styleUrls: ['./funciones.component.scss']
 })
-export class FuncionesComponent {
+export class FuncionesComponent implements OnInit {
+  contenido: any;
 
+  constructor(private funcionesService: FuncionesDataService) {}
+
+  ngOnInit(): void {
+    this.funcionesService.obtenerContenido().subscribe(data => {
+      this.contenido = data;
+    });
+  }
 }

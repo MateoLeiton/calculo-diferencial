@@ -1,1 +1,18 @@
-<p>funciones works!</p>
+<div class="modulo">
+    <h1>{{ contenido?.titulo }}</h1>
+  
+    <div *ngFor="let subtema of contenido?.subtemas" class="subtema">
+      <h2>{{ subtema.titulo }}</h2>
+  
+      <div *ngFor="let bloque of subtema.contenido">The `*ngFor` directive was used in the template, but neither the `NgFor` directive nor the `CommonModule` was imported. Use Angular's built-in control
+        <p *ngIf="bloque.tipo === 'texto'">{{ bloque.valor }}</p>
+        <img *ngIf="bloque.tipo === 'imagen'" [src]="bloque.valor" alt="Imagen explicativa" />
+        <iframe *ngIf="bloque.tipo === 'video'" [src]="bloque.valor" frameborder="0" allowfullscreen></iframe>
+        <div *ngIf="bloque.tipo === 'ejemplo'" class="ejemplo">
+          <p><strong>Ejemplo:</strong> {{ bloque.valor }}</p>
+          <button>Comprobar con IA</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
