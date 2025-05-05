@@ -1,16 +1,32 @@
-<!-- src/app/components/ia-chat-widget/ia-chat-widget.component.html -->
-<div class="chat-widget">
-  <div class="chat-toggle" [ngStyle]="{ backgroundColor: color }" (click)="toggleChat()">
-    {{ isOpen ? 'Minimizar' : minimizedLabel }}
+<div class="chat-widget" *ngIf="!isOpen">
+  <button class="open-button" [ngStyle]="{ backgroundColor: color }" (click)="toggleChat()">
+    {{ minimizedLabel }}
+  </button>
+</div>
+
+<div
+  class="chat-box"
+  *ngIf="isOpen"
+  cdkDrag
+  (mousedown)="bringToFront()"
+  [ngStyle]="{
+    width: width + 'px',
+    height: height + 'px',
+    borderColor: color,
+    zIndex: zIndex
+  }"
+>
+  <div class="chat-header" [ngStyle]="{ backgroundColor: color }" cdkDragHandle>
+    <span>{{ title }}</span>
+    <button class="close-button" (click)="toggleChat()">−</button>
   </div>
 
-  <div class="chat-box" *ngIf="isOpen" [ngStyle]="{ borderColor: color }">
-    <div class="chat-header" [ngStyle]="{ backgroundColor: color }">
-      {{ title }}
-    </div>
-    <div class="chat-body">
-      <p>Aquí irá la interfaz con la IA correspondiente.</p>
-      <p>Ejemplo: Área de entrada de texto y respuesta.</p>
+  <div class="chat-body">
+    <textarea class="input" placeholder="Escribe tu pregunta aquí..."></textarea>
+    <div class="respuesta">
+      <p>Aquí se mostrará la respuesta de la IA.</p>
     </div>
   </div>
+
+  <div class="resizer" (mousedown)="initResize($event)"></div>
 </div>

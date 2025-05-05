@@ -1,9 +1,19 @@
-<!-- src/app/components/ia-chat-container/ia-chat-container.component.html -->
 <div class="chat-container">
   <app-ia-chat-widget
-    *ngFor="let chat of chats"
-    [title]="chat.title"
-    [color]="chat.color"
-    [minimizedLabel]="chat.minimizedLabel">
+    title="Gemini"
+    color="#2196f3"
+    minimizedLabel="Gemini">
+  </app-ia-chat-widget>
+
+  <app-ia-chat-widget
+    title="Symbolab"
+    color="#f44336"
+    minimizedLabel="Symbolab">
+  </app-ia-chat-widget>
+
+  <app-ia-chat-widget
+    title="Wolfram Alpha"
+    color="#ff9800"
+    minimizedLabel="Wolfram">
   </app-ia-chat-widget>
 </div>
