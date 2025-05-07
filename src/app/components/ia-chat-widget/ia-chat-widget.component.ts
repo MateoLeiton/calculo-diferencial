@@ -1,22 +1,30 @@
-// src/app/components/ia-chat-widget/ia-chat-widget.component.ts
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter, HostListener } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { DragDropModule } from '@angular/cdk/drag-drop';
 
 @Component({
-  standalone: true,
-  imports: [CommonModule],
   selector: 'app-ia-chat-widget',
+  standalone: true,
+  imports: [CommonModule, DragDropModule],
   templateUrl: './ia-chat-widget.component.html',
   styleUrls: ['./ia-chat-widget.component.scss']
 })
 export class IaChatWidgetComponent {
-  @Input() title: string = 'IA';
-  @Input() color: string = '#2196f3';
-  @Input() minimizedLabel: string = 'IA';
+  @Input() title = 'IA';
+  @Input() color = '#2196f3';
+  @Input() minimizedLabel = 'IA';
+  @Output() close = new EventEmitter<void>();
 
-  isOpen = false;
+  zIndex = 1;
+  static currentMaxZ = 1;
 
-  toggleChat() {
-    this.isOpen = !this.isOpen;
+  @HostListener('mousedown')
+  bringToFront() {
+    IaChatWidgetComponent.currentMaxZ++;
+    this.zIndex = IaChatWidgetComponent.currentMaxZ;
+  }
+
+  cerrar() {
+    this.close.emit();
   }
 }

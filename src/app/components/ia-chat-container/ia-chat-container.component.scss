@@ -1,9 +1,29 @@
-/* src/app/components/ia-chat-container/ia-chat-container.component.scss */
-.chat-container {
+.chat-container-buttons {
   position: fixed;
-  bottom: 10px;
-  right: 10px;
+  bottom: 20px;
+  right: 20px;
   display: flex;
   gap: 10px;
   z-index: 9999;
+
+  .ia-button {
+    padding: 10px 15px;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  .gemini {
+    background-color: #2196f3;
+  }
+
+  .symbolab {
+    background-color: #f44336;
+  }
+
+  .wolfram {
+    background-color: #ff9800;
+  }
 }

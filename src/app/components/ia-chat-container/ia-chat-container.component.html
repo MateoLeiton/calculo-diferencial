@@ -1,9 +1,29 @@
-<!-- src/app/components/ia-chat-container/ia-chat-container.component.html -->
-<div class="chat-container">
-  <app-ia-chat-widget
-    *ngFor="let chat of chats"
-    [title]="chat.title"
-    [color]="chat.color"
-    [minimizedLabel]="chat.minimizedLabel">
-  </app-ia-chat-widget>
+<div class="chat-container-buttons">
+  <button class="ia-button gemini" (click)="abrir('gemini')">Gemini</button>
+  <button class="ia-button symbolab" (click)="abrir('symbolab')">Symbolab</button>
+  <button class="ia-button wolfram" (click)="abrir('wolfram')">Wolfram</button>
 </div>
+
+<app-ia-chat-widget
+  *ngIf="mostrar.gemini"
+  title="Gemini"
+  color="#2196f3"
+  minimizedLabel="Gemini"
+  (close)="cerrar('gemini')">
+</app-ia-chat-widget>
+
+<app-ia-chat-widget
+  *ngIf="mostrar.symbolab"
+  title="Symbolab"
+  color="#f44336"
+  minimizedLabel="Symbolab"
+  (close)="cerrar('symbolab')">
+</app-ia-chat-widget>
+
+<app-ia-chat-widget
+  *ngIf="mostrar.wolfram"
+  title="Wolfram Alpha"
+  color="#ff9800"
+  minimizedLabel="Wolfram"
+  (close)="cerrar('wolfram')">
+</app-ia-chat-widget>

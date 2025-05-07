@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { RouterOutlet } from '@angular/router';
 import { CommonModule } from '@angular/common';
-import { IaChatContainerComponent } from './components/ia-chat-container/ia-chat-container.component'; // Ajusta esta ruta si es necesario
+import { IaChatContainerComponent } from './components/ia-chat-container/ia-chat-container.component'; 
 
 @Component({
   selector: 'app-root',

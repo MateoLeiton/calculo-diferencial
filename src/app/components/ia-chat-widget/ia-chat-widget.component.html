@@ -1,16 +1,20 @@
-<!-- src/app/components/ia-chat-widget/ia-chat-widget.component.html -->
-<div class="chat-widget">
-  <div class="chat-toggle" [ngStyle]="{ backgroundColor: color }" (click)="toggleChat()">
-    {{ isOpen ? 'Minimizar' : minimizedLabel }}
+<div
+  class="chat-box"
+  cdkDrag
+  cdkDragBoundary="body"
+  (mousedown)="bringToFront()"
+  [ngStyle]="{
+    borderColor: color,
+    zIndex: zIndex
+  }"
+>
+  <div class="chat-header" [ngStyle]="{ backgroundColor: color }" cdkDragHandle>
+    <span>{{ title }}</span>
+    <button class="close-button" (click)="cerrar()">−</button>
   </div>
 
-  <div class="chat-box" *ngIf="isOpen" [ngStyle]="{ borderColor: color }">
-    <div class="chat-header" [ngStyle]="{ backgroundColor: color }">
-      {{ title }}
-    </div>
-    <div class="chat-body">
-      <p>Aquí irá la interfaz con la IA correspondiente.</p>
-      <p>Ejemplo: Área de entrada de texto y respuesta.</p>
-    </div>
+  <div class="chat-body">
+    <textarea class="input" placeholder="Escribe tu pregunta..."></textarea>
+    <div class="respuesta">Aquí va la respuesta de la IA.</div>
   </div>
 </div>
