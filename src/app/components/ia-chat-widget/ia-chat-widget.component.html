@@ -14,7 +14,25 @@
   </div>
 
   <div class="chat-body">
-    <textarea class="input" placeholder="Escribe tu pregunta..."></textarea>
-    <div class="respuesta">Aquí va la respuesta de la IA.</div>
+    <div class="mensajes">
+      <div
+        class="mensaje"
+        *ngFor="let msg of mensajes"
+        [ngClass]="msg.emisor"
+      >
+        {{ msg.texto }}
+      </div>
+    </div>
+
+    <div class="input-container">
+      <textarea
+        [(ngModel)]="mensaje"
+        class="input"
+        placeholder="Escribe tu pregunta..."
+        (keydown.enter)="enviarMensaje()"
+        rows="2"
+      ></textarea>
+      <button class="btn-enviar" (click)="enviarMensaje()">Enviar</button>
+    </div>
   </div>
 </div>
