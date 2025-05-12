@@ -1,0 +1,217 @@
+{
+  "titulo": "UNIDAD 2: LIMITES Y CONTINUIDAD",
+  "descripcion": "Explora los conceptos básicos de los limites",
+  "subtemas": [
+    {
+      "id": "introduccion",
+      "titulo": "1. Introducción al Concepto de Límite",
+      "contenido": [
+        {
+          "tipo": "texto",
+          "valor": "Uno de los análisis bases para una función es estudiar su continuidad y los valores en el que posiblemente ésta no exista. Por lo tanto, estudiar a la función en entornos reducidos de estos valores y observando el comportamiento de ella misma, es lo que llamamos límites de una función. La simbología que usaremos para estudiar los límites de una función acercándose a algún valor en específico es la siguiente:"
+        },
+        {
+          "tipo": "imagen",
+          "valor": "assets/img/limites/1.png"
+        },
+        {
+          "tipo": "texto",
+          "valor": "Donde lim es la manera abreviada de escribir límite, x → a se lee «cuando x tiende al valor a en la función», es decir, cuando la variable x toma valores muy cercanos al valor a."
+        },
+        {
+          "tipo": "ejemplo",
+          "contenido": [
+            {
+              "tipo": "texto",
+              "valor": "Límite de la función f(x) = x + 1."
+            }
+          ]
+        },
+        {
+          "tipo": "texto",
+        "valor": "Primero analizaremos el dominio de esta función.Rápidamente podemos observar que esta función no tiene ninguna restricción,para cualquier valor real de la variable x existirá un valor f(x), por lo tanto, su domino son todos los números reales: "
+        },
+        {
+          "tipo": "texto",
+          "valor": "Dom: R<br></br>Ahora analicemos el límite cuando x → 1:"
+        },
+        {
+          "tipo":"imagen",
+          "valor":"assets/img/limites/2.png"
+        },
+        {
+          "tipo":"texto",
+          "valor": "En este caso, como no tenemos una restricción en el dominio, sustituimos el valor al cual tiende la variable x en la función:<br></br>Tiene sentido que a medida x → 1 su imagen en el eje y sea 2."
+        },
+        {
+          "tipo":"imagen",
+          "valor": "assets/img/limites/3.png" 
+        },
+        {
+          "tipo":"subtitulo",
+          "valor": "Propiedades"
+        },
+        {
+          "tipo":"texto",
+          "valor": "Estas son algunas propiedades de los límites o como también son conocidas:<br></br>Álgebra de límites:<br></br>El límite de la suma de funciones será igual a la suma del límite de cada función."
+        },
+        {
+          "tipo": "ejemplo",
+          "contenido": [
+            {
+              "tipo": "imagen",
+              "valor": "assets/img/limites/4.png"
+            }
+          ]
+        },  
+        {
+          "tipo":"texto",
+          "valor": "<br></br>Esta propiedad se cumple para las cuatro operaciones básicas:"
+        },
+        { 
+          "tipo":"imagen",
+          "valor":"assets/img/limites/5.png"
+        },
+        {
+          "tipo":"texto",
+          "valor": "El límite de una función elevada a otra función será igual al límite de la función base elevado al límite de la función exponente."
+        },
+        {
+          "tipo":"ejemplo",
+          "contenido": [
+            {
+              "tipo": "imagen",
+              "valor": "assets/img/limites/6.png"
+            }
+          ]
+        },
+        {
+          "tipo":"ejemplo",
+          "contenido": [
+            {
+              "tipo": "texto",
+              "valor": "Aplicando las propiedades resolvamos el siguiente límite:"
+            },
+            {
+              "tipo": "imagen",
+              "valor": "assets/img/limites/7.png"
+            }
+          ]
+        },
+        {
+          "tipo":"subtitulo",
+          "valor": "EJERCICIO ASOCIADO A LA VIDA REAL INTRODUCCION AL CONCEPTO DE LIMITES"
+        },
+        {
+          "tipo":"ejemplo",
+          "contenido": [
+            {
+              "tipo": "texto",
+              "valor": "Imagina que una empresa colombiana de telecomunicaciones está lanzando un nuevo plan de internet de alta velocidad en Soacha. Durante la etapa de lanzamiento, ofrecen un descuento especial para los primeros clientes que se suscriban. El precio mensual del plan, P(t), en miles de pesos colombianos, está modelado por la siguiente función, donde t representa el número de clientes suscritos (en miles):"
+            },
+            {
+              "tipo": "imagen",
+              "valor": "assets/img/limites/8.png"
+            },
+            {
+              "tipo":"texto",
+            "valor": "Sin embargo, la promoción solo es válida hasta que se alcance un número muy grande de suscriptores.<br></br><strong>PREGUNTAS:</strong><br></br><strong>a)</strong> ¿Cuál es el precio del plan si solo se suscribe un pequeño número de clientes, digamos 100 (es decir, t = 0.1)?<br></br><strong>b)</strong> ¿Qué sucede con el precio del plan a medida que el número de clientes suscritos se vuelve muy grande (tiende a infinito)? ¿Existe un precio límite para este plan?<br></br><strong>c)</strong> Interpreta el significado práctico de este límite en el contexto de la oferta del plan de internet.<br></br><strong>SOLUCION:</strong><br></br>a) Para encontrar el precio cuando t = 0.1 (100 clientes), sustituimos este valor en la función:<br></br>"
+            },
+            {
+              "tipo":"imagen",
+              "valor":"assets/img/limites/9.png"
+            },
+            {
+              "tipo": "texto",
+              "valor": "Por lo tanto, si solo se suscriben 100 clientes, el precio del plan sería aproximadamente 54.55 miles de pesos colombianos, o $54,550 COP.<br></br>b) Para determinar qué sucede con el precio a medida que el número de clientes suscritos se vuelve muy grande, necesitamos calcular el límite de la función P(t) cuando t tiende a infinito:"
+            },
+            {
+              "tipo":"imagen",
+              "valor":"assets/img/limites/10.png"
+            },
+            {
+              "tipo":"texto",
+              "valor": "Aplicando las propiedades de los límites, tenemos:"
+            },
+            {
+              "tipo":"imagen",
+              "valor":"assets/img/limites/11.png"
+            },
+            {
+              "tipo":"texto",
+              "valor": "El límite de una constante es la constante misma:"
+            },
+            {
+              "tipo":"imagen",
+              "valor":"assets/img/limites/12.png"
+            },
+            {
+              "tipo":"texto",
+              "valor": "A medida que t se hace muy grande, el término 50/t+1 tiende a 0. Por lo tanto:<br></br>100 – 0 = 100<br></br>El precio del plan tiende a 100 miles de pesos colombianos a medida que el número de clientes suscritos se vuelve muy grande. El precio límite para este plan es de $100,000 COP.<br></br>c) IMPLEMENTACION PRÁCTICA:<br></br>El límite de $100,000 COP representa el precio al que el plan de internet se estabilizará una vez que la promoción de lanzamiento haya atraído a una gran cantidad de suscriptores. Inicialmente, el precio es menor debido al descuento para los primeros clientes. Sin embargo, a medida que la base de clientes crece, el efecto del término 50/t+1 (que representa la disminución del precio por la promoción) se vuelve insignificante, y el precio se acerca cada vez más a su valor normal o de equilibrio de $100,000 COP. Esto sugiere que la promoción es temporal y busca incentivar la adopción temprana del servicio. Una vez que la empresa alcanza una masa crítica de usuarios, el precio se ajusta al valor estándar del plan."
+            },
+            {
+
+            }
+
+          ]
+        }
+
+
+      ]
+    },
+    {
+      "id": "calculo-limites",
+      "titulo": "2. Calculo de Limites",
+      "contenido": [
+        {
+          "tipo":"texto",
+          "valor": "En el fascinante mundo del Cálculo Diferencial, el concepto de límite se erige como una piedra angular fundamental. Imagina que estás observando el comportamiento de algo que se acerca cada vez más a un punto específico, sin necesariamente llegar a tocarlo. Esta idea intuitiva de acercamiento es precisamente lo que el concepto de límite busca formalizar y cuantificar en matemáticas.<br></br>El cálculo de límites nos proporciona las herramientas para analizar el comportamiento de funciones cerca de ciertos puntos, incluso aquellos donde la función podría no estar definida o tener un comportamiento inusual. Al comprender cómo calcular límites, abrimos la puerta a la exploración de nociones cruciales como la continuidad de funciones, la definición de la derivada y, posteriormente, la integral.<br></br>En esta unidad, nos adentraremos en las técnicas y estrategias para calcular límites de diversas funciones. Aprenderemos a manejar diferentes situaciones, desde la simple sustitución hasta la resolución de formas indeterminadas, desvelando así el comportamiento oculto de las funciones en puntos críticos.<br></br>"
+        },
+        {
+          "tipo":"subtitulo",
+          "valor": "Límite en punto"
+        },
+        {
+          "tipo":"texto",
+          "valor": "Si f(x) es una función usual (polinómicas, racionales, radicales, exponenciales, logarítmicas, etc.) y está definida en el punto  , entonces se suele cumplir que:"
+        },
+        {
+          "tipo":"imagen",
+          "valor":"assets/img/limites/13.png"
+        },
+        {
+          "tipo":"texto",
+          "valor": "Es decir: <strong>para calcular el límite se sustituye en la función el valor al que tienden las X.</strong>"
+        },
+        {
+          "tipo":"subtitulo",
+          "valor": "Límite de una función definida a trozos"
+        },
+        {
+          "tipo":"texto",
+          "valor": "Para estudiar el límite de una función definida a trozos, en primer lugar tenemos que estudiar los límites laterales en los puntos de unión de los diferentes trozos. Después,<ul><li>si estos coinciden, este es el valor del límite</li><li>si no coinciden, el límite no existe.</li></ul>Un ejemplo de una función definida a trozos donde los limites no coinciden es la función parte entera de  , donde los limites no coinciden en los números enteros:"
+        },
+        {
+          "tipo":"imagen",
+          "valor":"assets/img/limites/14.png"
+        },
+        {
+          "tipo":"texto",
+          "valor": "Un ejemplo de una función donde los limites laterales si coinciden es la siguiente: "
+        },
+        {
+          "tipo":"imagen",
+          "valor":"assets/img/limites/15.png"
+        },
+        {
+          "tipo":"imagen",
+          "valor":"assets/img/limites/16.png"
+        },
+        {
+          "tipo":"texto",
+          "valor": "<strong>Límite cuando x tiende a infinito</strong><br></br>Para calcular el límite de una función cuando X -> ∞ se sustituyen las X por ∞.<br><strong>Funciones polinómicas en el infinito</strong></br>El límite cuando X -> ∞ de una función polinómica es ± ∞ dependiendo de si el término de mayor grado es positivo o negativo."
+        }
+      ]
+    }
+  ]
+}

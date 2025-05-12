@@ -6,7 +6,7 @@ import { FuncionesDataService } from '../../services/data/funciones-data.service
 @Component({
   selector: 'app-funciones',
   standalone: true,
-  imports: [CommonModule, HttpClientModule], // <- AGREGA HttpClientModule AQUÍ
+  imports: [CommonModule, HttpClientModule],
   templateUrl: './funciones.component.html',
   styleUrls: ['./funciones.component.scss']
 })

@@ -4,7 +4,7 @@
     <div *ngFor="let subtema of contenido?.subtemas" class="subtema">
       <h2>{{ subtema.titulo }}</h2>
   
-      <div *ngFor="let bloque of subtema.contenido">The `*ngFor` directive was used in the template, but neither the `NgFor` directive nor the `CommonModule` was imported. Use Angular's built-in control
+      <div *ngFor="let bloque of subtema.contenido">
         <p *ngIf="bloque.tipo === 'texto'">{{ bloque.valor }}</p>
         <img *ngIf="bloque.tipo === 'imagen'" [src]="bloque.valor" alt="Imagen explicativa" />
         <iframe *ngIf="bloque.tipo === 'video'" [src]="bloque.valor" frameborder="0" allowfullscreen></iframe>
