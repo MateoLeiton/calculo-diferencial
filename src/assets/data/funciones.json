@@ -2,12 +2,12 @@
     "titulo": "Unidad 1: Funciones",
     "subtemas": [
       {
-        "id": "introduccion",
-        "titulo": "1. Introducción a las funciones",
+        "id": "fundamentales",
+        "titulo": "1. Conceptos Fundamentales de Funciones",
         "contenido": [
           {
             "tipo": "texto",
-            "valor": "Una función es una relación entre dos conjuntos que asigna a cada elemento del primer conjunto exactamente un elemento del segundo conjunto."
+            "valor": "Una <strong>función</strong> es una relación entre dos conjuntos donde a cada elemento del primer conjunto (dominio) le corresponde un único elemento del segundo conjunto (codominio). En otras palabras, es una regla que asigna a cada entrada un valor de salida. Las funciones son fundamentales en matemáticas y se utilizan para modelar relaciones entre variables. El concepto de función se puede desglosar en los siguientes elementos:"
           }
           
         ]

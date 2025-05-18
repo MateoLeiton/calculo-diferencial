@@ -48,12 +48,8 @@
           "valor": "assets/img/limites/3.png" 
         },
         {
-          "tipo":"subtitulo",
-          "valor": "Propiedades"
-        },
-        {
           "tipo":"texto",
-          "valor": "Estas son algunas propiedades de los límites o como también son conocidas:<br></br>Álgebra de límites:<br></br>El límite de la suma de funciones será igual a la suma del límite de cada función."
+          "valor": "<b>Propiedades</b><br><br>Estas son algunas propiedades de los límites o como también son conocidas:<br></br>Álgebra de límites:<br></br>El límite de la suma de funciones será igual a la suma del límite de cada función."
         },
         {
           "tipo": "ejemplo",
@@ -99,15 +95,11 @@
           ]
         },
         {
-          "tipo":"subtitulo",
-          "valor": "EJERCICIO ASOCIADO A LA VIDA REAL INTRODUCCION AL CONCEPTO DE LIMITES"
-        },
-        {
           "tipo":"ejemplo",
           "contenido": [
             {
               "tipo": "texto",
-              "valor": "Imagina que una empresa colombiana de telecomunicaciones está lanzando un nuevo plan de internet de alta velocidad en Soacha. Durante la etapa de lanzamiento, ofrecen un descuento especial para los primeros clientes que se suscriban. El precio mensual del plan, P(t), en miles de pesos colombianos, está modelado por la siguiente función, donde t representa el número de clientes suscritos (en miles):"
+              "valor": "<b>EJERCICIO ASOCIADO A LA VIDA REAL INTRODUCCION AL CONCEPTO DE LIMITES</b><br><br>Imagina que una empresa colombiana de telecomunicaciones está lanzando un nuevo plan de internet de alta velocidad en Soacha. Durante la etapa de lanzamiento, ofrecen un descuento especial para los primeros clientes que se suscriban. El precio mensual del plan, P(t), en miles de pesos colombianos, está modelado por la siguiente función, donde t representa el número de clientes suscritos (en miles):"
             },
             {
               "tipo": "imagen",
@@ -168,12 +160,8 @@
           "valor": "En el fascinante mundo del Cálculo Diferencial, el concepto de límite se erige como una piedra angular fundamental. Imagina que estás observando el comportamiento de algo que se acerca cada vez más a un punto específico, sin necesariamente llegar a tocarlo. Esta idea intuitiva de acercamiento es precisamente lo que el concepto de límite busca formalizar y cuantificar en matemáticas.<br></br>El cálculo de límites nos proporciona las herramientas para analizar el comportamiento de funciones cerca de ciertos puntos, incluso aquellos donde la función podría no estar definida o tener un comportamiento inusual. Al comprender cómo calcular límites, abrimos la puerta a la exploración de nociones cruciales como la continuidad de funciones, la definición de la derivada y, posteriormente, la integral.<br></br>En esta unidad, nos adentraremos en las técnicas y estrategias para calcular límites de diversas funciones. Aprenderemos a manejar diferentes situaciones, desde la simple sustitución hasta la resolución de formas indeterminadas, desvelando así el comportamiento oculto de las funciones en puntos críticos.<br></br>"
         },
         {
-          "tipo":"subtitulo",
-          "valor": "Límite en punto"
-        },
-        {
           "tipo":"texto",
-          "valor": "Si f(x) es una función usual (polinómicas, racionales, radicales, exponenciales, logarítmicas, etc.) y está definida en el punto  , entonces se suele cumplir que:"
+          "valor": "<b>Límite en punto</b><br><br>Si f(x) es una función usual (polinómicas, racionales, radicales, exponenciales, logarítmicas, etc.) y está definida en el punto  , entonces se suele cumplir que:"
         },
         {
           "tipo":"imagen",
@@ -184,12 +172,8 @@
           "valor": "Es decir: <strong>para calcular el límite se sustituye en la función el valor al que tienden las X.</strong>"
         },
         {
-          "tipo":"subtitulo",
-          "valor": "Límite de una función definida a trozos"
-        },
-        {
           "tipo":"texto",
-          "valor": "Para estudiar el límite de una función definida a trozos, en primer lugar tenemos que estudiar los límites laterales en los puntos de unión de los diferentes trozos. Después,<ul><li>si estos coinciden, este es el valor del límite</li><li>si no coinciden, el límite no existe.</li></ul>Un ejemplo de una función definida a trozos donde los limites no coinciden es la función parte entera de  , donde los limites no coinciden en los números enteros:"
+          "valor": "<b>Límite de una función definida a trozos</b><br><br>Para estudiar el límite de una función definida a trozos, en primer lugar tenemos que estudiar los límites laterales en los puntos de unión de los diferentes trozos. Después,<ul><li>si estos coinciden, este es el valor del límite</li><li>si no coinciden, el límite no existe.</li></ul>Un ejemplo de una función definida a trozos donde los limites no coinciden es la función parte entera de  , donde los limites no coinciden en los números enteros:"
         },
         {
           "tipo":"imagen",
@@ -209,8 +193,186 @@
         },
         {
           "tipo":"texto",
-          "valor": "<strong>Límite cuando x tiende a infinito</strong><br></br>Para calcular el límite de una función cuando X -> ∞ se sustituyen las X por ∞.<br><strong>Funciones polinómicas en el infinito</strong></br>El límite cuando X -> ∞ de una función polinómica es ± ∞ dependiendo de si el término de mayor grado es positivo o negativo."
+          "valor": "<b>Límite cuando x tiende a infinito</b><br><br>Para calcular el límite de una función cuando X -> ∞ se sustituyen las X por ∞.<br><strong>Funciones polinómicas en el infinito</strong></br>El límite cuando X -> ∞ de una función polinómica es ± ∞ dependiendo de si el término de mayor grado es positivo o negativo."
+        },
+        {
+          "tipo":"imagen",
+          "valor":"assets/img/limites/17.png"
+        },
+        {
+          "tipo":"imagen",
+          "valor":"assets/img/limites/18.png"
+        },
+        {
+          "tipo":"texto",
+          "valor": " "
+        },
+        {
+          "tipo":"ejemplo",
+          "contenido": [
+            {
+              "tipo":"texto",
+              "valor": "<strong>EJERCICIO ASOCIADO A LA VIDA REAL CALCULO DE LIMITES</strong><br><br>En Tunja, una panadería artesanal llamada \"El Buen Amasijo\" es famosa por sus deliciosas almojábanas. El costo total de producción diario (en miles de pesos colombianos) para fabricar q cientos de almojábanas está dado por la función:"  
+            },
+            {
+              "tipo": "imagen",
+              "valor": "assets/img/limites/19.png"
+            },
+            {
+              "tipo":"texto",
+              "valor": "Donde q representa la cantidad de cientos de almojábanas producidas en un día (por ejemplo, si q = 3, se producen 300 almojábanas).<br><br>El precio de venta de cada ciento de almojábanas es de 10 mil pesos colombianos. Por lo tanto, el ingreso total diario (en miles de pesos colombianos) por la venta de q cientos de almojábanas está dado por la función:<br><br>I(q) = 10q<br><br><strong>Preguntas:</strong><br><br>a) ¿Cuál es el costo total de producción si la panadería produce 200 almojábanas en un día?<br><br>b) ¿Cuál es el ingreso total si se venden 500 almojábanas en un día?<br><br>c) Encuentra la función de utilidad diaria, U(q), que representa la diferencia entre el ingreso total y el costo total. <br><br>d) ¿Cuál es la utilidad si la panadería produce y vende 400 almojábanas en un día? <br><br>e) Si la panadería quiere alcanzar una utilidad de 25 mil pesos colombianos en un día, ¿cuántos cientos de almojábanas deben producir y vender?<br><br><strong>Solución:</strong><br><br>a) Para encontrar el costo total de producción de 200 almojábanas, necesitamos usar q = 200/100 =2. Sustituyendo en la función de costo:<br>"
+            },
+            {
+              "tipo": "imagen",
+              "valor": "assets/img/limites/20.png"
+            },
+            {
+              "tipo":"texto",
+              "valor": "El costo total de producción de 200 almojábanas es de 11 miles de pesos colombianos, o $11,000 COP.<br><br>b) Para encontrar el ingreso total por la venta de 500 almojábanas, usamos q=500/100=5. Sustituyendo en la función de ingreso:<br><br>I(5) = 10(5) = 50<br><br>El ingreso total por la venta de 500 almojábanas es de 50 miles de pesos colombianos, o $50,000 COP.<br><br>c) La función de utilidad diaria, U(q), se calcula restando el costo total del ingreso total:"
+            },
+            {
+              "tipo": "imagen",
+              "valor": "assets/img/limites/21.png"
+            },
+            {
+              "tipo":"imagen",
+              "valor":"assets/img/limites/22.png"
+            },
+            {
+              "tipo":"texto",
+              "valor": "Esto significa que la panadería puede alcanzar una utilidad de 25 mil pesos colombianos produciendo y vendiendo 600 almojábanas (q = 6) o 1000 almojábanas (q = 10)."
+            }
+          ]
+
         }
+      ]
+    },
+    {
+      "id": "continuidad-funciones",
+      "titulo": "2. Continuidad de Funciones",
+      "contenido": [
+        {
+          "tipo":"texto",
+          "valor": "Después de explorar el concepto fundamental de límite, damos un paso crucial hacia la comprensión del comportamiento \"suave\" de las funciones: la continuidad. Intuitivamente, una función continua en un punto es aquella cuyo gráfico puede dibujarse sin levantar el lápiz del papel en ese punto. No hay \"saltos\", \"huecos\" o \"rupturas\" abruptas. <br><br>Formalmente, la continuidad de una función en un punto requiere que el valor de la función en ese punto coincida con el límite de la función cuando nos acercamos a ese punto. Este concepto, aparentemente sencillo, tiene profundas implicaciones en el análisis matemático y en sus aplicaciones en el mundo real. <br><br>En esta sección, profundizaremos en la definición precisa de continuidad, exploraremos los diferentes tipos de discontinuidades que pueden presentarse y analizaremos las propiedades de las funciones continuas. Comprender la continuidad nos permitirá trabajar con funciones de manera más predecible y será esencial para el desarrollo de conceptos posteriores en el cálculo diferencial, como la derivabilidad. <br><br><strong>Continuidad de una función en un punto </strong><br><br>Se dice que una función  F (X)  es continua en un punto  X = a  si y sólo si se cumplen las tres condiciones siguientes: <br><br>"
+        },
+        {
+          "tipo":"imagen",
+          "valor":"assets/img/limites/23.png"
+        },
+        {
+          "tipo":"texto",
+          "valor": "<b>Continuidad lateral</b><br><br>La continuidad lateral en un punto     se define de manera similar a la continuidad en un punto, la diferencia es que aquí solo necesitamos que uno de los límites laterales existan. Así, podemos dividir la continuidad lateral en dos casos, continuidad por la izquierda y continuidad por la derecha. <br><br><b>Continuidad por la izquierda</b><br><br>Una función  <b>F (X) </b> es <b>continua por la izquierda</b> en el punto <b> X = a </b> si se cumplen las tres condiciones siguientes: "
+        },
+        {
+          "tipo": "imagen",
+          "valor": "assets/img/limites/24.png"
+        },
+        {
+          "tipo": "texto",
+          "valor": "<b>Continuidad por la derecha</b><br><br>Una función  <b>F (X) </b>  es <b>continua por la derecha</b> en el punto  <b>X = a</b> si se cumplen las tres condiciones siguientes: <br>"
+        },
+        {
+          "tipo": "imagen",
+          "valor": "assets/img/limites/25.png"
+        },
+        {
+          "tipo":"texto",
+          "valor": "<b>Continuidad de funciones</b><br><br>Existen varios tipos de funciones continuas, tales como, funciones continuas en todos los puntos de su dominio o funciones continuas en solo algunos trozos de su dominio. <br><br>Algunos ejemplos de funciones continuas en todos los puntos de su dominio son las funciones <b>polinómicas, racionales, con radicales, exponenciales, logarítmicas y trigonométricas. </b> <br><br>Los siguientes son casos particulares de la situación anteriormente descrita. <br>"
+        },
+        {
+          "tipo": "imagen",
+          "valor": "assets/img/limites/26.png"
+        },
+        {
+          "tipo":"texto",
+          "valor":"<b>Funciones definidas a trozos</b><br><br>Las funciones definidas a trozos son el principal caso de funciones que cumplen con ser continuas solo en algunos trozos o intervalos de su dominio. <br><br>Un ejemplo de función a trozos es la siguiente<br>"
+        },
+        {
+          "tipo":"imagen",
+          "valor":"assets/img/limites/27.png"
+        },
+        {
+          "tipo":"imagen",
+          "valor":"assets/img/limites/28.png"
+        },
+        {
+          "tipo":"texto",
+          "valor": "<b>Operaciones con funciones continuas</b><br><br>Es importante notar que, a partir de funciones continúas dadas, podemos generar otras funciones continuas. Esto lo podemos hacer a través de las operaciones básicas con funciones, las cuales son suma, resta, multiplicación, división y composición. <br>Las condiciones para verificar la continuidad en estas combinaciones son las siguientes<br>"
+        },
+        {
+          "tipo":"imagen",
+          "valor":"assets/img/limites/29.png"
+        },
+        {
+          "tipo":"imagen",
+          "valor":"assets/img/limites/30.png"
+        },
+        {
+          "tipo":"texto",
+          "valor": "<b>Tipos de discontinuidad</b><br><br>Hay funciones que tienen puntos donde no cumplen con la definición de continuidad, a estos puntos los llamamos puntos de discontinuidad. Es importante recalcar que hay varios tipos de discontinuidad y a continuación los estudiaremos. <br><br><b>Discontinuidad evitable</b><br><br>La discontinuidad evitable de una función F(X)  en un punto  X = a  se presenta cuando el límite siguiente existe. <br>"
+        },
+        {
+          "tipo":"imagen",
+          "valor":"assets/img/limites/31.png"
+        },
+        {
+          "tipo":"texto",
+          "valor": "Esto significa que la discontinuidad se presenta cuando algo pasa con la imagen de punto F (X).  Podemos distinguir entre dos tipos. <br>"
+        },
+        {
+          "tipo":"imagen",
+          "valor":"assets/img/limites/32.png"
+        },
+        {
+          "tipo": "texto",
+          "valor": "<b>Discontinuidad inevitable</b><br><br>Una discontinuidad es inevitable o de primera especie si existen los límites laterales en  <b>X = a</b>  pero son distintos. Equivalentemente, <br>"
+        },
+        {
+          "tipo": "imagen",
+          "valor": "assets/img/limites/33.png"
+        },
+        {
+          "tipo": "texto",
+          "valor": "En esta clase de discontinuidad también podemos encontrar dos tipos<br>"
+        },
+        {
+          "tipo": "imagen",
+          "valor": "assets/img/limites/34.png"
+        },
+        {
+          "tipo": "texto",
+          "valor": "<b>Discontinuidad esencial</b><br><br>"
+        },
+        {
+          "tipo": "imagen",
+          "valor": "assets/img/limites/35.png"
+        },
+        {
+          "tipo":"texto",
+          "valor": "<b>Continuidad en un intervalo</b><br><br><b>Continuidad en un intervalo cerrado</b><br>"
+        },
+        {
+          "tipo":"imagen",
+          "valor":"assets/img/limites/36.png"
+        },
+        {
+          "tipo":"ejemplo",
+          "contenido": [
+            {
+              "tipo":"texto",
+              "valor":"<b>PROBLEMA DE LA VIDA REAL DEL TEMA DE CONTINUIDAD DE FUNCIONES</b><br><br>La empresa de transporte público \"TransSoacha\" ha implementado un nuevo sistema de tarifas para sus rutas urbanas. La tarifa depende de la distancia recorrida por el usuario. El costo del pasaje, C(d) (en miles de pesos colombianos), en función de la distancia recorrida d (en kilómetros), se define de la siguiente manera: <br><br><ul><li>Para viajes de hasta 5 kilómetros (inclusive): $ 2.000<br></li><li>Para viajes de más de 5 kilómetros y hasta 10 kilómetros (inclusive): $ 2.500<br></li><li>Para viajes de más de 10 kilómetros: $ 3.000<br><br></li></ul>Esta situación se puede representar mediante la siguiente función definida por partes: <br>"
+            },
+            {
+              "tipo":"imagen",
+              "valor":"assets/img/limites/37.png"
+            },
+            {
+              "tipo":"texto",
+              "valor": "Un usuario frecuente de TransSoacha está analizando el costo de sus viajes diarios. <br><br><b>Preguntas: </b><br><br>a) ¿Cuál es el costo de un viaje de exactamente 5 kilómetros? <br><br>b) ¿Cuál es el costo de un viaje de 5.1 kilómetros? <br><br>c) ¿Es la función de costo C(d) continua en d=5? Justifica tu respuesta utilizando la definición de continuidad. <br><br>d) ¿Cuál es el costo de un viaje de exactamente 10 kilómetros? <br><br>e) ¿Cuál es el costo de un viaje de 9.9 kilómetros? <br><br>f) ¿Es la función de costo C(d) continua en d=10? Justifica tu respuesta utilizando la definición de continuidad. <br><br>g) ¿En qué valores de distancia la función de costo C(d) presenta discontinuidades? ¿Qué tipo de discontinuidad es? <br><br>h) ¿Qué implicaciones prácticas tienen estas discontinuidades para los usuarios de TransSoacha? <br><br><b>Solución: </b> <br><br>a) Para un viaje de exactamente 5 kilómetros (d = 5), usamos la primera parte de la función: C(5) = 2 miles de pesos colombianos ($2.000 COP). <br><br>b) Para un viaje de 5.1 kilómetros (d=5.1), usamos la segunda parte de la función: C(5.1) = 2.5 miles de pesos colombianos ($2.500 COP). <br><br>c) Para verificar la continuidad en d = 5, debemos analizar los límites laterales y el valor de la función en ese punto: <br><br><ul><li>Valor de la función en d = 5: C (5) = 2. <br></li><li>Límite por la izquierda (d→5−): limd→5−   C(d)=limd→5−  2 = 2. <br></li><li>Límite por la derecha (d→5+): limd→5+   C(d)=limd→5+    2.5 = 2.5. <br><br></li></ul>Como el límite por la izquierda (2) es diferente del límite por la derecha (2.5), el límite bilateral limd→5C(d) no existe. Por lo tanto, la función C(d) no es continua en d = 5. <br><br>d) Para un viaje de exactamente 10 kilómetros (d = 10), usamos la segunda parte de la función: C(10) = 2.5 miles de pesos colombianos ($2.500 COP). <br><br>e) Para un viaje de 9.9 kilómetros (d = 9.9), usamos la segunda parte de la función: C(9.9) = 2.5 miles de pesos colombianos ($2.500 COP). <br><br>f) Para verificar la continuidad en d = 10: <br><br><ul><li>Valor de la función en d = 10: C(10) = 2.5. <br></li><li>Límite por la izquierda (d→10−): limd→10−   C(d)=limd→10 − 2.5 = 2.5. <br></li><li>Límite por la derecha (d→10+): limd→10+   C(d)=limd→10 + 3 = 3. <br></li></ul>Como el límite por la izquierda (2.5) es diferente del límite por la derecha (3), el límite bilateral limd→10 C(d) no existe. Por lo tanto, la función C(d) no es continua en d = 10. <br><br>g) La función de costo C(d) presenta discontinuidades en d = 5 y d = 10. En ambos casos, se trata de una discontinuidad de salto, ya que el límite por la izquierda y el límite por la derecha existen, pero son diferentes. <br><br>h) <b>Implicaciones Prácticas para los Usuarios: </b><br><br>Las discontinuidades en la función de costo significan que un pequeño cambio en la distancia recorrida alrededor de los puntos de 5 km y 10 km puede resultar en un cambio abrupto en el precio del pasaje. <br><br><ul><li><b>En d = 5 km: </b> Un viaje de justo 5 km costará $2.000, pero un viaje ligeramente más largo, como 5.1 km, costará $2.500. Esto podría generar sorpresa o incluso frustración en los usuarios que viajan distancias cercanas a estos umbrales. <br></li><li><b>En d = 10 km: </b> Un viaje de justo 10 km costará $2.500, pero un viaje ligeramente más largo, como 10.1 km, costará $3.000. De manera similar, esto implica un aumento repentino en el precio al cruzar el umbral de los 10 kilómetros. <br></li></ul>Para los usuarios, es importante ser conscientes de estos puntos de discontinuidad, ya que planificar una ruta ligeramente más larga o más corta podría significar una diferencia en el costo del pasaje. <br><br>La falta de continuidad en estos puntos indica que el precio no aumenta de manera gradual con la distancia en esos umbrales específicos."
+            }
+          ]
+        }
+        
       ]
     }
   ]
