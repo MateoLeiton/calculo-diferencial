@@ -1,18 +1,375 @@
 {
-    "titulo": "Unidad 1: Funciones",
+    "titulo": "UNIDAD 1: FUNCIONES",
     "subtemas": [
       {
-        "id": "fundamentales",
+        "id": "conceptos-fundamentales",
         "titulo": "1. Conceptos Fundamentales de Funciones",
         "contenido": [
           {
             "tipo": "texto",
-            "valor": "Una <strong>función</strong> es una relación entre dos conjuntos donde a cada elemento del primer conjunto (dominio) le corresponde un único elemento del segundo conjunto (codominio). En otras palabras, es una regla que asigna a cada entrada un valor de salida. Las funciones son fundamentales en matemáticas y se utilizan para modelar relaciones entre variables. El concepto de función se puede desglosar en los siguientes elementos:"
+            "valor": "Una función es una relación entre dos conjuntos donde a cada elemento del primer conjunto (dominio) le corresponde un único elemento del segundo conjunto (codominio). En otras palabras, es una regla que asigna a cada entrada un valor de salida. Las funciones son fundamentales en matemáticas y se utilizan para modelar relaciones entre variables. El concepto de función se puede desglosar en los siguientes elementos: <br><ul><li><b>Dominio: </b><br>El conjunto de entrada de la función, es decir, todos los valores que pueden ser utilizados como entrada. <br><br></li> <li><b>Codominio: </b><br>El conjunto de salida de la función, es decir, el conjunto donde se encuentran todos los posibles valores de salida. <br><br></li> <li><b>Imagen: </b><br>El valor de salida de la función para un valor específico de la entrada. <br><br></li><li><b>Función uno a uno: </b><br>Una función donde cada elemento del dominio se relaciona con un elemento único del codominio. <br><br></li><li><b>Función sobreyectiva: </b><br>Una función donde cada elemento del codominio está relacionado con al menos un elemento del dominio.  <br><br></li></ul><b>Ejemplos de funciones: </b><br><ul><li>La función que calcula el área de un círculo a partir de su radio. </li><li>La función que calcula la distancia recorrida por un objeto en movimiento uniforme. </li><li>La función que asocia a cada persona su número de identificación. </li></ul><br><b>Representación de funciones: </b><br><br>Las funciones se pueden representar de diferentes maneras: <br><ul><li><b>Algebraicamente: </b> Usando una ecuación, como y = f(x). </li><li><b>Gráficamente: </b>Usando un gráfico en el plano cartesiano. </li><li><b>En forma de tabla: </b> Listando los valores de entrada y salida. </li></ul><br><b>Importancia de las funciones: </b><br><br>Las funciones son fundamentales en matemáticas y se utilizan para modelar una amplia gama de relaciones entre variables en diversos campos, como física, economía, ingeniería y ciencias de la computación. <br><br> "
+          },
+          {
+            "tipo": "ejemplo",
+            "contenido": [
+              {
+                "tipo":"texto",
+                "valor": "<b>EJEMPLO DE LA VIDA REAL DEL TEMA 1: CONCEPTOS FUNDAMENTALES DE FUNCIONES. </b><br><br>Imagina el Sistema Integrado de Transporte Público (SITP) de Bogotá. Podemos pensar en una función que relaciona el número de la ruta del bus con su destino principal.<ul><li><b>Dominio: </b> El conjunto de todas las rutas de buses del SITP (C1, H6, T163, etc.). </li><li><b>Codominio: </b>El conjunto de todos los posibles destinos principales en Bogotá (e.g., Suba, Chapinero, Usme, etc.). </li><li><b>Función (f): </b> La regla que asigna a cada número de ruta <b>un único </b>destino principal. </li></ul><br>Por ejemplo:<ul><li>La ruta <b>C1</b> tiene como destino principal <b>Suba Centro. </b> Podemos escribir esto como: f(C1) = Suba Centro. </li><li>La ruta <b>H6 </b>tiene como destino principal <b>Portal Tunal. </b>Podemos escribir esto como: f(H6) = Portal Tunal. </li><li>La ruta <b>T163</b> tiene como destino principal <b>Paseo de los Libertadores. </b> Podemos escribir esto como: f(T163) = Paseo de los Libertadores. </li></ul><br><b>¿Por qué esto es una función? </b><br><ul><li><b>Cada ruta tiene un único destino principal: </b>Un bus con el número C1 siempre va a Suba Centro (en su recorrido principal). No tiene dos destinos finales diferentes al mismo tiempo. </li><li><b>Puede haber destinos que no sean el destino principal de ninguna ruta específica: </b> Por ejemplo, puede haber un barrio al que se llegue en varias rutas, pero no sea el destino final de ninguna de ellas. Este barrio estaría en el codominio, pero no necesariamente en el rango. </li><li><b>Varias rutas pueden tener el mismo destino principal: </b>Por ejemplo, podría haber varias rutas diferentes que terminen en \"Chapinero\". Esto no viola la definición de función, ya que a cada ruta individual se le asigna un único destino. </li></ul><br><b>Conexiones con los Conceptos Fundamentales: </b><br><ul><li><b>Dominio y Rango: </b> Entender el conjunto de todas las rutas posibles (dominio) y el conjunto de todos los destinos finales alcanzados por alguna ruta (rango). </li><li><b>Notación Funcional: </b>Usar la notación f(ruta)=destino para expresar la relación de manera concisa. </li><li><b>Representación Verbal: </b> Describir la función como \"la asignación de cada ruta del SITP a su destino principal\".</li><li><b>Representación Tabular: </b> Podríamos crear una tabla listando las rutas y sus correspondientes destinos. </li><li><b>Representación Gráfica (más abstracta aquí): </b>Aunque no es una gráfica numérica tradicional, podríamos imaginar un diagrama donde las rutas son puntos en un conjunto y los destinos en otro, con flechas indicando la asignación. </li></ul>"
+              },
+              {
+                "tipo": "imagen",
+                "valor": "assets/img/funciones/Imagen1.png"
+              }
+            ]
           }
           
         ]
-      }
+      },
+      {
+        "id":"dominio-rango",
+        "titulo": "2. Dominio y Rango de Funciones",
+        "contenido": [
+          {
+            "tipo":"texto",
+            "valor":"El dominio de una función f ( x ) es el conjunto de todos los valores para los cuales la función está definida, y el rango de la función es el conjunto de todos los valores que f  toma. <br><br>(En gramática, probablemente le llame al dominio el conjunto reemplazo y al rango el conjunto solución. Quizá también estos han sido llamados la entrada y salida de la función.) <br><br>"
+          },
+          {
+            "tipo":"ejemplo",
+            "contenido": [
+              {
+                "tipo": "imagen",
+                "valor": "assets/img/funciones/Imagen2.png"
+              },
+              {
+                "tipo":"texto",
+                "valor": "En el ejemplo 1 el dominio es el conjunto { A , B , C , E }. D no está en el dominio, ya que la función no está definida para D.<br><br>El rango es el conjunto {1, 3, 4}. 2 no está en el rango, ya que no hay letra en el dominio que se enlace con el 2."
+              }
+            ]
+          },
+          {
+            "tipo":"ejemplo",
+            "contenido": [
+              {
+                "tipo":"texto",
+                "valor": "El dominio de la función<br><br>f ( x ) = 1 / x<br><br>es todos los números reales excepto el cero (ya que en x = 0, la función no está definida: la división entre cero no está permitida). <br><br>El rango también es todos los números reales excepto el cero. Puede verse que hay algún punto en la curva para cada valor de y excepto para y = 0. <br><br>"
+              },
+              {
+                "tipo": "imagen",
+                "valor": "assets/img/funciones/Imagen3.png"
+              },
+              {
+                "tipo":"texto",
+                "valor": "Los dominios pueden también estar explícitamente especificados, si hay valores para los cuales la función pudiera estar definida, pero que no deseamos considerarlos por alguna razón."
+              }
+            ]
+          },
+          {
+            "tipo":"ejemplo",
+            "contenido": [
+              {
+                "tipo": "texto",
+                "valor": "La notación siguiente muestra que el dominio de la función está restringido al intervalo (–1, 1). <br><br>f ( x ) = x<sup>2</sup> ,     –1 < x < 1<br><br>La gráfica de esta función es como se muestra. <br><br>Puede notarse que los círculos abiertos, muestran que la función no está definida en x = –1 y x = 1. Los valores del rango de y desde 0 hasta el 1 (incluyendo el 0, pero no incluyendo el 1). <br><br>Así el rango de la función es  0 ≤ y < 1."
+              },
+              {
+                "tipo": "imagen",
+                "valor": "assets/img/funciones/Imagen4.png"
+              }
+            ]
+          },
+          {
+            "tipo":"ejemplo",
+            "contenido": [
+              {
+                "tipo":"texto",
+                "valor": "<b>Ejemplo de la vida real del tema 2: Dominio y Rango de Funciones</b><br><br>Imagina que tomas un taxi en Bogotá. La tarifa del taxi se calcula en función de la distancia recorrida. Supongamos que la estructura de tarifas es la siguiente (simplificada para el ejemplo): <br><ul><li>Hay una tarifa base inicial de $5.000 pesos colombianos. </li><br><li>Se cobran $300 pesos por cada kilómetro recorrido. </li></ul><br>Podemos definir una función que relacione la distancia recorrida (en kilómetros) con el costo total del viaje (en pesos colombianos). <br><br>Sea: <br><ul><li>d = la distancia recorrida en kilómetros (variable independiente). </li><br><li>C(d) = el costo total del viaje en pesos colombianos (variable dependiente). </li></ul><br>La función que describe esta situación sería: <br><br>C(d) = 5000 + 300d<br><br><b>Dominio de la Función en este Contexto: </b><br><br>En la vida real, la distancia que un taxi puede recorrer no puede ser negativa. Además, aunque teóricamente no hay un límite superior fijo, para un viaje típico dentro de la ciudad, la distancia tendrá un límite razonable. Sin embargo, desde una perspectiva puramente matemática de la función, d podría ser cualquier número real no negativo. <br><br><ul><li><b>Dominio Realista: </b> d ≥ 0 (la distancia no puede ser negativa). En un contexto de un viaje urbano típico, podríamos acotarlo aún más, por ejemplo, 0 ≤ d ≤ 50 km (asumiendo un viaje máximo razonable dentro de la ciudad y sus alrededores cercanos). </li> <br><li><b>Dominio Matemático (sin restricciones prácticas): </b> [0,∞) </li></ul><br><b>Rango de la Función en este Contexto: </b><br><br>El rango será el conjunto de todos los posibles costos del viaje, correspondientes a las distancias en el dominio. <br><br><ul><li>Si la distancia recorrida es d=0 km (acabas de subir al taxi), el costo es C(0) = 5000 + 300(0) = $5.000. </li><li>Si la distancia recorrida es d=1 km, el costo es C(1) = 5000 + 300(1) = $5.300. </li><li>Si consideramos el dominio realista de 0≤d≤50 km: <ul><li>El costo mínimo sería C(0) = $5.000. </li><li>El costo máximo sería C(50) = 5000 + 300(50) = 5000 + 15000 = $20.000. </li><li>Por lo tanto, el rango realista sería [5000,20000]. </li></ul></li><li>Si consideramos el dominio matemático [0,∞): <ul><li>El costo mínimo sería C(0) = $5.000. </li><li>El costo aumentaría indefinidamente a medida que la distancia aumenta. </li><li>Por lo tanto, el rango matemático sería [5000,∞). </li></ul></li></ul><br><b>Conexión con los Conceptos Fundamentales: </b><br><br><ul><li><b>Dominio: </b>Representa las posibles \"entradas\" válidas para la función en este contexto (la distancia que se puede recorrer). Las restricciones prácticas del mundo real a menudo limitan el dominio matemático teórico. </li><br><li><b>Rango: </b>Representa las posibles \"salidas\" o resultados de la función (los posibles costos del viaje) que se obtienen al usar los valores del dominio. </li></ul><br>"
+              }
       
+            ]
+          }
+        ]
+      },
+      {
+        "id":"graficas-funciones",
+        "titulo": "3. Gráficas de Funciones",
+        "contenido":[
+
+          {
+            "tipo":"texto",
+            "valor": "Las gráficas de funciones no son solo una herramienta de visualización estética en Cálculo Diferencial; son una parte integral del proceso de aprendizaje y comprensión. Facilitan la conexión entre el álgebra de las funciones y su comportamiento geométrico, lo que a su vez hace que los conceptos abstractos del cálculo sean más concretos y accesibles. Sin una comprensión sólida de las gráficas, la capacidad de comprender y aplicar los conceptos avanzados del cálculo diferencial se ve significativamente limitada. <br><br><b>La Gráfica como Representación Visual: </b><br><br>La gráfica de una función y = f(x) es el conjunto de todos los puntos (x,f(x)) en el plano cartesiano, donde x pertenece al dominio de la función. <br><br>La gráfica proporciona una representación visual del comportamiento de la función, mostrando cómo los valores de salida (y) cambian en respuesta a los cambios en los valores de entrada (x). <br><br></b>Trazado de Gráficas de Funciones Básicas: </b><br><br>A continuación, se relacionan las gráficas de funciones fundamentales. <br><br><b>Funciones Lineales: </b>y = mx + b (líneas rectas, pendiente e intercepto). <br><br><b>Funciones Cuadráticas: </b>y = ax<sup>2</sup> + bx + c (parábolas, vértice, concavidad, interceptos). <br><br><b>Funciones Cúbicas: </b>y = ax<sup>3</sup> + bx<sup>2</sup>  +cx  +d (forma general y puntos de inflexión). <br><br><b>Funciones Potencia: </b>y = x<sup>n</sup> (para diferentes valores de n, incluyendo enteros positivos y negativos, y racionales). <br><br><b>Funciones Exponenciales: </b>y = a<sup>x</sup> (crecimiento y decrecimiento exponencial, asíntota horizontal). <br><br><b>Funciones Logarítmicas: </b>y = log<sub>b</sub>(x) (relación con la exponencial, asíntota vertical). <br><br><b>Funciones Trigonométricas: </b>y  = sin(x), y = cos(x), y = tan(x), etc. (periodicidad, amplitud, desfase, asíntotas). <br><br><b>Funciones Valor Absoluto: </b>y = ∣x∣ (forma de \"V\").<br><br><b>Transformaciones de Gráficas: </b> Es importante tener en cuenta que las operaciones algebraicas en la función afectan su gráfica: <br><br><b>Traslaciones Verticales: </b>y = f(x) + c (desplazamiento hacia arriba si c >  0, hacia abajo si c  <0). <br><br><b>Traslaciones Horizontales: </b>y = f(x−c) (desplazamiento hacia la derecha si c > 0, hacia la izquierda si c < 0). <br><br><b>Reflexiones: </b><br><br>Respecto al eje x: y = −f(x) (la gráfica se invierte verticalmente). <br><br>Respecto al eje y: y = f(−x) (la gráfica se invierte horizontalmente). <br><br><b>Alargamientos y Compresiones: </b><br><br>Verticales: y = c ⋅ f(x) (se estira si ∣c∣ >1, se comprime si 0<∣c∣<1). <br><br>Horizontales: y = f(c ⋅ x) (se comprime si ∣c∣>1, se estira si 0<∣c∣<1). <br><br>Practicar la aplicación de múltiples transformaciones a una gráfica base. <br><br><b>Simetría de Funciones: </b><br><br><b>Funciones Pares: </b>f (−x) = f(x) (simetría respecto al eje y). Identificar gráficamente. <br><br><b>Funciones Impares: </b>f (−x) = −f(x) (simetría respecto al origen). Identificar gráficamente. <br><br><b>Identificación de Características Clave de una Gráfica: </b><br><br><b>Interceptos: </b>Puntos donde la gráfica cruza los ejes x (raíces o ceros de la función) e y (valor de la función en x = 0). <br><br><b>Asíntotas: </b>Líneas a las que la gráfica se acerca indefinidamente (horizontales, verticales y oblicuas). <br><br><b>Máximos y Mínimos Locales y Globales: </b>Puntos donde la función alcanza sus valores más altos o más bajos en un intervalo o en todo su dominio. <br><br><b>Intervalos de Crecimiento y Decrecimiento: </b>Regiones del dominio donde la función aumenta o disminuye su valor. <br><br><b>Comportamiento al Infinito: </b>Cómo se comporta la función cuando x tiende a + ∞ o −∞.<br><br>"
+          },
+          {
+            "tipo":"ejemplo",
+            "contenido":[
+
+              {
+                "tipo":"texto",
+                "valor": "<b>Ejemplo de la vida real del tema 3: Graficas de Funciones</b><br><br>Imagina a un ciclista subiendo por una de las vías que ascienden los Cerros Orientales de Bogotá, como la vía a La Calera. La altura del ciclista sobre el nivel del mar cambia a medida que avanza horizontalmente a lo largo del camino. <br><br>Podemos definir una función que relacione la distancia horizontal recorrida por el ciclista desde un punto de inicio con su altura sobre el nivel del mar. <br><br>Sea:<ul><li>d = la distancia horizontal recorrida por el ciclista en kilómetros (variable independiente). </li><li>h(d) = la altura del ciclista sobre el nivel del mar en metros (variable dependiente). </li></ul><br>A medida que el ciclista avanza (aumenta d), su altura h(d) generalmente aumentará, aunque la pendiente del camino puede variar. <br><br><b>La Gráfica de la Función: </b><br><br>Si pudiéramos registrar continuamente la distancia horizontal recorrida por el ciclista y su altura correspondiente, podríamos trazar estos puntos en un plano cartesiano: <br><ul><li>El eje horizontal (eje x) representaría la distancia horizontal recorrida (d). </li><li>El eje vertical (eje y) representaría la altura sobre el nivel del mar (h(d)). </li></ul><br>La gráfica resultante sería una curva que muestra el perfil de elevación de la subida. <br><br><b>¿Qué podemos observar en esta gráfica? </b><br><ul><li><b>Puntos: </b>Cada punto (d,h(d)) en la gráfica nos diría la altura del ciclista a una distancia horizontal específica desde el inicio. </li><br><li>Pendiente: La inclinación de la gráfica en cualquier punto representaría la pendiente del camino en ese punto. Una pendiente pronunciada indicaría una subida más empinada. <br></li><li><b>Partes Planas: </b>Si hay secciones llanas en el camino, la gráfica tendría segmentos horizontales (pendiente cero). </li><br><li><b>Descensos (si los hubiera): </b>Si el camino tuviera alguna bajada, la gráfica tendría segmentos con pendiente negativa. </li><br><li><b>Altura Máxima: </b>El punto más alto alcanzado en la gráfica representaría la altura máxima que el ciclista alcanza en esa subida. </li></ul><br><b>Práctica en herramienta de IA WolframAlpha</b><br><br>Es importante que realicemos la siguiente actividad practica en WolframAlpha, para analizar el ejemplo de la vida diaria planteado en este Tema 3 denominado: Graficas de Funciones, ingresando funciones hipotéticas que podrían representar una subida a los cerros orientales de Bogotá, comenzando con las siguientes: <br><br>\"plot y = x\" (una subida constante) <br><br>\"plot y = x^2 for x from 0 to 5\" (una subida cada vez más pronunciada) <br><br>\"plot y = sqrt(x) for x from 0 to 10\" (una subida que se vuelve menos pronunciada) <br><br>\"plot y = sin(x) for x from 0 to 2pi\" (una subida y bajada ondulada) <br><br>Al obtener la informacion suministrada por WolfranAlpha, les solicitamos describan como la forma de la grafica se relaciona con la ecuacion que ingresaron<br><br>¿Cuándo la subida es más empinada? <br><br>¿Cuándo es más suave? <br><br>¿Hay puntos máximos? <br><br>"
+              }
+            ]
+          }
+
+        ]
+      },
+      {
+        "id": "operaciones-funciones",
+        "titulo": "4. Operaciones con Funciones",
+        "contenido": [
+          {
+            "tipo": "texto",
+            "valor": "Las operaciones de suma, resta, multiplicación y división entre funciones son posibles y semejantes a las correspondientes efectuadas con los números. <br><br>Además, se define la composición de funciones<br><br><b>Suma: </b> (f + g) (x) = f (x) + g(x) <br><br><b>Resta: </b> (f−g) (x) = f(x) − g(x) <br><br><b>Multiplicación: </b> (f⋅g) (x) = f(x) ⋅ g(x) <br><br><b> División: </b> (f/g) (x)  = g(x) f(x), con la condición importante de que g(x) / =0. <br><br><b>Dominio de las Operaciones: </b>El dominio de la suma, resta y multiplicación de dos funciones es la intersección de los dominios de f(x) y g(x). Para la división, el dominio es la intersección de los dominios de f(x) y g(x), excluyendo cualquier valor de x para el cual g(x) = 0. <br><br>"
+          },
+          {
+            "tipo":"ejemplo",
+            "contenido":[
+              {
+                "tipo":"imagen",
+                "valor":"assets/img/funciones/Imagen5.png"
+              },
+              {
+                "tipo":"texto",
+                "valor": "Otra forma de combinar dos funciones para crear una nueva función es llamada la composición de funciones. En la composición de funciones sustituimos una función completa en otra función. <br><br>La notación de la función f con g es (f o g)(x) = f(g(x)) y se lee f de g de x . Significa que donde sea que haya una x en la función f , es reemplazada con la función g ( x ). El dominio de f o g  es el conjunto de todas las x en el dominio de g tal que g ( x ) está en el dominio de f . <br><br>"
+              }
+            ]
+          },
+          {
+            "tipo":"ejemplo",
+            "contenido":[
+              {
+                "tipo":"imagen",
+                "valor":"assets/img/funciones/Imagen6.png"
+              }
+            ]
+          },
+          {
+            "tipo":"ejemplo",
+            "contenido":[
+              {
+                "tipo":"imagen",
+                "valor":"assets/img/funciones/Imagen7.png"
+              }
+            ]
+          },
+          {
+            "tipo":"ejemplo",
+            "contenido":[
+              {
+                "tipo":"imagen",
+                "valor":"assets/img/funciones/Imagen8.png"
+              }
+            ]
+          },
+          {
+            "tipo":"ejemplo",
+            "contenido":[
+              {
+                "tipo":"texto",
+                "valor": "<b>Ejemplo de la vida real del tema 4: Operaciones de Funciones</b><br><br>Imagina dos ciclistas que parten de puntos diferentes en la Ciclovía de Bogotá y se mueven uno hacia el otro. <br><br><b>Función de Posición del Ciclista 1: </b><br><br>Supongamos que el ciclista 1 parte del punto A (considerado como la posición 0) y se mueve a una velocidad constante de 15 kilómetros por hora hacia la derecha. Su posición P1(t) (en kilómetros desde el punto A) en función del tiempo t (en horas) está dada por: <br><br>P1(t) = 15t<br><br><b>Función de Posición del Ciclista 2: </b><br><br>El ciclista 2 parte de un punto B, que está a 30 kilómetros a la derecha del punto A, y se mueve a una velocidad constante de 10 kilómetros por hora hacia la izquierda (es decir, hacia el ciclista 1). Su posición P2(t) (en kilómetros desde el punto A) en función del tiempo t (en horas) está dada por: <br><br>P2(t) = 30 − 10t<br><br>(El 30 representa su posición inicial, y el −10t indica que su posición disminuye con el tiempo porque se mueve hacia la izquierda). <br><br><b>Operaciones con Funciones en este Contexto: </b><br><br><ol><li><b>Distancia entre los Ciclistas (Resta del Valor Absoluto de las Posiciones): </b><br><br>Para encontrar la distancia entre los dos ciclistas en cualquier momento t, podemos tomar el valor absoluto de la diferencia de sus posiciones: <br><br>D(t) = ∣P2(t)−P1(t)∣ <br><br>D(t) = ∣(30−10t)−(15t)∣ <br><br>D(t) = ∣30−25t∣<br><br>La función D(t) representa la distancia entre los dos ciclistas en función del tiempo. </li><br><br><li><b>Tiempo de Encuentro (Resolución de la Igualdad de Posiciones): </b><br><br>Los ciclistas se encontrarán cuando sus posiciones sean iguales, es decir, cuando P1(t)=P2(t). Podemos resolver esta ecuación: <br><br>15t = 30 − 10t<br><br> 25t = 30 <br><br>t=25/30  = 1.2 horas<br><br>Aunque esto no es directamente una operación entre las funciones para crear una nueva función del tiempo, ilustra cómo la igualdad de dos funciones (un caso específico de su relación) puede resolver un problema del mundo real. </li><br><br><li><b>Velocidad Relativa (Resta de las Velocidades): </b><br><br>La velocidad a la que se acercan los dos ciclistas es la magnitud de la diferencia de sus velocidades. La velocidad del ciclista 1 es +15 km/h y la del ciclista 2 es -10 km/h (negativa porque va en dirección opuesta). La velocidad relativa de acercamiento es: <br><br>Vrelativa = ∣V1  −V2∣ = ∣15 − (−10)∣ = ∣15 + 10∣ = 25 km/h<br><br>Aunque las velocidades no son funciones explícitas del tiempo en este ejemplo (son constantes), conceptualmente podríamos tener funciones de velocidad que varían con el tiempo, y su diferencia nos daría la velocidad relativa. <br><br></li></ol><b>Dominio en este Contexto: </b><br><br>El dominio de estas funciones de posición sería el tiempo t  ≥ 0 (el tiempo no puede ser negativo desde el inicio de su movimiento). El dominio práctico estaría limitado por la duración del paseo en la Ciclovía o hasta que se encuentren. <br><br><b>Rango en este Contexto: </b><br><br>El rango de las funciones de posición serían las posibles ubicaciones de cada ciclista a lo largo del tiempo dentro del dominio considerado. El rango de la función de distancia sería la distancia entre ellos a lo largo del tiempo. <br><br>"
+              }
+            ]	
+          }
+        ]
+      },
+      {
+        "id": "tipos-funciones-y-propiedades",
+        "titulo": "5. Tipos de Funciones y Propiedades",
+        "contenido":[
+
+          {
+            "tipo":"texto",
+            "valor": "En cálculo diferencial, las funciones se clasifican en diversos tipos según sus propiedades y características. Se pueden clasificar como funciones algebraicas o trascendentes, así como funciones crecientes, decrecientes o constantes. Las funciones algebraicas incluyen polinómicas, racionales e irracionales, mientras que las trascendentes incluyen funciones exponenciales, logarítmicas y trigonométricas. Además, las funciones pueden ser inyectivas, sobreyectivas o biyectivas<br><br><b>Funciones lineales</b><br><br>Llamamos función lineal a las funciones polinómicas de primer grado, es decir, una función cuya representación es una línea recta. Existen diferentes tipos de funciones lineales: <br><br><b>Función constante: </b><br><br>y = n<br>"
+          },
+          {
+            "tipo":"imagen",
+            "valor":"assets/img/funciones/Imagen9.png"
+          },
+          {
+            "tipo":"texto",
+            "valor": "<b>Función de proporcionalidad: </b><br><br>y = mx<br>"
+          },
+          {
+            "tipo":"imagen",
+            "valor":"assets/img/funciones/Imagen10.png"
+          },
+          {
+            "tipo":"texto",
+            "valor": "<b>Expresión general de la función lineal: </b><br><br>y = mx + n<br>"
+          },
+          {
+            "tipo":"imagen",
+            "valor":"assets/img/funciones/Imagen11.png"
+          },
+          {
+            "tipo":"texto",
+            "valor": "<b>Funciones lineales a trozos</b><br>"
+          },
+          {
+            "tipo":"imagen",
+            "valor":"assets/img/funciones/Imagen12.png"
+          },
+          {
+            "tipo":"imagen",
+            "valor":"assets/img/funciones/Imagen13.png"
+          },
+          {
+            "tipo":"texto",
+            "valor": "<b>Funciones cuadráticas</b><br><br>Son funciones de la forma y = ax² + bx + c, con a ≠ 0<br><br>"
+          },
+          {
+            "tipo":"imagen",
+            "valor":"assets/img/funciones/Imagen14.png"
+          },
+          {
+            "tipo":"texto",
+            "valor": "<b>Funciones con valor absoluto</b><br>"
+          },
+          {
+            "tipo":"imagen",
+            "valor":"assets/img/funciones/Imagen15.png"
+          },
+          {
+            "tipo":"texto",
+            "valor": "<b>Funciones de proporcionalidad inversa</b><br><br>Es una función que relaciona dos magnitudes inversamente proporcionales, son funciones del tipo y = k/x<br>"
+          },
+          {
+            "tipo":"imagen",
+            "valor":"assets/img/funciones/Imagen16.png"
+          },
+          {
+            "tipo":"imagen",
+            "valor":"assets/img/funciones/Imagen17.png"
+          },
+          {
+            "tipo":"texto",
+            "valor": "<b>Funciones Radicales</b><br><br>Son aquellas que viene expresadas mediante un radical <br><br>"
+          },
+          {
+            "tipo":"imagen",
+            "valor":"assets/img/funciones/Imagen18.png"
+          },
+          {
+            "tipo":"imagen",
+            "valor":"assets/img/funciones/Imagen19.png"
+          },
+          {
+            "tipo":"texto",
+            "valor": "<b>Funciones exponenciales</b><br><br>Se llaman funciones exponenciales a las que tienen la ecuación y = a<sup>bx</sup>, siendo la base \"a\" un número real positivo distinto de cero. <br><br>"
+          },
+          {
+            "tipo":"imagen",
+            "valor":"assets/img/funciones/Imagen20.png"
+          },
+          {
+            "tipo":"texto",
+            "valor": "<b>Funciones Logarítmicas</b><br><br>Las funciones del tipo y = log<sub>a</sub>x  llamadas logarítmicas son la inversa de la función exponencial y = a<sup>x</sup>. <br><br>"
+          },
+          {
+            "tipo":"imagen",
+            "valor":"assets/img/funciones/Imagen21.png"
+          },
+          {
+            "tipo":"texto",
+            "valor": "<b>Funciones Trigonométricas</b><br><br>Son funciones asociadas a una razón trigonométrica. En este apartado veremos tres de ellas: la función seno, coseno y tangente. <br><br><b>Función seno</b><br><br>"
+          },
+          {
+            "tipo":"imagen",
+            "valor":"assets/img/funciones/Imagen22.png"
+          },
+          {
+            "tipo":"texto",
+            "valor": "<b>Función coseno</b><br><br>"
+          },
+          {
+            "tipo":"imagen",
+            "valor":"assets/img/funciones/Imagen23.png"
+          },
+          {
+            "tipo":"texto",
+            "valor": "<b>Función tangente</b><br><br>"
+          },
+          {
+            "tipo":"imagen",
+            "valor":"assets/img/funciones/Imagen24.png"
+          },
+          {
+            "tipo":"ejemplo",
+            "contenido":[
+              {
+                "tipo":"texto",
+                "valor": "<b>Ejemplo de la vida real del tema 5: Tipos de funciones y sus propiedades</b><br><br>Imagina un tanque de agua en una casa que se llena en tres etapas diferentes: <br><ul><li><b>Etapa 1 (Minutos 0-5): </b>Se abre una llave con un flujo constante y el nivel del agua sube linealmente. Supongamos que la altura del agua h(t) (en centímetros) en función del tiempo t (en minutos) es: <br><br> h1(t)  = 10t para 0 ≤ t ≤5<br><br>(Esta es una función lineal con pendiente constante). <br></li><li><b>Etapa 2 (Minutos 5-15): </b>Se abre una segunda llave con un flujo diferente, y el nivel del agua sube a un ritmo que disminuye con el tiempo (quizás la presión baja). Supongamos que la altura del agua sigue una raíz cuadrada: <br><br>h2(t) = 20 + 5√t − 5 para 5 < t ≤ 15<br><br>(Esta involucra una función radical). <br></li><li><b>Etapa 3 (Minutos 15-20): </b>El tanque se acerca a su capacidad máxima y el ritmo de llenado disminuye rápidamente, acercándose asintóticamente a un nivel máximo. Supongamos que la altura se modela con una función que involucra un término exponencial decreciente: <br><br>h3(t) = 50 − 10e−(t−15) para 15 < t ≤ 20<br><br>(Esta involucra una función exponencial). <br></li></ul>La altura total del agua en el tanque en función del tiempo se describe por una función definida por partes: <br><br>"
+              },
+              {
+                "tipo":"imagen",
+                "valor":"assets/img/funciones/Imagen25.png"
+              },
+              {
+                "tipo":"texto",
+                "valor": "<b>Uso de Symbolab para el Análisis: </b><br><br>Ahora haciendo uso de la herramienta de IA Symbolab podemos explorar las propiedades de cada de cada una de las tres etapa definidas, en las cuales se hizo uso de un tipo de función diferente, y de la función definida por partes: <br><ol><li><b>Graficar cada parte individualmente: </b><br><br><ul><li><b>Lineal: </b> Ingresen plot y = 10x for x from 0 to 5 en Symbolab y observen la línea recta con pendiente constante. </li><li><b>Radical: </b> Ingresen plot y = 20 + 5sqrt(x-5) for x from 5 to 15 y observen cómo la pendiente disminuye. </li><li><b>Exponencial: </b> Ingresen plot y = 50 - 10e^-(x-15) for x from 15 to 20 y observen cómo la función se acerca a una asíntota horizontal. </li></ul></li><br><li><b>Graficar la función definida por partes completa: </b><br><br><ul><li>Intenten ingresar la función por partes en Symbolab usando la sintaxis adecuada (Symbolab soporta funciones piecewise). </li><li>Por ejemplo: plot piecewise { 0 <= x <= 5: 10x, 5 < x <= 15: 20 + 5sqrt(x-5), 15 < x <= 20: 50 - 10e^-(x-15) }.</li><li>Observen cómo las diferentes partes se conectan (o no) en los puntos de empalme. </li></ul></li><br><li><b>Analizar propiedades específicas usando Symbolab: </b><br><br><ul><li><b>Valores en puntos específicos: </b>Evalúen la altura en momentos específicos dentro de cada etapa (h(3), h(10), h(18)) usando la definición de la función. Pueden verificar estos valores observando la gráfica en Symbolab. </li><li><b>Continuidad: </b>La función es continua en los puntos de empalme (t = 5 y t = 15). Pueden verificar esto evaluando los límites laterales en Symbolab (aunque la sintaxis para límites en piecewise puede ser más avanzada, la gráfica les dará una buena indicación visual). </li><li><b>Dominio y Rango: </b>Identifiquen el dominio total de la función (0 ≤ t ≤ 20) y  estimen el rango observando la gráfica en Symbolab (los valores mínimos y máximos de la altura). </li><li><b>Monotonía: </b>La función es siempre creciente, o hay intervalos donde el ritmo de llenado cambia. Pueden inferir lo anterior de la pendiente de la gráfica en cada etapa. </li><br></ul></li></ol>"
+              }
+            ]
+          }
+          
+
+        ]
+      },
+      {
+        "id": "funciones-inversas",
+        "titulo": "6. Funciones Inversas",
+        "contenido":[
+
+          {
+            "tipo":"texto",
+            "valor": "Las funciones f y g son funciones inversas si f ( g ( x )) = x para todas las x en el dominio de g y g ( f ( x )) = x para todas las x en el dominio de f . <br><br>La inversa de una función f es usualmente denotada por f  –1  y se lee “ f inversa.” (Dese cuenta que el superíndice –1 en f  –1   no es un exponente). <br><br>Suponga que dos funciones son inversas. Si ( a , b ) es un punto en la <b>gráfica </b>de la función original, entonces el punto ( b, a ) debe ser un punto en la gráfica de la función inversa. Las gráficas son imágenes espejo una de otra con respecto a la recta y = x . <br>"
+          },
+          {
+            "tipo":"imagen",
+            "valor":"assets/img/funciones/Imagen26.png"
+          },
+          {
+            "tipo":"texto",
+            "valor": "Para encontrar la inversa de una función algebraicamente, intercambie la x y la y, y resuelva para y. <br>"
+          },
+          {
+            "tipo":"ejemplo",
+            "contenido":[
+              {
+                "tipo":"imagen",
+                "valor":"assets/img/funciones/Imagen27.png"
+              }
+            ]
+          },
+          {
+            "tipo":"ejemplo",
+            "contenido":[
+              {
+                "tipo":"texto",
+                "valor":"<b>Ejemplo de la vida real del tema 6: Función inversa</b><br><br>En Colombia, la temperatura se mide comúnmente en grados Celsius (°C), mientras ue en otros países se usa grados Fahrenheit (°F). <br><br>Existe una fórmula para convertir de Celsius a Fahrenheit: <br>"
+              },
+              {
+                "tipo":"imagen",
+                "valor":"assets/img/funciones/Imagen28.png"
+              },
+              {
+                "tipo":"texto",
+                "valor": "Aquí, C es la temperatura en grados Celsius (la variable de entrada), y F(C) es la temperatura en grados Fahrenheit (la variable de salida). Esta función toma una temperatura en Celsius y la convierte a su equivalente en Fahrenheit. <br><br><b>La Función Inversa: </b><br><br>La función inversa haría la conversión en sentido contrario: tomar una temperatura en grados Fahrenheit y convertirla a su equivalente en grados Celsius. Para encontrar esta función inversa, podemos seguir los pasos algebraicos: <br>"
+              },
+              {
+                "tipo":"imagen",
+                "valor":"assets/img/funciones/Imagen29.png"
+              },
+              {
+                "tipo":"texto",
+                "valor": "Ahora, C(F) es la función inversa que toma una temperatura en Fahrenheit (la entrada) y la convierte a su equivalente en Celsius (la salida). <br><br><b>Uso de Symbolab para Explorar la Función y su Inversa: </b><br><br>Apreciados estudiantes para la siguiente actividad practica pueden hacer uso de la IA Symbolab para: <br><br><b>Graficar la función original (Celsius a Fahrenheit): </b><br><br>Ingresen plot y = (9/5)x + 32 en Symbolab.  Observen la línea recta con una pendiente positiva. El eje x representa Celsius y el eje y representa Fahrenheit. <br><br><b>Graficar la función inversa (Fahrenheit a Celsius): </b><br><br>Ingresen plot y = (5/9)(x - 32) en Symbolab. Observen otra línea recta. Aquí, el eje x representa Fahrenheit y el eje y representa Celsius. <br><br><b>Graficar ambas funciones en el mismo plano: </b><br><br>Ingresen plot y = (9/5)x + 32, y = (5/9)(x - 32), y = x en Symbolab. Observen cómo las gráficas de la función original y su inversa son reflexiones la una de la otra respecto a la línea y=x. Esta es una propiedad fundamental de las funciones inversas. <br><br><b>Evaluar puntos y verificar la relación inversa: </b><br><br>Pueden elegir una temperatura en Celsius, por ejemplo, 20°C. <br><br>Usen la función original para convertirla a Fahrenheit: <br><br>F (20) = 5/9(20) + 32 = 36 + 32  = 68°F. <br><br>Ahora, tomen ese valor en Fahrenheit (68°F) y úsenlo en la función inversa para convertirlo de vuelta a Celsius: <br><br>C (68) = 9/5 (68 − 32) = 9/5 (36)  =20°C. <br><br>Pueden usar Symbolab para verificar estos cálculos ingresando <br><br>(9/5) * 20 + 32 y (5/9) * (68 - 32) <br><br>El anterior ejemplo de la conversión de temperatura proporciona una ilustración clara y práctica del concepto de función inversa y su propiedad fundamental. <br><br>El uso de Symbolab facilita la visualización y la verificación de los cálculos."
+              }
+            ]
+          },
+          {
+
+          }
+
+        ]
+      }
+
     ]
+  
   }
   

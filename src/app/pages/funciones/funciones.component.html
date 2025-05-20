@@ -1,18 +1,51 @@
-<div class="modulo">
-    <h1>{{ contenido?.titulo }}</h1>
+<section *ngIf="contenido">
+  <h2>{{ contenido.titulo }}</h2>
+  <p *ngIf="contenido.descripcion">{{ contenido.descripcion }}</p>
+
+  <div *ngFor="let subtema of contenido.subtemas" class="subtema">
+    <h3>{{ subtema.titulo }}</h3>
+
+    <div *ngFor="let item of subtema.contenido" class="bloque">
+      <p *ngIf="item.tipo === 'subtitulo'" class="subtitulo">{{ item.valor }}</p>
+
+
+      <p *ngIf="item.tipo === 'texto'" [innerHTML]="item.valor" class="texto"></p>
+
+
+      <img
+        *ngIf="item.tipo === 'imagen'"
+        [src]="item.valor"
+        alt="Imagen explicativa"
+        class="imagen-responsiva"
+      />
+
+      <iframe
+        *ngIf="item.tipo === 'video'"
+        [src]="item.valor"
+        frameborder="0"
+        allowfullscreen
+        class="video-embed"
+      ></iframe>
+
+      
+      <div *ngIf="item.tipo === 'ejemplo'" class="ejemplo">
+        <strong>Ejemplo:</strong>
   
-    <div *ngFor="let subtema of contenido?.subtemas" class="subtema">
-      <h2>{{ subtema.titulo }}</h2>
-  
-      <div *ngFor="let bloque of subtema.contenido">
-        <p *ngIf="bloque.tipo === 'texto'">{{ bloque.valor }}</p>
-        <img *ngIf="bloque.tipo === 'imagen'" [src]="bloque.valor" alt="Imagen explicativa" />
-        <iframe *ngIf="bloque.tipo === 'video'" [src]="bloque.valor" frameborder="0" allowfullscreen></iframe>
-        <div *ngIf="bloque.tipo === 'ejemplo'" class="ejemplo">
-          <p><strong>Ejemplo:</strong> {{ bloque.valor }}</p>
-          <button>Comprobar con IA</button>
-        </div>
+      <div *ngFor="let ex of item.contenido">
+        
+        <p *ngIf="ex.tipo === 'texto'" [innerHTML]="ex.valor" class="texto"></p>
+
+      <img
+        *ngIf="ex.tipo === 'imagen'"
+        [src]="ex.valor"
+        alt="Imagen del ejemplo"
+        class="imagen-responsiva"
+      />
       </div>
+
+      <button class="btn-ia">Comprobar con IA</button>
+      </div>
+
     </div>
   </div>
-  
+</section>
