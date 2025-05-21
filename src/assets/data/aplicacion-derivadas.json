@@ -2,14 +2,242 @@
     "titulo": "Unidad 4: APLICACION DE DERIVADAS",
     "subtemas": [
       {
-        "id": "introduccion",
-        "titulo": "1. Introducción a las DERIVADAS",
+        "id": "reglas-tangentes-y-normales",
+        "titulo": "1. Rectas Tangentes y Normales ",
         "contenido": [
           {
             "tipo": "texto",
-            "valor": "APLIQUEMOSELA??."
+            "valor": "Imaginen que tienen una curva, la gráfica de una función y = f(x) en el plano cartesiano. Piensen en un punto específico sobre esa curva. La derivada, esa herramienta poderosa que hemos estado estudiando, tiene una interpretación geométrica fascinante justo en ese punto. <br><br><b>1. La Recta Tangente: El \"Roce\" en un Punto</b><br><br><ul><li><b>La Idea Central: </b>¿Recuerdan la definición de la derivada? </li></ul>"
+          },
+          {
+            "tipo":"imagen",
+            "valor":"assets/img/aplicacion-derivadas/Imagen1.png"
+          },
+          {
+            "tipo":"texto",
+            "valor": "Esta expresión, que al principio puede parecer abstracta, ¡tiene una representación gráfica muy clara! Si consideramos dos puntos cercanos sobre la curva, (a,f(a)) y (a+h,f(a+h)), la fracción f(a+h)−f(a)/h es simplemente la pendiente de la recta que une estos dos puntos, ¡la recta secante! <br><br><ul><li><b>Acercándonos al Punto: </b>Ahora, ¿qué pasa si hacemos que el segundo punto se acerque cada vez más al primero, es decir, hacemos que h tienda a cero? Esa recta secante va a ir girando hasta que, en el límite, ¡apenas \"roce\" la curva en el punto (a,f(a))! Esa recta límite es lo que llamamos la recta tangente a la curva en ese punto. <br><br><li><b>La Pendiente Mágica: </b>La pendiente de esta recta tangente es precisamente el valor de la derivada de la función en ese punto, f′(a). ¡Así que la derivada nos da la inclinación instantánea de la curva en cualquier punto! </li><br><br><li><b>Encontrando su Ecuación: </b>Para encontrar la ecuación de esta recta tangente, necesitamos un punto (que ya lo tenemos, (a,f(a))) y su pendiente (que es f′(a)). Usamos la ecuación punto-pendiente de una recta: <br></li></ul>"
+          },
+          {
+            "tipo":"imagen",
+            "valor": "assets/img/aplicacion-derivadas/Imagen2.png"
+          },
+          {
+            "tipo": "texto",
+            "valor": "¡Con esta fórmula podemos encontrar la ecuación de la recta tangente en cualquier punto donde la derivada exista! <br><br>"
+          },
+          {
+            "tipo":"ejemplo",
+            "contenido":[
+              {
+                "tipo": "texto",
+                "valor": "Consideremos la función f(x) = x2 en el punto (2,4). <br><br><ul><li>Primero, encontramos la derivada: f′(x) = 2x. </li><li>Luego, evaluamos la derivada en x=2: f′(2) = 2(2)=4. ¡Esta es la pendiente de la recta tangente en (2,4)! </li><li>Finalmente, usamos la ecuación punto-pendiente: y – 4 =4(x−2), que simplificando nos da y = 4x−4. </li><li>¡Esta es la ecuación de la recta tangente a y = x2 en el punto (2,4)! </li></ul><br><b>2. La Recta Normal: La \"Perpendicular\" en el Punto</b><br><br><ul><li><b>Definición: </b>Ahora, imaginemos otra recta que pasa por el mismo punto (a,f(a)), pero esta vez, en lugar de \"rozar\" la curva, ¡es perfectamente perpendicular a la recta tangente! Esta recta se llama la recta normal a la curva en ese punto. </li><li><b>Relación de Pendientes: </b>¿Recuerdan la condición para que dos rectas sean perpendiculares? ¡El producto de sus pendientes debe ser −1 (siempre que ninguna sea horizontal o vertical)! </li><li><b>Calculando la Pendiente Normal: </b>Si la pendiente de la recta tangente es m<sub>tangente</sub> = f′(a) (y no es cero), entonces la pendiente de la recta normal, m<sub>normal</sub>, será: </li></ul><br>"
+              },
+              {
+                "tipo":"imagen",
+                "valor":"assets/img/aplicacion-derivadas/Imagen3.png"
+              },
+              {
+                "tipo":"imagen",
+                "valor":"assets/img/aplicacion-derivadas/Imagen4.png"
+              },
+              {
+                "tipo":"texto",
+                "valor": "<b>En resumen: </b><br><ul><li>La <b>derivada</b> f′(a) en un punto (a,f(a)) es la <b>pendiente de la recta tangente </b>a la curva en ese punto. </li><li>La <b>recta tangente </b>es la mejor aproximación lineal de la función cerca del punto de tangencia. </li><li>La <b>recta normal</b> es perpendicular a la recta tangente en el punto de tangencia. </li></ul><br><b>¿Por qué son importantes las rectas tangentes y normales? </b><br><ul><li>Nos dan una comprensión geométrica profunda del significado de la derivada. </li><li>La recta tangente puede usarse para aproximar el valor de una función cerca de un punto (lo veremos más adelante con las aproximaciones lineales). </li><li>En física e ingeniería, la tangente puede representar la dirección instantánea de movimiento o la dirección de una fuerza en un punto. </li><li>La normal es importante en óptica (la dirección del rayo incidente y reflejado se miden con respecto a la normal a la superficie) y en geometría de superficies. </li></ul><br><br>"
+              }
+            ]
+          },
+          {
+            "tipo":"ejemplo",
+            "contenido":[
+              {
+                "tipo":"texto",
+                "valor": "<b>Ejemplo de la vida real sobre el tema Rectas Tangentes y Normales </b><br><br>Imagina que estás conduciendo un carro por una carretera que describe una curva parabólica. En un instante dado, tu carro se encuentra en un punto específico de la curva. La dirección en la que el carro se está moviendo en ese preciso instante está dada por la recta tangente a la curva en ese punto. Si la curva de la carretera está dada por la función y=x2 (simplificando la realidad a un plano 2D) y en un instante te encuentras en el punto donde x=1, ¿cuál es la ecuación de la recta tangente que representa tu dirección de movimiento en ese instante? <br><br><b>Solución: </b><br><br><ol><li><b>Identificar la función y el punto: </b><ul><li>La función que describe la curva de la carretera es f(x) = x2. </li><li>El punto en el que nos encontramos es cuando x=1. Para encontrar la coordenada y, evaluamos la función en x = 1: y = f (1) = (1) 2 = 1. <br><br>Así que el punto de interés es (1,1). </li></ul><li><br><br><li><b>Encontrar la derivada de la función: </b><br>La derivada de f(x) = x2 es f′(x) = 2x. </li><li><b>Evaluar la derivada en el punto de interés para obtener la pendiente de la tangente: </b><br>En x = 1, la pendiente de la recta tangente es mtangente = f′(1) = 2(1) = 2. </li><li><b>Usar la ecuación punto-pendiente para encontrar la ecuación de la recta tangente: </b><br><ul><li>La ecuación punto-pendiente es y − y1 = m(x−x1), donde (x1, y1) = (1,1) y m = 2. </li><li>Sustituyendo los valores: y – 1 = 2(x−1). </li></ul></li><li><b>Simplificar la ecuación de la recta tangente (opcional): </b><br><ul><li>Y – 1 = 2x − 2</li><li>Y = 2x − 1</li></ul><li></ol><br><br><b>Respuesta: </b><br><br>La ecuación de la recta tangente a la curva de la carretera y = x2 en el punto donde x=1 (el punto (1,1)) es y = 2x − 1. Esta recta representa la dirección instantánea en la que el carro se está moviendo en ese punto. Si en ese instante el carro continuara en línea recta, seguiría la trayectoria de esta recta tangente. <br><br>"
+              }
+            ]
           }
           
+        ]
+      },
+      {
+        "id": "tasas-cambio-relacionadas",
+        "titulo": "2. Tasas de Cambio Relacionadas",
+        "contenido":[
+          {
+            "tipo":"texto",
+            "valor": "Las Tasas de Cambio Relacionadas son una aplicación muy interesante de la derivada que nos permite entender cómo cambian diferentes cantidades que están relacionadas entre sí. Aquí te presento información clave para trabajar este subtema con tus estudiantes universitarios de cálculo diferencial. <br><br>El concepto fundamental detrás de las tasas de cambio relacionadas es el uso de la <b>derivada implícita.</b> En muchas situaciones, las variables no son funciones directas de una sola variable independiente (como y = f(x)), sino que están relacionadas a través de una ecuación. Si todas estas variables dependen del tiempo (t), podemos derivar implícitamente la ecuación con respecto a t para relacionar sus tasas de cambio con respecto al tiempo (dx/dt, dy/dt, etc.). <br><br><b>Pasos Generales para Resolver Problemas de Tasas de Cambio Relacionadas: </b><br><br><ol><li><b>Leer y Comprender el Problema: </b>Identifica claramente qué cantidades varían, cuáles son constantes, qué tasa(s) de cambio se conocen y qué tasa(s) de cambio se deben encontrar. Es útil hacer un diagrama si la situación lo permite. <br></li><li><b>Establecer las Variables y sus Notaciones: </b>Asigna símbolos a todas las cantidades que varían con el tiempo (por ejemplo, x(t), y(t), V(t) para distancia, altura, volumen, respectivamente). Identifica las tasas de cambio que se dan en el problema (por ejemplo, dx/dt = 5 m/s) y la tasa de cambio que se busca (por ejemplo, encontrar dV/dt). <br></li><li><b>Encontrar una Ecuación que Relacione las Variables: </b>Busca una ecuación que conecte las variables cuyas tasas de cambio están involucradas en el problema. Esta ecuación a menudo proviene de fórmulas geométricas (área, volumen, teorema de Pitágoras), relaciones físicas o la descripción del problema. <br></li><li><b>Derivar Implícitamente la Ecuación con Respecto al Tiempo (t): </b> Aplica las reglas de derivación (regla de la cadena, regla del producto, regla del cociente, etc.) a ambos lados de la ecuación con respecto a la variable tiempo (t). Recuerda que la derivada de una variable como x con respecto a t es dx/dt. <br></li><li><b>Sustituir los Valores Conocidos: </b>Una vez que hayas derivado la ecuación, sustituye los valores numéricos de las variables y las tasas de cambio conocidas en el instante específico que se menciona en el problema. <br></li><li><b>Resolver para la Tasa de Cambio Deseada: </b> Despeja la tasa de cambio que se te pide encontrar en el problema. <br></li><li><b>Interpretar la Respuesta: </b>Asegúrate de dar la respuesta con las unidades correctas y en el contexto del problema (por ejemplo, \"El volumen del cono está aumentando a una tasa de 10 cm3/s\").<br><br></li>"
+          },
+          {
+            "tipo":"ejemplo",
+            "contenido":[
+              {
+                "tipo":"texto",
+                "valor": "<b>Ejemplo de la vida real sobre Tasas de Cambio Relacionadas</b>Imagina un tanque con forma de cono invertido (con la punta hacia abajo). Se está bombeando agua al tanque a una tasa constante. Queremos saber a qué velocidad está subiendo el nivel del agua en el tanque en un instante específico. <br><br><b>Descripción del Problema: </b><br><br>Un tanque cónico invertido tiene una altura de 10 metros y un radio en la parte superior de 5 metros. <br><br>Se está bombeando agua al tanque a una tasa de 3 metros cúbicos por minuto (dV/dt = 3m3/min). <br>Queremos encontrar la velocidad a la que sube el nivel del agua (dh/dt) cuando la altura del agua en el tanque es de 6 metros (h = 6m). <br><br><b>Solución: </b><br>"
+              },
+              {
+                "tipo":"imagen",
+                "valor":"assets/img/aplicacion-derivadas/Imagen5.png"
+              },
+              {
+                "tipo":"imagen",
+                "valor":"assets/img/aplicacion-derivadas/Imagen6.png"
+              },
+              {
+                "tipo":"texto",
+                "valor": "<b>7. Interpretar la Respuesta: </b><br><br>Cuando la altura del agua en el tanque es de 6 metros, el nivel del agua está subiendo a una tasa de 1/3π metros por minuto. Aproximadamente, 1/3π ≈ 0.106 m/min. <br><br>El anterior ejemplo ilustra cómo las tasas de cambio de diferentes variables (volumen y altura del agua) están relacionadas a través de una ecuación geométrica y cómo podemos usar la derivada para encontrar una de estas tasas cuando conocemos la otra. <br><br> "
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "maximos-minimos",
+        "titulo": "3. Valores Máximos y Mínimos (Optimización) ",
+        "contenido":[
+
+          {
+            "tipo":"texto",
+            "valor":"La optimización consiste en encontrar los valores más grandes (máximos) o más pequeños (mínimos) que puede alcanzar una función dentro de un dominio específico. En cálculo diferencial, utilizamos las derivadas para identificar los puntos donde una función puede tener estos valores extremos. <br><br><b>Conceptos Fundamentales: </b><br><br><ol><li><b>Valores Extremos: </b><br><ul><li><b>Máximo Absoluto (o Global): </b>El valor más grande que alcanza la función en todo su dominio. </li><li><b>Mínimo Absoluto (o Global): </b>El valor más pequeño que alcanza la función en todo su dominio. </li><li><b>Máximo Local (o Relativo): </b>Un valor de la función que es mayor o igual que todos los valores cercanos a él en un intervalo abierto. </li><li><b>Mínimo Local (o Relativo): </b>Un valor de la función que es menor o igual que todos los valores cercanos a él en un intervalo abierto. </li></li><li><b>Puntos Críticos: </b>Un punto c en el dominio de una función f es un punto crítico si se cumple alguna de las siguientes condiciones: <br><ul><li>f′(c) = 0 (la derivada es cero en ese punto). En estos puntos, la recta tangente a la gráfica de la función es horizontal. </li><li>f′(c) no existe (la derivada no está definida en ese punto). Esto puede ocurrir en esquinas, picos o discontinuidades verticales. </li></ul></li></ol><br><br><b>Teoremas Clave: </b><br><br><ul><li><b>Teorema del Valor Extremo: </b>Si una función f es continua en un intervalo cerrado [a,b], entonces f debe alcanzar un máximo absoluto y un mínimo absoluto en algún punto de ese intervalo. Estos valores extremos pueden ocurrir en los puntos críticos dentro del intervalo o en los extremos del intervalo (a o b). <br></li><li><b>Teorema de Fermat (para extremos locales): </b>Si una función f tiene un máximo o mínimo local en un punto interior c de su dominio, y si f′(c) existe, entonces f′(c)=0. (Ojo: la condición f′(c)=0 es necesaria pero no suficiente para tener un extremo local). <br></li></ul><br><b>Criterios para Identificar Máximos y Mínimos: </b><br><ol><li><b>Criterio de la Primera Derivada: </b><br><ul><li>Si f′ cambia de positiva a negativa en un punto crítico c, entonces f tiene un máximo local en c. </li><li>Si f′ cambia de negativa a positiva en un punto crítico c, entonces f tiene un mínimo local en c. </li><li>Si f′ no cambia de signo en un punto crítico c, entonces f no tiene ni máximo ni mínimo local en c (puede ser un punto de inflexión horizontal). </li></ul><li><br><li><b>Criterio de la Segunda Derivada: </b><br><ul><li>Si f′(c) = 0 y f′′(c) > 0, entonces f tiene un mínimo local en c (la función es cóncava hacia arriba). </li><li>Si f′(c) = 0 y f′′(c) < 0, entonces f tiene un máximo local en c (la función es cóncava hacia abajo). </li><li>Si f′(c) = 0 y f′′(c) = 0, el criterio no es concluyente. Se debe usar el criterio de la primera derivada o analizar derivadas de orden superior. </li></ul></li></ol><br><b>Estrategia para Encontrar los Valores Extremos Absolutos en un Intervalo Cerrado [a,b]: </b><br><br><ol><li>Encuentra todos los puntos críticos de f en el intervalo abierto (a,b). </li><li>Evalúa f en cada uno de estos puntos críticos. </li><li>Evalúa f en los extremos del intervalo, f(a) y f(b). </li><li>El valor más grande entre los obtenidos en los pasos 2 y 3 es el máximo absoluto en [a,b], y el valor más pequeño es el mínimo absoluto en [a,b]. </li></ol><br><br>"
+          },
+          {
+            "tipo":"ejemplo",
+            "contenido":[
+              {
+                "tipo":"texto",
+                "valor": "<b>Ejercicio de la vida real sobre Valores Máximos y Mínimos (Optimización) </b><br><br>Un granjero tiene 100 metros de cerca para construir un corral rectangular para sus ovejas. Quiere maximizar el área del corral. ¿Cuáles deben ser las dimensiones del corral para lograr la mayor área posible? <br><br><b>Solución: </b><br><br><b>1.Entender el Problema: </b>Queremos encontrar las dimensiones (largo y ancho) de un rectángulo que tenga el área máxima posible, dado que el perímetro (la cantidad de cerca disponible) es de 100 metros. <br><br>b>2.Dibujar un Diagrama: </b><br><br>"
+              },
+              {
+                "tipo":"imagen",
+                "valor": "assets/img/aplicacion-derivadas/Imagen7.png"
+              },
+              {
+                "tipo":"texto",
+                "valor": "<b>3.Introducir Notación: </b><br><br><ul><li>Sea l la longitud del corral (en metros). </li><li>Sea a el ancho del corral (en metros). </li><li>Sea A el área del corral (en metros cuadrados). </li><li>El perímetro P está dado por P = 2l + 2a = 100 metros. </li></ul><br><br><b>4.Establecer la Función Objetivo: </b>Queremos maximizar el área A, que está dada por la fórmula: <br><br>A = l x a<br><br><ol><li><b>Identificar las Restricciones: </b>Tenemos la restricción del perímetro: <br><br>2l + 2a = 100</li><br><br><li><b>Reducir la Función Objetivo a una Sola Variable: </b>Usamos la restricción del perímetro para expresar una de las variables en términos de la otra. Despejemos a de la ecuación del perímetro: <br><br>2a = 100 – 2l<br><br>a = 50 - l<br><br>Ahora sustituimos esta expresión para a en la fórmula del área: <br><br>A(l) = l(50 – l) = 50l – l<sup>2</sup><br><br>El dominio para la longitud l es 0 < l < 50 (si l = 0 o l = 50, el área sería cero). <br><br></li><li><b>Encontrar los Valores Extremos: </b>Ahora tenemos una función del área en términos de una sola variable, A(l) = 50l − l2. Para encontrar el máximo, derivamos A(l) con respecto a l y encontramos los puntos críticos: <br></li></ol><br><br>"
+              },
+              {
+                "tipo":"imagen",
+                "valor": "assets/img/aplicacion-derivadas/Imagen77.png"
+              },
+              {
+                "tipo":"texto",
+                "valor": "Igualamos la derivada a cero para encontrar los puntos críticos: <br><br>"
+              },
+              {
+                "tipo":"imagen",
+                "valor": "assets/img/aplicacion-derivadas/Imagen8.png"
+              },
+              {
+                "tipo":"texto",
+                "valor": "Ahora, usamos el criterio de la segunda derivada para verificar si este punto crítico corresponde a un máximo. Encontramos la segunda derivada de A(l): <br><br>"
+              },
+              {
+                "tipo":"imagen",
+                "valor": "assets/img/aplicacion-derivadas/Imagen9.png"
+              },
+              {
+                "tipo":"texto",
+                "valor": "<b>5.Encontrar las Dimensiones: </b>Ahora que tenemos el valor del que maximiza el área, podemos encontrar el valor de a usando la restricción: <br><br>a = 50 – l = 50 – 25 = 25<br><br><b>6.Responder la Pregunta: </b>Las dimensiones del corral que maximizan el área son un largo de 25 metros y un ancho de 25 metros. Esto significa que el corral con la mayor área posible es un cuadrado. <br><br><b>El área máxima será: </b><br><br>A = l ⋅ a = 25 ⋅ 25 = 625 metros cuadrados<br><br>Este ejemplo sencillo muestra cómo usar el cálculo diferencial para resolver un problema de optimización práctico: encontrar las dimensiones óptimas para maximizar un área bajo una restricción de perímetro. <br><br>"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id":"concavidad-p-inflexion",
+        "titulo": "4. Concavidad y Puntos de Inflexión ",
+        "contenido": [
+          {
+            "tipo":"texto",
+            "valor": "Son conceptos clave para entender la forma en que una función se curva y cambia su curvatura. Aquí tienes la información esencial para trabajar este subtema con tus estudiantes universitarios de cálculo diferencial: <br><br><ol><li><b>Concavidad: </b><br><br>La concavidad de la gráfica de una función describe si la curva se abre hacia arriba o hacia abajo en un intervalo. <br><br><ul><li><b>Cóncava Hacia Arriba: </b>La gráfica de una función f es cóncava hacia arriba en un intervalo I si la gráfica de f se encuentra por encima de todas sus rectas tangentes en ese intervalo. Intuitivamente, tiene forma de \"U\".<br><ul><li>Condición con la Segunda Derivada: Si f′′(x)>0 para todo x en un intervalo I, entonces la gráfica de f es cóncava hacia arriba en I. </li></ul></li><br><li><b>Cóncava Hacia Abajo: </b>La gráfica de una función f es cóncava hacia abajo en un intervalo I si la gráfica de f se encuentra por debajo de todas sus rectas tangentes en ese intervalo. Intuitivamente, tiene forma de \"∩\" invertida. <br><ul><li>Condición con la Segunda Derivada: Si f′′(x) < 0 para todo x en un intervalo I, entonces la gráfica de f es cóncava hacia abajo en I. </li></ul></li><br><li><b>¿Qué pasa si f′′(x) = 0? </b>Si la segunda derivada es cero en un punto, no podemos concluir directamente sobre la concavidad en ese punto. Puede ser un punto de inflexión (donde cambia la concavidad) o simplemente un punto donde la concavidad no cambia, pero la razón de cambio de la pendiente es momentáneamente cero. </li></ul><br><br><li><b> Puntos de Inflexión: </b><br><br>Un punto (c, f(c)) en la gráfica de una función f se llama <b>punto de inflexión </b>si la concavidad de la gráfica cambia en ese punto. Es decir, la gráfica pasa de ser cóncava hacia arriba a cóncava hacia abajo (o viceversa) en x = c. <br><br><ul><li><b>Cómo Encontrar Posibles Puntos de Inflexión: </b>Los puntos de inflexión suelen ocurrir donde la segunda derivada es cero o donde la segunda derivada no existe. <br><ul><li>Encuentra la segunda derivada f′′(x). </li><li>Determina los valores de x para los cuales f′′(x) = 0 o f′′(x) no está definida. Estos valores de x son los candidatos a puntos de inflexión. </li></ul><li><br><li><b>Cómo Verificar si hay un Punto de Inflexión: </b>Para confirmar si un candidato x=c corresponde a un punto de inflexión, debemos verificar si la concavidad de f cambia en x=c. Esto se puede hacer analizando el signo de f′′(x) a la izquierda y a la derecha de c. <br><ul><li>Si el signo de f′′(x) cambia de positivo a negativo (o de negativo a positivo) en x=c, entonces (c,f(c)) es un punto de inflexión. </li></ul></li></ul></li></ol><br><br><b>Pasos para Analizar la Concavidad y Encontrar Puntos de Inflexión: </b><br><br><ol><li><b>Encontrar la Segunda Derivada: </b>Calcula f′′(x). </li><li><b>Determinar los Puntos Donde f′′(x)=0 o f′′(x) no Existe: </b>Estos son los valores críticos de la segunda derivada y los posibles puntos de inflexión. </li><li><b>Crear Intervalos: </b>Utiliza estos valores críticos para dividir el dominio de la función en intervalos. </li><b><li>Analizar el Signo de f′′(x) en Cada Intervalo: </b>Elige un valor de prueba dentro de cada intervalo y evalúa el signo de f′′(x) en ese punto. <br><ul><li>Si f′′(x)>0 en el intervalo, la función es cóncava hacia arriba en ese intervalo. </li><li>Si f′′(x)<0 en el intervalo, la función es cóncava hacia abajo en ese intervalo. </li></ul><li><b><li>Identificar los Puntos de Inflexión: </b>Los puntos donde la concavidad cambia (es decir, donde el signo de f′′(x) cambia) corresponden a puntos de inflexión. Para encontrar las coordenadas completas del punto de inflexión, evalúa la función original f(x) en el valor de x donde ocurre el cambio de concavidad. <li></ol><br><br><b>Ejemplo Sencillo: </b><br><br>Considera la función f(x) = x3 − 3x2 + x − 1. <br><br><ol><li><b>Primera Derivada: </b>f′(x) = 3x2 − 6x + 1</li><li><b>Segunda Derivada: </b>f′′(x) = 6x − 6</li><li><b>Puntos Donde f′′(x) = 0: </b><br><br>6x – 6 = 0 ⟹ 6x = 6 ⟹ x = 1<br><br>La segunda derivada está definida para todos los valores de x. Así que, x = 1 es el único candidato para un punto de inflexión. <br></li><br><li><b>Analizar el Signo de f′′(x): </b><ul><li>Para x < 1 (por ejemplo, x = 0): f′′(0) = 6(0) −6 = −6 < 0. <br>La función es cóncava hacia abajo en (−∞,1). <li><li>Para x > 1 (por ejemplo, x=2): f′′(2) = 6(2) −6 = 12 – 6 = 6 > 0. <br>La función es cóncava hacia arriba en (1,∞). </li></ul></li><br><br><li><b>Punto de Inflexión: </b>Como la concavidad cambia en x = 1, hay un punto de inflexión en x = 1. Para encontrar la coordenada y, evaluamos f(1): <br><br>f(1) = (1)3 − 3(1)2 + (1) – 1 = 1 – 3 + 1 – 1 = −2. <br><br>Por lo tanto, el punto de inflexión es (1,−2). <br><br></li></ol>"
+          },
+          {
+            "tipo":"ejemplo",
+            "contenido":[
+              {
+                "tipo":"texto",
+                "valor": "<b>Ejemplo de la vida real sobre Concavidad y Puntos de Inflexión</b><br><br>Aunque la concavidad y los puntos de inflexión son conceptos más abstractos que las tasas de cambio o la optimización directa, podemos encontrar analogías en la vida real para entenderlos mejor, especialmente en fenómenos que involucran tasas de cambio que a su vez cambian. <br><br><b>La Velocidad de un Carro Acelerando</b><br><br>Imagina que estás viajando en un carro y observas cómo aumenta tu velocidad con el tiempo. Podemos analizar esto en términos de concavidad: <br><br><ul><li><b>Velocidad Aumentando a un Ritmo Cada Vez Mayor: </b>Si la velocidad del carro aumenta cada vez más rápido (por ejemplo, al principio aumenta lentamente, luego más rápido, y después aún más rápido), la gráfica de la velocidad contra el tiempo tendría una <b>concavidad hacia arriba. </b> Esto significa que la tasa de cambio de la velocidad (que es la aceleración) está aumentando. <br></li><li><b>Velocidad Aumentando a un Ritmo Cada Vez Menor: </b>Si la velocidad del carro sigue aumentando, pero el ritmo al que lo hace disminuye gradualmente (por ejemplo, al principio aumenta rápidamente, luego el aumento se hace más lento, y después aún más lento), la gráfica de la velocidad contra el tiempo tendría una <b>concavidad hacia abajo. </b> Esto significa que la tasa de cambio de la velocidad (la aceleración) está disminuyendo. <br></li><li><b>Punto de Inflexión: </b>Podría haber un instante en el tiempo donde la forma en que la velocidad está aumentando cambia. Por ejemplo, al principio la velocidad podría aumentar a un ritmo creciente (concavidad hacia arriba), y luego, después de cierto punto, podría seguir aumentando pero a un ritmo decreciente (concavidad hacia abajo) porque el conductor comienza a soltar gradualmente el acelerador. El punto en la gráfica de velocidad contra tiempo donde ocurre este cambio en la forma del aumento de la velocidad (de un ritmo creciente a un ritmo decreciente, o viceversa) sería análogo a un <b>punto de inflexión. </b>En este punto, la aceleración (la segunda derivada de la posición con respecto al tiempo, o la primera derivada de la velocidad con respecto al tiempo) podría tener un máximo o un mínimo local. </li></ul><br><br><b>En términos de funciones: </b><br><br><ul><li>Si s(t) representa la posición del carro en el tiempo t, entonces:<ul><li>v(t) = s′(t) es la velocidad del carro. </li><li>a(t) = v′(t) = s′′(t) es la aceleración del carro. </li></ul></li><br><li>La concavidad de la gráfica de la velocidad v(t) está determinada por el signo de su derivada, que es la aceleración a(t) = v′(t).<ul><li>Si a(t) > 0, la gráfica de la velocidad es cóncava hacia arriba (la velocidad está aumentando). </li><li>Si a(t) < 0, la gráfica de la velocidad es cóncava hacia abajo (la velocidad está disminuyendo). </li></ul></li><br><li>Un punto de inflexión en la gráfica de la velocidad v(t) ocurriría donde la concavidad cambia, lo que significa que la aceleración a(t) tendría un máximo o un mínimo local (es decir, donde a′(t) = s′′′(t) = 0 o no existe, y la derivada de la aceleración cambia de signo). </li></ul><br><br>"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "regla-LHopital",
+        "titulo": "5. Regla de L'Hôpital ",
+        "contenido": [
+          {
+            "tipo":"texto",
+            "valor": "La Regla de L'Hôpital (a menudo escrita como L'Hôpital, aunque su origen es un poco más complejo, involucrando a Johann Bernoulli) es una herramienta muy poderosa en cálculo para evaluar límites de formas indeterminadas. <br><br>La Regla de L'Hôpital se aplica cuando intentamos calcular un límite de una función que resulta en una de las formas indeterminadas 0/0 o ∞/∞ (donde \"∞\" puede ser +∞ o −∞). En estas situaciones, la regla nos dice que el límite de la razón de las funciones es igual al límite de la razón de sus derivadas, siempre que este último límite exista. <br><br><b>Enunciado Formal de la Regla de L'Hôpital. </b> <br><br>Sean f(x) y g(x) funciones que son derivables en un intervalo abierto I que contiene a c (excepto posiblemente en c mismo). <br><br>Supongamos que: <br><br>"
+          },
+          {
+            "tipo":"imagen",
+            "valor": "assets/img/aplicacion-derivadas/Imagen10.png"
+          },
+          {
+            "tipo":"texto",
+            "valor": "<b>Otras Formas Indeterminadas y Cómo Reducirlas a 0/0 o ∞/∞:<br><br></b>La Regla de L'Hôpital solo se aplica directamente a las formas indeterminadas 0/0 y ∞/∞<br>. <br>Sin embargo, otras formas indeterminadas pueden a menudo transformarse algebraicamente a estas formas: <br><br>"
+          },
+          {
+            "tipo":"imagen",
+            "valor": "assets/img/aplicacion-derivadas/Imagen11.png"
+          },
+          {
+            "tipo":"ejemplo",
+            "contenido":[
+              {
+                "tipo":"texto",
+                "valor": "<b>Ejercicio de la vida real sobre Regla de L'Hôpital <br><br></b>Imagina que estás estudiando el crecimiento de dos poblaciones de bacterias en un laboratorio. <br><br><ul><li>Población 1: El número de bacterias en función del tiempo (en horas) está dado por una función P1(t). </li><li>Población 2: El número de bacterias en función del tiempo está dado por otra función P2(t). </li></ul><br><br>Supongamos que, en condiciones ideales, ambas poblaciones crecen exponencialmente, pero con diferentes tasas. <br><br>Es decir, P1(t) = a1ek1t y P2(t) = a2ek2t, donde las constantes a1 y a2 representan las poblaciones iniciales, y k1 y k2 son las tasas de crecimiento. <br><br>Ahora, imagina que te interesa comparar el crecimiento relativo de estas dos poblaciones a largo plazo. Podrías considerar la razón de las poblaciones: <br><br>"
+              },
+              {
+                "tipo":"imagen",
+                "valor": "assets/img/aplicacion-derivadas/Imagen12.png"
+              },
+              {
+                "tipo":"texto",
+                "valor": "Si k1 > k2, esperarías que la población 1 crezca mucho más rápido que la población 2 a medida que el tiempo t se acerca al infinito. En este caso, el límite de la razón R(t) cuando t tiende a infinito sería infinito. <br><br>Si k1 < k2, esperarías que la población 2 crezca mucho más rápido que la población 1 a largo plazo, y el límite de R(t) cuando t tiende a infinito sería cero. <br><br>Pero, ¿qué sucede si k1 y k2 son muy cercanos? En ese caso, la determinación del límite de R(t) podría no ser tan obvia. Aquí es donde la idea detrás de L'Hôpital entra en juego. <br><br>Aunque este ejemplo involucra funciones exponenciales que no dan una forma indeterminada de 0/0 o ∞/∞, podemos modificarlo para ilustrar la idea: <br><br>Supongamos que las poblaciones están modeladas por funciones más complejas que, al tomar el límite de su razón, nos dan una forma indeterminada. Por ejemplo, supongamos que: <br><br>"
+              },
+              {
+                "tipo":"imagen",
+                "valor": "assets/img/aplicacion-derivadas/Imagen13.png"
+              },
+              {
+                "tipo": "texto",
+                "valor": "Ahora, al tomar el límite cuando t tiende a infinito, tenemos ∞/∞. L'Hôpital nos dice que, en lugar de analizar directamente la razón de las poblaciones, podemos analizar la razón de sus tasas de crecimiento instantáneas (las derivadas): <br><br>"
+              },
+              {
+                "tipo":"imagen",
+                "valor": "assets/img/aplicacion-derivadas/Imagen14.png"
+              },
+              {
+                "tipo":"texto",
+                "valor": "Calculando las derivadas (usando la regla del producto): <br><br>"
+              },
+              {
+                "tipo":"imagen",
+                "valor": "assets/img/aplicacion-derivadas/Imagen15.png"
+              },
+              {
+                "tipo": "texto",
+                "valor": "Ahora, la razón de las derivadas nos da una idea de cómo se comparan las velocidades de crecimiento de las poblaciones. Si el límite de esta razón de derivadas es un número finito L, significa que, a largo plazo, las poblaciones crecen a tasas que son aproximadamente L veces una de la otra. <br><br>"
+              }
+            ]
+          },
+          {
+            "tipo":"ejemplo",
+            "contenido":[
+              {
+                "tipo":"texto",
+                "valor": "En este ejemplo: <br><br>"
+              },
+              {
+                "tipo":"imagen",
+                "valor": "assets/img/aplicacion-derivadas/Imagen16.png"
+              },
+              {
+                "tipo":"texto",
+                "valor": "La Regla de L'Hôpital nos permite comparar el comportamiento de funciones que, individualmente, tienden a cero o a infinito, al analizar el límite de la razón de sus derivadas. <br><br>En el ejemplo de las poblaciones, esto significa que podemos entender cómo el crecimiento relativo de las poblaciones se comporta a largo plazo al comparar sus tasas de crecimiento instantáneo. <br><br>"
+              }
+            ]
+          }
         ]
       }
       

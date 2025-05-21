@@ -1,36 +1,63 @@
-.modulo {
-    padding: 20px;
-  
-    .subtema {
-      margin-top: 30px;
-  
-      img {
-        max-width: 100%;
-        margin: 10px 0;
-      }
-  
-      iframe {
-        width: 100%;
-        height: 315px;
-        margin: 10px 0;
-      }
-  
-      .ejemplo {
-        background: #f0f8ff;
-        padding: 10px;
-        margin: 10px 0;
-        border-left: 4px solid #2196f3;
-  
-        button {
-          margin-top: 5px;
-          padding: 5px 10px;
-          background: #2196f3;
-          color: white;
-          border: none;
-          border-radius: 4px;
-          cursor: pointer;
-        }
-      }
-    }
+section {
+  padding: 20px;
+  background-color: white;
+}
+
+.subtema {
+  margin-bottom: 30px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: 20px;
+}
+
+.bloque {
+  margin-top: 10px;
+}
+
+.imagen-responsiva {
+  max-width: 100%;
+  height: auto;
+  margin: 10px 0;
+  border-radius: 8px;
+}
+
+.video-embed {
+  width: 100%;
+  height: 315px;
+  margin: 10px 0;
+  border-radius: 8px;
+}
+.subtitulo {
+  font-weight: bold;
+  font-size: 1.1rem;
+  margin-top: 15px;
+  margin-bottom: 5px;
+  color: #005883;
+}
+
+
+.ejemplo {
+  background: #f4f8ff;
+  padding: 10px;
+  border-left: 4px solid #005883;
+  border-radius: 4px;
+  margin-top: 10px;
+
+  img {
+    max-width: 100%;
+    margin-top: 10px;
+    border-radius: 6px;
   }
-  
+}
+
+.btn-ia {
+  background-color: #005883;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  margin-top: 5px;
+  border-radius: 4px;
+  cursor: pointer;
+  &:hover {
+      background-color: #F0B429; // Color al pasar el mouse
+    }
+}

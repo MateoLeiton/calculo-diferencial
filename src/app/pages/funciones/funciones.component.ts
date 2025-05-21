@@ -18,6 +18,7 @@ export class FuncionesComponent implements OnInit {
   ngOnInit(): void {
     this.funcionesService.obtenerContenido().subscribe(data => {
       this.contenido = data;
+      this.contenido.subtemas = data.subtemas;
     });
   }
 }

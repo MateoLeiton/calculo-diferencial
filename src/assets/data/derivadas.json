@@ -3,13 +3,562 @@
     "subtemas": [
       {
         "id": "introduccion",
-        "titulo": "1. Introducción a las DERIVADAS",
+        "titulo": "1. Introducción al concepto de DERIVADA",
         "contenido": [
           {
             "tipo": "texto",
-            "valor": "DERIVEMOS??."
+            "valor": "Las derivadas son una parte fundamental del cálculo diferencial y tienen aplicaciones importantes en diversas áreas de las matemáticas y las ciencias. <br>"
+          },
+          {
+            "tipo": "imagen",
+            "valor": "assets/img/derivadas/Imagen1.png"
+          },
+          {
+            "tipo":"texto",
+            "valor": "<b>¿Qué es una Derivada? </b><br><br>En términos simples, una derivada representa la tasa de cambio de una función con respecto a una de sus variables. Es una medida de cómo cambia el valor de una función cuando se realiza un pequeño cambio en su variable independiente. <br><br>En otras palabras, la derivada de una función nos dice la pendiente de la línea tangente en cualquier punto de la gráfica de la función. <br><br><b>Concepto Fundamental: La Pendiente de la Tangente </b><br><br>Para entender las derivadas, es útil imaginar una función gráfica. La pendiente de la tangente a la gráfica de la función en un punto específico nos dice la rapidez con la que la función está cambiando en ese punto. <br><br>Está pendiente es precisamente lo que representa la derivada. <br><br><b>Ejemplo Visual </b><br><br>Imagina que tienes una curva que representa la posición de un automóvil en función del tiempo. La derivada de esta función te dirá la velocidad del automóvil en cualquier instante. Si la velocidad es constante, la derivada será una línea recta. Si la velocidad cambia, la derivada reflejará estos cambios en la pendiente de la curva. <br><br>"
+          },
+          {
+            "tipo":"ejemplo",
+            "contenido":[
+              {
+                "tipo":"texto",
+                "valor": "<b>Ejercicio de la vida real sobre Introducción al Concepto de Derivada</b><br><br>Imagina que estás diseñando el software de control para un dron que despega verticalmente. Quieres asegurarte de que el ascenso sea suave y controlado. Durante una prueba, los ingenieros recopilan datos sobre la altura del dron (en metros) en función del tiempo transcurrido (en segundos) desde el despegue. Los datos obtenidos durante los primeros segundos son los siguientes: <br><br>"
+              },
+              {
+                "tipo":"imagen",
+                "valor": "assets/img/derivadas/Imagen2.png"
+              },
+              {
+                "tipo":"texto",
+                "valor": "<b>Preguntas: </b><br><br><ol><li><b>Velocidad Promedio: </b>Calcula la velocidad promedio del dron durante los siguientes intervalos de tiempo: <br><ul><li>Entre (t = 0) s y (t = 1) s. </li><li>Entre (t = 1) s y (t = 2) s. </li><li>Entre (t = 2) s y (t = 3) s. </li><li>Entre (t = 1) s y (t = 1.5) s. </li><li>Entre (t = 1.5) s y (t = 2) s. </li></ul><br>¿Qué observas sobre la velocidad promedio a medida que consideramos intervalos de tiempo diferentes? <br><br></li><li><b>Aproximación a la Velocidad Instantánea: </b> Para entender mejor la velocidad del dron en un instante específico, considera el tiempo (t = 2) s. <br><br>Calcula la velocidad promedio del dron durante intervalos de tiempo cada vez más pequeños alrededor de (t = 2) s: <br><br><ul><li>Entre (t = 1.5) s y (t = 2.5) s. </li><li>Entre (t = 1.9) s y (t = 2.1) s (supón que la altura en (t = 1.9) s es (18.05) m y en (t = 2.1) s es (22.05) m). </li><li>Entre (t = 1.99) s y (t = 2.01) s (supón que la altura en (t = 1.99) s es (19.8005) m y en (t = 2.01) s es (20.2005) m). </li><br></ul>¿Qué puedes decir sobre la velocidad del dron en el instante (t = 2) s basándote en estos cálculos? ¿A qué concepto matemático se acerca este proceso? <br><br></li><li><b>Función de Altura: </b>Supón que la altura del dron en función del tiempo está dada por la función (h(t) = 5t^2). Utiliza la definición formal de la derivada para encontrar la velocidad instantánea del dron en cualquier tiempo (t). <br><br></li><li><b>Velocidad Instantánea en t = 2s (Usando la Derivada): </b>Utiliza la función derivada que encontraste en el paso 3 para calcular la velocidad instantánea del dron en (t = 2) s. ¿Cómo se compara este valor con tu aproximación en el paso 2? </li></ol>"
+              }
+            ]
           }
           
+          
+        ]
+      },
+      {
+        "id": "reglas-basicas",
+        "titulo": "2. Reglas básicas de Derivación",
+        "contenido":[
+
+          {
+            "tipo":"texto",
+            "valor": "Ahora que hemos comprendido la definición fundamental de la derivada como un límite, calcular la derivada directamente aplicando esta definición puede ser un proceso laborioso, especialmente para funciones más complejas. Afortunadamente, existen una serie de reglas que simplifican enormemente este proceso. Estas reglas básicas de derivación nos proporcionan atajos poderosos para encontrar la derivada de combinaciones comunes de funciones sin tener que recurrir al límite en cada caso. En esta sección, exploraremos estas reglas esenciales, que se convertirán en tus herramientas principales para derivar una amplia variedad de funciones de manera eficiente y precisa. <br><br><b>Definición Formal de Derivada </b><br><br>"
+          },
+          {
+            "tipo":"imagen",
+            "valor": "assets/img/derivadas/Imagen3.png"
+          },
+          {
+            "tipo": "texto",
+            "valor": "Este límite nos da la pendiente de la línea tangente a la función en el punto xx. <br><br>En la práctica, este cálculo puede ser complejo, pero existen reglas y fórmulas para simplificar el proceso. <br><br><b>Reglas básicas de Derivación</b><br><br>"
+          },
+          {
+            "tipo":"imagen",
+            "valor": "assets/img/derivadas/Imagen4.png"
+          },
+          {
+            "tipo":"ejemplo",
+            "contenido":[
+
+              {
+                "tipo":"texto",
+                "valor": "<b>Ejercicio de la vida real sobre Reglas Básicas de Derivación</b><br><br>Imagina que estás supervisando el llenado de un tanque de agua industrial. El volumen de agua en el tanque (en litros) en función del tiempo transcurrido desde que se abrió la llave (en minutos) está dado por la siguiente función: <br><br>V(t) = 10t3 + 50t2 + 100t + 200<br><br>donde (t ≥ 0). <br><br><b>Preguntas: </b><br><br><ol><li>¿Cuál es el volumen de agua en el tanque cuando se abre la llave ((t = 0) minutos)? </li><li>Encuentra la función que representa la tasa de cambio del volumen de agua con respecto al tiempo (es decir, la rapidez con la que el agua está entrando al tanque). </li><li>¿Cuál es la rapidez con la que el agua está entrando al tanque a los (t = 5) minutos? </li><li>¿Cuál es la rapidez con la que la rapidez de llenado está cambiando con respecto al tiempo? </li><br><br></ol><b>Desarrollo: </b><br><br><b>1.Volumen inicial: </b>Para encontrar el volumen de agua en el tanque cuando se abre la llave, simplemente evaluamos la función (V(t)) en (t = 0): <br><br>V(0) = 10(0)3 + 50(0)2 + 100(0) + 200 = 200 litros<br><br>Por lo tanto, al inicio, el tanque ya contenía 200 litros de agua. <br><br><b>2.Función de la tasa de cambio del volumen: </b><br><br>"
+              },
+              {
+                "tipo":"imagen",
+                "valor": "assets/img/derivadas/Imagen5.png"
+              },
+              {
+                "tipo":"texto",
+                "valor": "<b>3.Rapidez de llenado a (t = 5) minutos: </b><br><br>Para encontrar la rapidez con la que el agua está entrando al tanque a los (t = 5) minutos, evaluamos la función (V'(t)) en (t = 5): <br><br>"
+              },
+              {
+                "tipo":"imagen",
+                "valor": "assets/img/derivadas/Imagen6.png"
+              },
+              {
+                "tipo":"texto",
+                "valor":"A los 5 minutos, el agua está entrando al tanque a una rapidez de 1350 litros por minuto. <br><br><b>4.Rapidez de cambio de la rapidez de llenado: </b><br>"
+              },
+              {
+                "tipo":"imagen",
+                "valor": "assets/img/derivadas/Imagen7.png"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "reglas-sumas",
+        "titulo": "3. Reglas de Derivación de Sumas, Productos y Cocientes",
+        "contenido": [
+          
+          {
+            "tipo":"texto",
+            "valor": "En el tema anterior, aprendimos las reglas básicas para derivar funciones individuales como potencias y constantes. Sin embargo, en la práctica, a menudo nos encontramos con funciones que son el resultado de combinar otras funciones a través de operaciones como la suma, la resta, la multiplicación y la división. Para derivar estas funciones compuestas de manera eficiente, contamos con reglas específicas que nos permiten trabajar con cada componente por separado. En este tema, exploraremos las reglas de derivación para sumas, productos y cocientes, las cuales nos brindarán las herramientas necesarias para derivar expresiones algebraicas más complejas de forma sistemática y sin la necesidad de volver a la definición del límite en cada paso. <br><br>"
+          },
+          {
+            "tipo":"imagen",
+            "valor": "assets/img/derivadas/Imagen8.png"
+          },
+          {
+            "tipo":"ejemplo",
+            "contenido":[
+              {
+                "tipo":"imagen",
+                "valor": "assets/img/derivadas/Imagen9.png"
+              },
+              {
+                "tipo":"imagen",
+                "valor": "assets/img/derivadas/Imagen10.png"
+              }
+            ]
+          },
+          {
+            "tipo":"ejemplo",
+            "contenido":[
+
+              {
+                "tipo":"texto",
+                "valor": "<b>Ejercicio de la vida real sobre Reglas de Derivación de Sumas, Productos y Cocientes</b><br><br><b>Escenario: Costo y Ganancia de una Empresa</b><br><br>Una empresa fabrica un producto. El costo total de producción (C(q)) (en dólares) para producir (q) unidades está dado por: <br><br>C(q)  = 0.01q3 − 0.5q2 + 50q  + 2000<br><br>El precio de venta por unidad (p(q)) (en dólares) depende de la cantidad producida y vendida, según la siguiente relación: <br><br>p(q) = 100 − 0.02q<br><br>La función de ingreso total (I(q)) es el producto de la cantidad vendida y el precio por unidad: (I(q) = q \\cdot p(q)). La función de ganancia (G(q)) es la diferencia entre el ingreso total y el costo total: (G(q) = I(q) - C(q)). <br><br><b>Preguntas: </b><br><br><ol><li>Encuentra la función de ingreso total (I(q)). </li><li>Encuentra la función de ganancia (G(q)). </li><li>Encuentra la función de costo marginal (C'(q)) (la tasa de cambio del costo total con respecto a la cantidad). </li><li>Encuentra la función de ingreso marginal (I'(q)) (la tasa de cambio del ingreso total con respecto a la cantidad) utilizando la regla del producto. </li><li>Encuentra la función de ganancia marginal (G'(q)) (la tasa de cambio de la ganancia con respecto a la cantidad) utilizando la regla de la suma (o diferencia). </li><li>Encuentra la tasa de cambio del precio con respecto a la cantidad, (\\frac{dp}{dq}).</li><li>Encuentra la tasa de cambio del ingreso marginal con respecto a la cantidad, (\\frac{d}{dq}(I'(q))). </li></ol><br><br><b>Desarrollo:</b><br><br>"              
+              },
+              {
+                "tipo":"imagen",
+                "valor": "assets/img/derivadas/Imagen11.png"
+              },
+              {
+                "tipo":"imagen",
+                "valor": "assets/img/derivadas/Imagen12.png"
+              },
+              {
+                "tipo":"imagen",
+                "valor": "assets/img/derivadas/Imagen13.png"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "composicion-funciones",
+        "titulo": "4. Composición de funciones",
+        "contenido":[
+
+          {
+            "tipo": "texto",
+            "valor": "Antes de sumergirnos en la poderosa regla de la cadena para derivar funciones complejas, es fundamental comprender la operación subyacente: la composición de funciones. La composición de funciones es una forma de combinar dos o más funciones donde la salida de una función se convierte en la entrada de otra. Imagina una máquina donde introduces una materia prima, una primera etapa de procesamiento la transforma, y luego esa salida transformada se introduce en una segunda etapa para una transformación adicional. De manera similar, en la composición de funciones, aplicamos una función a la variable independiente, y luego aplicamos otra función al resultado de la primera. Entender cómo se construyen y manipulan estas funciones compuestas es clave para aplicar correctamente la regla de la cadena y expandir nuestro repertorio de funciones que podemos derivar. <br><br>"
+          },
+          {
+            "tipo":"ejemplo",
+            "contenido":[
+
+              {
+                "tipo": "imagen",
+                "valor": "assets/img/derivadas/Imagen14.png"
+              },
+              {
+                "tipo":"texto",
+                "valor": "<b>Solución:</b><br><br>Una forma de evaluar f(g(3)) es trabajar \"de adentro hacia afuera\". En otras palabras, evaluemos g(3) primero, y después sustituyamos ese resultado en f para encontrar nuestra respuesta. <br><br>Evaluemos g(3) <br>"
+              },
+              {
+                "tipo":"imagen",
+                "valor": "assets/img/derivadas/Imagen15.png"
+              },
+              {
+                "tipo":"texto",
+                "valor": "<b>Encontrar la función compuesta</b><br><br>En el ejemplo anterior, la función g convirtió 3 a 29, y la función f convirtió 29 a 86. Encontremos la función que convierta 3 directamente a 86. <br>"
+              },
+              {
+                "tipo": "imagen",
+                "valor": "assets/img/derivadas/Imagen16.png"
+              },
+              {
+                "tipo":"texto",
+                "valor": "Para hacer esto, debemos componer las dos funciones y encontrar f(g(x)). <br><br>"
+              },
+              {
+                "tipo":"texto",
+                "valor": "¿Qué es f(g(x))? <br><br>Como referencia, recuerda que f (x) = 3x-1 y g(x) = x3+2. <br><br><b>Solución:</b><br><br>Si observamos la expresión f(g(x)), podemos ver que g(x) es la entrada de la función f. Así que sustituyamos g(x) donde aparece x en la función f. <br>"
+              },
+              {
+                "tipo":"imagen",
+                "valor": "assets/img/derivadas/Imagen17.png"
+              }
+              
+            ]
+          },
+          
+          {
+            "tipo":"ejemplo",
+            "contenido":[
+
+              {
+                "tipo":"texto",
+                "valor": "<b>Ejemplo de la vida real sobre Composición de funciones</b><br><br>Imagina que una tienda de ropa ofrece dos tipos de descuentos que se aplican secuencialmente a una compra: <br><br><ol><li><b>Descuento por fidelidad: </b>Los clientes con tarjeta de fidelidad obtienen un 10% de descuento en el precio original de cualquier artículo. Podemos representar este descuento como una función (f(p) = 0.90p), donde (p) es el precio original y (f(p)) es el precio después del descuento por fidelidad. </li><li><b>Oferta especial del día: </b>Adicionalmente, hoy la tienda tiene una oferta especial que aplica un descuento de $5 a cualquier artículo después de aplicar otros descuentos. Podemos representar esta oferta como una función (g(x) = x - 5), donde (x) es el precio después de cualquier descuento previo y (g(x)) es el precio final. </li></ol><br><br><b>Situación: </b><br><br>Un cliente con tarjeta de fidelidad quiere comprar una camisa que tiene un precio original de $30. Queremos saber cuál será el precio final que pagará el cliente. <br><br><b>Análisis usando composición de funciones: </b><br><br>Podemos ver que el precio final se calcula aplicando primero el descuento por fidelidad y luego la oferta especial. Esto es una composición de funciones. <br><ul><li>Primero, aplicamos la función de descuento por fidelidad al precio original: f(30)  = 0.90 × 30 = $27Este es el precio de la camisa después de aplicar el descuento por fidelidad. </li><li>Luego, aplicamos la función de la oferta especial al precio ya descontado: g(27) = 27 – 5 = $22Este es el precio final que pagará el cliente. </li>"
+              },
+              {
+                "tipo":"imagen",
+                "valor": "assets/img/derivadas/Imagen18.png"
+              },
+              {
+                "tipo":"texto",
+                "valor": "<b>Conclusión: </b><br><br>En el anterior ejemplo, se muestra cómo la composición de funciones se utiliza en la vida real para aplicar descuentos secuenciales. La salida de una función (el precio después del primer descuento) se convierte en la entrada de la siguiente función (la oferta especial), determinando el precio final que paga el consumidor. <br>"
+              }
+            ]
+          }
+
+            
+          
+        ]
+      },
+      {
+        "id": "regla-cadena",
+        "titulo": "5. Regla de la Cadena",
+        "contenido":[
+
+          {
+            "tipo":"texto",
+            "valor": "Hasta ahora, hemos aprendido a derivar funciones individuales y combinaciones mediante sumas, restas, productos y cocientes. Sin embargo, existe otra forma fundamental de combinar funciones: la composición. Una función compuesta es aquella en la que una función se evalúa dentro de otra. Para derivar este tipo de funciones, necesitamos una regla especial y poderosa conocida como la regla de la cadena. Esta regla nos permitirá descomponer la derivación de funciones compuestas en la derivación de sus componentes individuales, abriendo la puerta a la derivación de funciones mucho más complejas. Prepárense para descubrir una de las reglas más importantes y versátiles del cálculo diferencial. <br><br>La derivación por regla de cadena se aplica cuando buscamos derivar una composición de funciones. <br>"
+          },
+          {
+            "tipo":"imagen",
+            "valor": "assets/img/derivadas/Imagen19.png"
+          },
+          {
+            "tipo":"texto",
+            "valor": "La demostración por definición sería como sigue<br>"
+          },
+          {
+            "tipo":"imagen",
+            "valor": "assets/img/derivadas/Imagen20.png"
+          },
+          {
+            "tipo":"texto",
+            "valor": "Ahora veremos unos ejercicios en los cuales aplicaremos la regla de la cadena<br><br>"
+          },
+          {
+            "tipo":"ejemplo",
+            "contenido":[
+              {
+                "tipo":"texto",
+                "valor": "<b>1. Deriva la siguiente función</b><br>"
+              },
+              {
+                "tipo":"imagen",
+                "valor": "assets/img/derivadas/Imagen21.png"
+              }
+            ]
+          },
+          {
+            "tipo":"ejemplo",
+            "contenido":[
+              {
+                "tipo":"texto",
+                "valor": "<b>2. Deriva la siguiente función</b><br>"
+              },
+              {
+                "tipo":"imagen",
+                "valor": "assets/img/derivadas/Imagen22.png"
+              }
+            ]
+          },
+          {
+            "tipo":"ejemplo",
+            "contenido":[
+              {
+                "tipo":"texto",
+                "valor": "<b>3. Deriva la siguiente función</b><br>"
+              },
+              {
+                "tipo":"imagen",
+                "valor": "assets/img/derivadas/Imagen23.png"
+              },
+              {
+                "tipo":"texto",
+                "valor": "Por lo tanto, nuestra derivada sería<br>"
+              },
+              {
+                "tipo":"imagen",
+                "valor": "assets/img/derivadas/Imagen24.png"
+              }
+            ]
+          },
+          {
+            "tipo":"ejemplo",
+            "contenido":[
+
+              {
+                "tipo":"texto",
+                "valor": "<b>Ejemplo de la vida real de Regla de la Cadena</b><br><br>Imagina que estás estudiando el calentamiento de un motor de automóvil. La temperatura del motor (T) (en grados Celsius) aumenta con el tiempo de funcionamiento (t) (en minutos). Sin embargo, la eficiencia del motor (E) (adimensional, entre 0 y 1) depende de su temperatura. Queremos saber cómo la eficiencia del motor cambia con el tiempo. <br><br>Supongamos que tenemos las siguientes relaciones: <br>"
+              },
+              {
+                "tipo":"imagen",
+                "valor": "assets/img/derivadas/Imagen25.png"
+              },
+              {
+                "tipo":"imagen",
+                "valor": "assets/img/derivadas/Imagen26.png"
+              } ,
+              {
+                "tipo":"texto",
+                "valor": "<b>Conclusión</b>"
+              },
+              {
+                "tipo":"imagen",
+                "valor": "assets/img/derivadas/Imagen27.png"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id":"derivacion-trascendentes",
+        "titulo": "6. Derivación de Funciones Trascendentes",
+        "contenido":[
+
+          {
+            "tipo":"texto",
+            "valor": "Hasta ahora, nuestro enfoque en la derivación se ha centrado principalmente en funciones algebraicas, aquellas construidas a partir de polinomios, raíces y operaciones racionales. Sin embargo, el mundo de las funciones va mucho más allá. Las <b>funciones trascendentes, </b> que incluyen las funciones trigonométricas, exponenciales, logarítmicas y sus inversas, son fundamentales en muchas áreas de la ciencia y la ingeniería para modelar fenómenos periódicos, crecimiento y decaimiento, y relaciones inversas. En este tema, extenderemos nuestras reglas de derivación para incluir estas importantes familias de funciones. Descubriremos cómo encontrar la tasa de cambio de senos y cosenos, de cantidades que crecen exponencialmente, de relaciones logarítmicas y más. <br>"
+          },
+          {
+            "tipo":"imagen",
+            "valor": "assets/img/derivadas/Imagen28.png"
+          },
+          {
+            "tipo":"texto",
+            "valor": "<b>Ejercicios de funciones derivadas</b>"
+          },
+          {
+            "tipo":"imagen",
+            "valor": "assets/img/derivadas/Imagen29.png"
+          },
+          {
+            "tipo":"texto",
+            "valor": "<b>Derivada de la función exponencial</b>"
+          },
+          {
+            "tipo":"imagen",
+            "valor": "assets/img/derivadas/Imagen30.png"
+          },
+          {
+            "tipo":"ejemplo",
+            "contenido":[
+              {
+                "tipo":"imagen",
+                "valor": "assets/img/derivadas/Imagen31.png"
+              }
+            ]
+          },
+          {
+            "tipo":"ejemplo",
+            "contenido":[
+              {
+                "tipo":"imagen",
+                "valor": "assets/img/derivadas/Imagen32.png"
+              }
+            ]
+          },
+          {
+            "tipo":"texto",
+            "valor": "<b>Fórmula para derivar una función logarítmica</b>"
+          },
+          {
+            "tipo":"imagen",
+            "valor": "assets/img/derivadas/Imagen33.png"
+          },
+          {
+            "tipo":"texto",
+            "valor": "<b>Ejercicios de derivada de la función logarítmica</b>"
+          },
+          {
+            "tipo":"imagen",
+            "valor": "assets/img/derivadas/Imagen34.png"
+          },
+          {
+            "tipo":"imagen",
+            "valor": "assets/img/derivadas/Imagen35.png"
+          },
+          {
+            "tipo":"texto",
+            "valor": "<b>Funciones inversas</b><br><br>Antes de explorar cómo derivar las funciones trigonométricas inversas, es crucial recordar el concepto fundamental de funciones inversas. Una función inversa, en esencia, \"deshace\" lo que la función original hace. Si una función toma una entrada (x) y produce una salida (y), su inversa toma esa salida (y) y devuelve la entrada original (x). Comprender la relación entre una función y su inversa, especialmente en términos de sus gráficas y dominios/rangos, nos proporcionará la base necesaria para entender y aplicar las reglas de derivación específicas para las funciones inversas que encontraremos, como el arcoseno, arcocoseno y arcotangente<br>"
+          },
+          {
+            "tipo":"imagen",
+            "valor": "assets/img/derivadas/Imagen36.png"
+          },
+          {
+            "tipo":"ejemplo",
+            "contenido":[
+              {
+                "tipo":"texto",
+                "valor": "<b>Usando la derivada de la función inversa</b>"
+              },
+              {
+                "tipo":"imagen",
+                "valor": "assets/img/derivadas/Imagen37.png"
+              }
+            ]
+          },
+          {
+            "tipo": "ejemplo",
+            "contenido":[
+
+              {
+                "tipo":"texto",
+                "valor": "<b>Ejemplo de la vida real sobre Derivación de Funciones Trascendentes</b><br>"
+              },
+              {
+                "tipo":"imagen",
+                "valor": "assets/img/derivadas/Imagen38.png"
+              },
+              {
+                "tipo": "texto",
+                "valor": "<b>Interpretación en la Vida Real</b>"
+              },
+              {
+                "tipo":"imagen",
+                "valor": "assets/img/derivadas/Imagen39.png"
+              }
+            ]
+          },
+          {
+            "tipo":"texto",
+            "valor": "El ejercicio anterior ilustra cómo una función exponencial puede modelar un fenómeno físico como el enfriamiento, y cómo la derivada de esa función nos revela la dinámica de ese cambio a lo largo del tiempo. Vemos que el enfriamiento no ocurre a una velocidad constante, sino que se ralentiza progresivamente a medida que el objeto se equilibra térmicamente con su entorno<br><br>"
+          }
+        ]
+      },
+      {
+        "id":"derivacion-implicita",
+        "titulo": "7. Derivación implícita",
+        "contenido":[
+
+          {
+            "tipo":"texto",
+            "valor": "Hasta ahora, la mayoría de las funciones que hemos derivado se han presentado en forma explícita, es decir, (y) está definida directamente en términos de (x) (por ejemplo, (y = x^2 + \\sin x)). Sin embargo, en muchas situaciones, las variables (x) e (y) están relacionadas por una ecuación donde (y) no está aislada en un lado (por ejemplo, (x^2 + y^2 = 25) o (x^3 + xy + y^3 = 1)). En estos casos, donde (y) está definida implícitamente como una función de (x), necesitamos una técnica especial para encontrar la derivada (\\frac{dy}{dx}). <br><br>Esta técnica se conoce como derivación implícita, y nos permite encontrar la tasa de cambio de (y) con respecto a (x) sin necesidad de despejar (y) explícitamente en términos de (x). <br><br><b>Funciones implícitas:</b><br><br>Una correspondencia o una función está definida en forma implícita, cuando no aparece despejada la variable  , sino que la relación entre   e   viene dada por una ecuación de dos incógnitas cuyo segundo miembro es cero. <br>"
+          },
+          {
+            "tipo":"imagen",
+            "valor": "assets/img/derivadas/Imagen40.png"
+          },
+          {
+            "tipo":"texto",
+            "valor": "Una vez aclarado este concepto, podemos hablar de las derivadas de las funciones implícitas. <br><br><b>Derivadas de funciones implícitas</b><br><br>Para hallar la derivada en forma implícita no es necesario despejar  . Basta derivar tanto el miembro derecho como el izquierdo de la igualdad con respecto a la misma variable, utilizando las reglas vistas hasta ahora y teniendo presente que: <br>"
+          },
+          {
+            "tipo":"imagen",
+            "valor": "assets/img/derivadas/Imagen41.png"
+          },
+          {
+            "tipo":"ejemplo",
+            "contenido":[
+              {
+                "tipo":"imagen",
+                "valor": "assets/img/derivadas/Imagen42.png"
+              }
+            ]
+          },
+          {
+            "tipo":"ejemplo",
+            "contenido":[
+              {
+                "tipo":"texto",
+                "valor": "<b>Ejemplo de la vida real sobre Derivación implícita</b><br>"
+              },
+              {
+                "tipo":"imagen",
+                "valor": "assets/img/derivadas/Imagen43.png"
+              },
+              {
+                "tipo":"imagen",
+                "valor": "assets/img/derivadas/Imagen44.png"
+              },
+              {
+                "tipo":"texto",
+                "valor": "<b>Resultado: </b><br><br>Cuando el radio de la mancha de aceite es de (5) metros, el radio está aumentando a una velocidad de (\\frac{1} {\\pi} \\aprox 0.318) metros por minuto. <br><br>En este ejemplo, no teníamos una función explícita para (r) en términos de (t) (o viceversa). Sin embargo, pudimos usar la relación conocida entre el área y el radio de un círculo, y al derivar implícitamente esta relación con respecto al tiempo, pudimos conectar sus tasas de cambio y resolver para la tasa de cambio deseada ((\\frac{dr}{dt})). La derivación implícita es esencial en situaciones donde las variables están relacionadas pero no se pueden expresar fácilmente una en función de la otra de forma explícita. <br><br>"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id":"derivadas-orden-superior",
+        "titulo": "8. Derivadas de Orden Superior",
+        "contenido": [
+          {
+            "tipo":"texto",
+            "valor": "Hemos aprendido a encontrar la primera derivada de una función, la cual nos proporciona información valiosa sobre la tasa de cambio instantánea y la pendiente de la tangente a la curva. Pero, ¿qué sucede si derivamos la derivada? La derivada de la primera derivada se conoce como la segunda derivada, y nos revela información sobre la tasa de cambio de la primera derivada, es decir, cómo está cambiando la pendiente de la tangente. Podemos continuar este proceso y encontrar la tercera derivada, la cuarta derivada, y así sucesivamente, generando lo que conocemos como derivadas de orden superior. Estas derivadas no son solo una curiosidad matemática; tienen interpretaciones físicas importantes, como la aceleración (la segunda derivada de la posición), y son fundamentales en el análisis del comportamiento de las funciones, como su concavidad. <br><br><b>Orden de las derivadas</b><br><br>El orden de las derivadas se denota de la siguiente manera: <br>"
+          },
+          {
+            "tipo":"imagen",
+            "valor": "assets/img/derivadas/Imagen45.png"
+          },
+
+          {
+            "tipo":"ejemplo",
+            "contenido":[
+              {
+                "tipo":"texto",
+                "valor": "<b>Ejemplo de derivadas de orden superior</b><br>Calculemos las derivadas de orden superior para esta función: <br>"
+              },
+              {
+                "tipo":"imagen",
+                "valor": "assets/img/derivadas/Imagen46.png"
+              },
+              {
+                "tipo":"texto",
+                "valor": "La derivada de quinto orden su resultado sería cero, siendo la última derivada que podemos calcular para la función original. <br><br>"
+              }
+            ]
+          },
+          {
+            "tipo":"texto",
+            "valor": "<b>Ejercicios de derivadas de orden superior: </b><br><br>"
+          },
+          {
+            "tipo":"ejemplo",
+            "contenido":[
+              {
+                "tipo":"texto",
+                "valor": "Encuentra la tercera derivada de: <br>"
+              },
+              {
+                "tipo":"imagen",
+                "valor": "assets/img/derivadas/Imagen47.png"
+              }
+            ]
+          },
+          {
+            "tipo":"ejemplo",
+            "contenido":[
+              {
+                "tipo":"texto",
+                "valor": "Encuentra la cuarta derivada de . <br>"
+              },
+              {
+                "tipo":"imagen",
+                "valor": "assets/img/derivadas/Imagen48.png"
+              }
+            ]
+          },
+          {
+            "tipo":"ejemplo",
+            "contenido":[
+              {
+                "tipo":"texto",
+                "valor": "<b>Ejemplo de la vida real sobre derivadas de Orden Superior</b><br><br>Imagina que estás viajando en un automóvil en línea recta y de repente aplicas los frenos. La posición del automóvil (s(t)) (en metros) en función del tiempo (t) (en segundos) después de aplicar los frenos podría estar modelada por una función como: <br><br>s(t) = 20 t− 2t2<br><br>donde (t \\ge 0) hasta que el automóvil se detiene. <br><br><b>Análisis utilizando Derivadas de Orden Superior: </b><br>"
+              },
+              {
+                "tipo":"imagen",
+                "valor": "assets/img/derivadas/Imagen49.png"
+              },
+              {
+                "tipo":"texto",
+                "valor": "<b>Interpretación en la Vida Real: </b><br><ul><li><b>Velocidad: </b> Nos dice qué tan rápido se está moviendo el automóvil en cada instante después de aplicar los frenos. Inicialmente es de 20 m/s y disminuye con el tiempo. </li><li><b>Aceleración: </b>Nos dice cómo está cambiando la velocidad del automóvil con el tiempo. Una aceleración negativa constante significa que la velocidad está disminuyendo de manera uniforme. Sentimos esta aceleración como la fuerza que nos empuja hacia adelante al frenar. </li><li><b>Jerk: </b> Nos dice cómo está cambiando la aceleración. Un jerk de cero significa que la desaceleración es suave y constante. Si el jerk no fuera cero (por ejemplo, si la fuerza de frenado cambiara repentinamente), lo sentiríamos como un cambio brusco en la desaceleración. </li></ul><br><br><b>Conexión con Derivadas de Orden Superior: </b><br><br>Este ejemplo de la vida real ilustra cómo las derivadas de orden superior tienen interpretaciones físicas significativas. La primera derivada es la velocidad, la segunda es la aceleración, y la tercera (jerk) describe la suavidad del cambio en la aceleración. En ingeniería y física, estas derivadas de orden superior son importantes para analizar el movimiento, la vibración y la respuesta de sistemas a fuerzas cambiantes. "
+              }
+            ]
+          }
         ]
       }
       

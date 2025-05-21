@@ -4,48 +4,49 @@
 
   <div *ngFor="let subtema of contenido.subtemas" class="subtema">
     <h3>{{ subtema.titulo }}</h3>
-
-    <div *ngFor="let item of subtema.contenido" class="bloque">
-      <p *ngIf="item.tipo === 'subtitulo'" class="subtitulo">{{ item.valor }}</p>
-
-
-      <p *ngIf="item.tipo === 'texto'" [innerHTML]="item.valor" class="texto"></p>
+      <ng-container *ngFor="let item of subtema.contenido">
+        <div *ngFor="let item of subtema.contenido" class="bloque">
+          <p *ngIf="item.tipo === 'subtitulo'" class="subtitulo">{{ item.valor }}</p>
 
 
-      <img
-        *ngIf="item.tipo === 'imagen'"
-        [src]="item.valor"
-        alt="Imagen explicativa"
-        class="imagen-responsiva"
-      />
+          <p *ngIf="item.tipo === 'texto'" [innerHTML]="item.valor" class="texto"></p>
 
-      <iframe
-        *ngIf="item.tipo === 'video'"
-        [src]="item.valor"
-        frameborder="0"
-        allowfullscreen
-        class="video-embed"
-      ></iframe>
 
+          <img
+            *ngIf="item.tipo === 'imagen'"
+            [src]="item.valor"
+            alt="Imagen explicativa"
+            class="imagen-responsiva"
+          />
+
+          <iframe
+            *ngIf="item.tipo === 'video'"
+            [src]="item.valor"
+            frameborder="0"
+            allowfullscreen
+            class="video-embed"
+          ></iframe>
+
+          
+          <div *ngIf="item.tipo === 'ejemplo'" class="ejemplo">
+            <strong>Ejemplo:</strong>
       
-      <div *ngIf="item.tipo === 'ejemplo'" class="ejemplo">
-        <strong>Ejemplo:</strong>
-  
-      <div *ngFor="let ex of item.contenido">
-        
-        <p *ngIf="ex.tipo === 'texto'" [innerHTML]="ex.valor" class="texto"></p>
+          <div *ngFor="let ex of item.contenido">
+            
+            <p *ngIf="ex.tipo === 'texto'" [innerHTML]="ex.valor" class="texto"></p>
 
-      <img
-        *ngIf="ex.tipo === 'imagen'"
-        [src]="ex.valor"
-        alt="Imagen del ejemplo"
-        class="imagen-responsiva"
-      />
-      </div>
+          <img
+            *ngIf="ex.tipo === 'imagen'"
+            [src]="ex.valor"
+            alt="Imagen del ejemplo"
+            class="imagen-responsiva"
+          />
+          </div>
 
-      <button class="btn-ia">Comprobar con IA</button>
-      </div>
+          <button class="btn-ia">Comprobar con IA</button>
+          </div>
 
-    </div>
+        </div>
+      </ng-container>
   </div>
 </section>
