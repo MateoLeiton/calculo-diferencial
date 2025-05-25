@@ -1,4 +1,5 @@
 // src/app/components/ia-chat-widget/ia-chat-widget.component.ts
+//antes de los cambios
 import { Component, Input, Output, EventEmitter, HostListener, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { DragDropModule } from '@angular/cdk/drag-drop';
