@@ -17,10 +17,42 @@
           {{ msg.texto }}
         </ng-container>
         <ng-template #imagen>
-          <img [src]="sanitizeUrl(msg.texto)" *ngIf="msg.texto" alt="Respuesta de IA" class="imagen-respuesta" />
+          <img
+            [src]="sanitizeUrl(msg.texto)"
+            *ngIf="msg.texto"
+            alt="Respuesta de IA"
+            class="imagen-respuesta"
+          />
         </ng-template>
       </div>
     </div>
+
+    <!-- Mostrar Symbolab solo si es el tipo de IA -->
+    <ng-container *ngIf="iaType === 'symbolab'">
+      <div class="symbolab-container">
+        <!--iframe de la calculadora de geometria de symbolab
+        <iframe
+          id="symbolab-calculator"
+          src="https://www.symbolab.com/calculator_widget2/construction/circle_footage_cost_calculator"
+          width="100%"
+          height="450"
+          frameborder="0"
+          style="border: 0; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"
+        ></iframe>-->
+
+        <!--iframe de la calculadora de derivadas de symbolab-->
+        <iframe 
+          id="symbolab-derivative" 
+          src="https://www.symbolab.com/calculator_widget2/derivatives" 
+          width="100%" 
+          height="480" 
+          frameborder="0" 
+          style="border: 0; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
+        </iframe>
+
+
+      </div>
+    </ng-container>
   </div>
 
   <div class="chat-input">

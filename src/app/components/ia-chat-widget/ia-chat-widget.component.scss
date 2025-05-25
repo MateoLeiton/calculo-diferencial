@@ -104,4 +104,26 @@
       background-color: #1976d2;
     }
   }
+ /* .symbolab-container {
+  margin-top: 10px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}*/
+
+  .symbolab-container {
+  margin-top: 12px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+  iframe {
+    border: none;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+
 }
