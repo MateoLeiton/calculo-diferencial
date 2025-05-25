@@ -11,7 +11,7 @@ bootstrapApplication(AppComponent, {
       RouterModule.forRoot(routes, {
         anchorScrolling: 'enabled',
         scrollPositionRestoration: 'enabled'
-})),
+      })),
     provideHttpClient() 
   ]
 })

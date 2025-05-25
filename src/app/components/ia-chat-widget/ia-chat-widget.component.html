@@ -3,10 +3,7 @@
   cdkDrag
   cdkDragBoundary="body"
   (mousedown)="bringToFront()"
-  [ngStyle]="{
-    borderColor: color,
-    zIndex: zIndex
-  }"
+  [ngStyle]="{ borderColor: color, zIndex: zIndex }"
 >
   <div class="chat-header" [ngStyle]="{ backgroundColor: color }" cdkDragHandle>
     <span>{{ title }}</span>
@@ -14,25 +11,24 @@
   </div>
 
   <div class="chat-body">
-    <div class="mensajes">
-      <div
-        class="mensaje"
-        *ngFor="let msg of mensajes"
-        [ngClass]="msg.emisor"
-      >
-        {{ msg.texto }}
+    <div class="mensaje" *ngFor="let msg of mensajes">
+      <div class="emisor" [ngClass]="msg.emisor">
+        <ng-container *ngIf="!msg.esImagen; else imagen">
+          {{ msg.texto }}
+        </ng-container>
+        <ng-template #imagen>
+          <img [src]="sanitizeUrl(msg.texto)" *ngIf="msg.texto" alt="Respuesta de IA" class="imagen-respuesta" />
+        </ng-template>
       </div>
     </div>
+  </div>
 
-    <div class="input-container">
-      <textarea
-        [(ngModel)]="mensaje"
-        class="input"
-        placeholder="Escribe tu pregunta..."
-        (keydown.enter)="enviarMensaje()"
-        rows="2"
-      ></textarea>
-      <button class="btn-enviar" (click)="enviarMensaje()">Enviar</button>
-    </div>
+  <div class="chat-input">
+    <textarea
+      [(ngModel)]="mensaje"
+      class="input"
+      placeholder="Escribe tu pregunta..."
+    ></textarea>
+    <button (click)="enviarMensaje()" class="btn-enviar">Enviar</button>
   </div>
 </div>

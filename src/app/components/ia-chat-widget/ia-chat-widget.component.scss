@@ -12,6 +12,7 @@
   height: 400px;
   display: flex;
   flex-direction: column;
+  z-index: 9999;
 
   .chat-header {
     padding: 10px;
@@ -22,6 +23,7 @@
     align-items: center;
     cursor: move;
     border-radius: 8px 8px 0 0;
+    flex-shrink: 0;
   }
 
   .close-button {
@@ -34,56 +36,72 @@
 
   .chat-body {
     flex: 1;
-    display: flex;
-    flex-direction: column;
     padding: 10px;
+    overflow-y: auto;
+    background-color: #f9f9f9;
 
-    .mensajes {
-      flex: 1;
-      overflow-y: auto;
+    .mensaje {
       margin-bottom: 10px;
-      display: flex;
-      flex-direction: column;
-      gap: 6px;
 
-      .mensaje {
+      .emisor {
         padding: 8px;
-        border-radius: 6px;
-        max-width: 80%;
+        border-radius: 5px;
+        max-width: 90%;
         word-wrap: break-word;
-
-        &.usuario {
-          background: #e0f7fa;
-          align-self: flex-end;
-        }
-
-        &.ia {
-          background: #f1f1f1;
-          align-self: flex-start;
-        }
       }
-    }
 
-    .input-container {
-      display: flex;
-      gap: 5px;
+      .usuario {
+        background-color: #dbeafe;
+        align-self: flex-end;
+        text-align: right;
+      }
 
-      .input {
-        flex: 1;
-        resize: none;
-        padding: 6px;
+      .ia {
+        background-color: #e0e7ff;
+        align-self: flex-start;
+        text-align: left;
+      }
+
+      .imagen-respuesta {
+        width: 100%;
         border-radius: 4px;
         border: 1px solid #ccc;
       }
+    }
+  }
 
-      .btn-enviar {
-        background-color: #2196f3;
-        color: white;
-        border: none;
-        padding: 6px 12px;
-        border-radius: 4px;
-        cursor: pointer;
-      }
+  .chat-input {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex-shrink: 0;
+    border-top: 1px solid #ddd;
+    background-color: #fff;
+
+    .input {
+      width: 100%;
+      min-height: 60px;
+      resize: vertical;
+      padding: 5px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 14px;
+    }
+
+    .btn-enviar {
+      align-self: flex-end;
+      background-color: #2196f3;
+      color: white;
+      padding: 5px 12px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .btn-enviar:hover {
+      background-color: #1976d2;
     }
   }
 }
