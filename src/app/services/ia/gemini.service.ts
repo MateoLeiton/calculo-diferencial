@@ -17,7 +17,7 @@ export class GeminiService {
         temperature: 0.2,
         topK: 1,
         topP: 0.8,
-        maxOutputTokens: 1024,
+        maxOutputTokens: 4024,
       },
       safetySettings: [
         {

@@ -18,13 +18,23 @@
 
   .gemini {
     background-color: #2196f3;
+    &:hover {
+      background-color: #0b77ad;
+    }
   }
 
+
   .symbolab {
-    background-color: #f44336;
+    background-color: #e02f22;
+    &:hover {
+      background-color: #bc1212;
+    }
   }
 
   .wolfram {
     background-color: #ff9800;
+    &:hover {
+      background-color: #c18912;
+    }
   }
 }
