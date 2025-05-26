@@ -1,3 +1,4 @@
+<!-- ia-chat-container.component.html -->
 <div class="chat-container-buttons">
   <button class="ia-button gemini" (click)="abrir('gemini')">Gemini</button>
   <button class="ia-button symbolab" (click)="abrir('symbolab')">Symbolab</button>
@@ -5,6 +6,7 @@
 </div>
 
 <app-ia-chat-widget
+  #geminiWidget
   *ngIf="mostrar.gemini"
   title="Gemini"
   [iaType]="'gemini'"
@@ -14,6 +16,7 @@
 </app-ia-chat-widget>
 
 <app-ia-chat-widget
+  #symbolabWidget
   *ngIf="mostrar.symbolab"
   title="Symbolab"
   [iaType]="'symbolab'"
@@ -23,6 +26,7 @@
 </app-ia-chat-widget>
 
 <app-ia-chat-widget
+  #wolframWidget
   *ngIf="mostrar.wolfram"
   title="Wolfram Alpha"
   [iaType]="'wolfram'"

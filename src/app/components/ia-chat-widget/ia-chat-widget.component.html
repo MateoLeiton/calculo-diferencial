@@ -1,3 +1,4 @@
+<!-- ia-chat-widget.component.html -->
 <div
   class="chat-box"
   cdkDrag
@@ -13,9 +14,17 @@
   <div class="chat-body">
     <div class="mensaje" *ngFor="let msg of mensajes">
       <div class="emisor" [ngClass]="msg.emisor">
-        <ng-container *ngIf="!msg.esImagen; else imagen">
+        <!--<ng-container *ngIf="!msg.esImagen; else imagen">
+          {{ msg.texto }}
+        </ng-container>-->
+        <ng-container *ngIf="!msg.esImagen && !msg.texto.startsWith('http'); else imagen">
           {{ msg.texto }}
         </ng-container>
+
+        <a *ngIf="msg.texto.startsWith('http')" [href]="msg.texto" target="_blank">
+          Ver en Symbolab
+        </a>
+
         <ng-template #imagen>
           <img
             [src]="sanitizeUrl(msg.texto)"
@@ -40,7 +49,7 @@
           style="border: 0; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);"
         ></iframe>-->
 
-        <!--iframe de la calculadora de derivadas de symbolab-->
+        <!--iframe de la calculadora de derivadas de symbolab
         <iframe 
           id="symbolab-derivative" 
           src="https://www.symbolab.com/calculator_widget2/derivatives" 
@@ -48,9 +57,9 @@
           height="480" 
           frameborder="0" 
           style="border: 0; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
-        </iframe>
+        </iframe>-->
 
-
+        
       </div>
     </ng-container>
   </div>

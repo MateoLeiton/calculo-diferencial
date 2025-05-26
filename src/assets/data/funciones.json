@@ -61,7 +61,12 @@
                 "tipo":"texto",
                 "valor": "Los dominios pueden también estar explícitamente especificados, si hay valores para los cuales la función pudiera estar definida, pero que no deseamos considerarlos por alguna razón."
               }
-            ]
+            ],
+            "prompts": {
+              "gemini": "Calcular el dominio y rango de f(x)=1/x",
+              "symbolab": "NO VERIFICABLE",
+              "wolfram": "plot f(x)=1/x"
+            }
           },
           {
             "tipo":"ejemplo",

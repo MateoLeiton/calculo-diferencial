@@ -1,5 +1,4 @@
 // src/app/components/ia-chat-widget/ia-chat-widget.component.ts
-//antes de los cambios
 import { Component, Input, Output, EventEmitter, HostListener, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { DragDropModule } from '@angular/cdk/drag-drop';
@@ -46,27 +45,40 @@ export class IaChatWidgetComponent {
     this.close.emit();
   }
 
-  async enviarMensaje() {
-    if (!this.mensaje.trim()) return;
+  async enviarMensaje(promptOverride?: string) {
+    const prompt = promptOverride?.trim() || this.mensaje.trim();
+    if (!prompt) return;
 
-    this.mensajes.push({ emisor: 'usuario', texto: this.mensaje });
-    const index = this.mensajes.push({ emisor: 'ia', texto: 'Cargando...' }) - 1;
+    this.mensajes.push({ emisor: 'usuario', texto: prompt });
+    const index = this.mensajes.push({ emisor: 'ia', texto: '' }) - 1;
 
     try {
       if (this.iaType === 'gemini') {
-        await this.geminiService.enviarMensajeStream(this.mensaje, (chunk) => {
+        await this.geminiService.enviarMensajeStream(prompt, (chunk) => {
           this.mensajes[index].texto += chunk;
         });
       } else if (this.iaType === 'wolfram') {
         const appid = 'GP4AQG-PLPPV9PJXW';
-        const query = encodeURIComponent(this.mensaje);
+        const query = encodeURIComponent(prompt);
         const imageUrl = `https://api.wolframalpha.com/v1/simple?appid=${appid}&i=${query}&width=400&background=F5F5F5&foreground=black`;
         this.mensajes[index] = {
           emisor: 'ia',
           texto: imageUrl,
           esImagen: true
         };
-      } else {
+      }
+      else if (this.iaType === 'symbolab') {
+        const base = 'https://www.symbolab.com/solver?query=';
+        const query = encodeURIComponent(this.mensaje.trim());
+        const url = `${base}${query}`;
+
+        // Abre en nueva pestaña
+        window.open(url, '_blank');
+
+        // Muestra el enlace en el chat
+        this.mensajes[index].texto = `Haz clic en el siguiente enlace para ver el resultado en Symbolab: ${url}`;
+      }      
+      else {
         this.mensajes[index].texto = 'IA no implementada todavía.';
       }
     } catch (error) {
@@ -79,4 +91,10 @@ export class IaChatWidgetComponent {
   sanitizeUrl(url: string): SafeResourceUrl {
     return this.sanitizer.bypassSecurityTrustResourceUrl(url);
   }
+
+  recibirPrompt(prompt: string) {
+  this.mensaje = prompt;
+  this.enviarMensaje();
+}
+
 }

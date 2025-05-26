@@ -1,51 +1,37 @@
 <section *ngIf="contenido">
   <h2>{{ contenido.titulo }}</h2>
-  <p *ngIf="contenido.descripcion">{{ contenido.descripcion }}</p>
 
   <div *ngFor="let subtema of contenido.subtemas" class="subtema">
     <h3>{{ subtema.titulo }}</h3>
 
     <div *ngFor="let item of subtema.contenido" class="bloque">
       <p *ngIf="item.tipo === 'subtitulo'" class="subtitulo">{{ item.valor }}</p>
-
-
       <p *ngIf="item.tipo === 'texto'" [innerHTML]="item.valor" class="texto"></p>
 
+      <img *ngIf="item.tipo === 'imagen'" [src]="item.valor" class="imagen-responsiva" />
+      <iframe *ngIf="item.tipo === 'video'" [src]="item.valor" class="video-embed"></iframe>
 
-      <img
-        *ngIf="item.tipo === 'imagen'"
-        [src]="item.valor"
-        alt="Imagen explicativa"
-        class="imagen-responsiva"
-      />
-
-      <iframe
-        *ngIf="item.tipo === 'video'"
-        [src]="item.valor"
-        frameborder="0"
-        allowfullscreen
-        class="video-embed"
-      ></iframe>
-
-      
       <div *ngIf="item.tipo === 'ejemplo'" class="ejemplo">
         <strong>Ejemplo:</strong>
-  
-      <div *ngFor="let ex of item.contenido">
+
+        <div *ngFor="let ex of item.contenido">
+          <p *ngIf="ex.tipo === 'texto'" [innerHTML]="ex.valor" class="texto"></p>
+          <img *ngIf="ex.tipo === 'imagen'" [src]="ex.valor" class="imagen-responsiva" />
+        </div>
+
+        <!-- MENÚ DE IA CONDICIONAL -->
+        <ng-container *ngIf="item.prompts">
+          <mat-menu #iaMenu="matMenu">
+            <button *ngIf="item.prompts.gemini !== 'NO VERIFICABLE'" mat-menu-item (click)="comprobarConIA('gemini', item.prompts.gemini)">Gemini</button>
+            <button *ngIf="item.prompts.symbolab !== 'NO VERIFICABLE'" mat-menu-item (click)="comprobarConIA('symbolab', item.prompts.symbolab)">Symbolab</button>
+            <button *ngIf="item.prompts.wolfram !== 'NO VERIFICABLE'" mat-menu-item (click)="comprobarConIA('wolfram', item.prompts.wolfram)">Wolfram</button>
+          </mat-menu>
+
+          <button mat-button [matMenuTriggerFor]="iaMenu" color="primary">Comprobar con IA</button>
+        </ng-container>
         
-        <p *ngIf="ex.tipo === 'texto'" [innerHTML]="ex.valor" class="texto"></p>
-
-      <img
-        *ngIf="ex.tipo === 'imagen'"
-        [src]="ex.valor"
-        alt="Imagen del ejemplo"
-        class="imagen-responsiva"
-      />
       </div>
-
-      <button class="btn-ia">Comprobar con IA</button>
-      </div>
-
     </div>
   </div>
+  <app-ia-chat-container></app-ia-chat-container>
 </section>
