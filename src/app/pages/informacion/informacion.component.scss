@@ -1,0 +1,149 @@
+/* src/app/pages/informacion/informacion.component.scss */
+.informacion-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 2rem;
+  flex-wrap: wrap;
+  animation: fadeIn 1s ease;
+
+  @media (max-width: 1024px) {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+.imagen-izquierda,
+.imagenes-derecha {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    width: 100%;
+    max-width: 220px;
+    height: auto;
+    border-radius: 12px;
+    object-fit: cover;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+}
+
+.imagenes-derecha {
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contenido-texto {
+  flex: 2;
+  padding: 1rem;
+  background-color: #f5f9ff;
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+
+  h2 {
+    color: #005883;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    margin: 0.5rem 0;
+    font-size: 1.1rem;
+
+    strong {
+      color: #005883;
+    }
+  }
+}
+
+.encabezado-proyecto {
+  display: flex;
+  align-items: center;
+  padding: 0 1rem;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  min-height: 90px;
+
+  .logo-proyecto {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    animation: rotarLogo 2s ease-in-out;
+  }
+
+  .titulo-proyecto {
+    color: #ffffff;
+    animation: fadeInUp 1s ease;
+    line-height: 1.2;
+
+    h1 {
+      font-size: 1rem;
+      font-weight: 400;
+      margin: 0;
+
+      span {
+        font-weight: bold;
+        font-size: 0.95rem;
+        display: block;
+        color: #ffe082;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: flex-start;
+
+    .titulo-proyecto h1 {
+      font-size: 0.95rem;
+
+      span {
+        font-size: 0.85rem;
+      }
+    }
+  }
+}
+
+/* Animaciones */
+@keyframes rotarLogo {
+  0% {
+    transform: rotate(-360deg);
+    opacity: 0;
+  }
+  100% {
+    transform: rotate(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    transform: translateY(15px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+
+/* Animación de entrada */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

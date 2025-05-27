@@ -1,5 +1,6 @@
 .sidenav-container {
     height: 100vh;
+    background-color: white;
   }
   
   .sidenav {
@@ -16,6 +17,14 @@
     position: sticky;
     top: 0;
     z-index: 1000;
+    .button {
+      .mat-icon {
+        font-weight: bold;
+        font-size: 1.3rem;
+        display: block;
+        color: #005883;
+      }
+    }
   }
   
   .mat-nav-list a:hover {
@@ -63,6 +72,49 @@
   
   
 
+  .menu-lateral-titulo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+    mat-icon {
+      color: #005883;
+      animation: popIn 0.4s ease-out;
+    }
+
+    span {
+      font-size: 1.3rem;
+      font-weight: bold;
+      color: #005883;
+      letter-spacing: 1px;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.4);
+      animation: fadeSlideIn 0.5s ease;
+    }
+  }
+
+  /* Animaciones suaves */
+  @keyframes fadeSlideIn {
+    0% {
+      opacity: 0;
+      transform: translateX(-15px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes popIn {
+    0% {
+      transform: scale(0.5);
+      opacity: 0;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
 
 
 
@@ -90,4 +142,76 @@
     color: #ffffff;
   }
   
+  .encabezado-proyecto {
+  display: flex;
+  align-items: center;
+  padding: 0 1rem;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  min-height: 90px;
+  background-color: white;
+
+  .logo-proyecto {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    animation: rotarLogo 2s ease-in-out;
+  }
+
+  .titulo-proyecto {
+    color: #ffffff;
+    animation: fadeInUp 1s ease;
+    line-height: 1.2;
+
+    h1 {
+      font-size: 1rem;
+      font-weight: 400;
+      margin: 0;
+
+      span {
+        font-weight: bold;
+        font-size: 1.3rem;
+        display: block;
+        color: #005883;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: flex-start;
+
+    .titulo-proyecto h1 {
+      font-size: 0.95rem;
+
+      span {
+        font-size: 0.85rem;
+      }
+    }
+  }
+}
+
+/* Animaciones */
+@keyframes rotarLogo {
+  0% {
+    transform: rotate(-360deg);
+    opacity: 0;
+  }
+  100% {
+    transform: rotate(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    transform: translateY(15px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
   

@@ -5,6 +5,8 @@ import { DragDropModule } from '@angular/cdk/drag-drop';
 import { FormsModule } from '@angular/forms';
 import { GeminiService } from '../../services/ia/gemini.service';
 import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
+import { marked } from 'marked';
+
 
 interface MensajeChat {
   emisor: 'usuario' | 'ia';
@@ -55,7 +57,9 @@ export class IaChatWidgetComponent {
     try {
       if (this.iaType === 'gemini') {
         await this.geminiService.enviarMensajeStream(prompt, (chunk) => {
-          this.mensajes[index].texto += chunk;
+          this.mensajes[index].texto += marked(chunk);
+          
+
         });
       } else if (this.iaType === 'wolfram') {
         const appid = 'GP4AQG-PLPPV9PJXW';
@@ -81,9 +85,16 @@ export class IaChatWidgetComponent {
       else {
         this.mensajes[index].texto = 'IA no implementada todavía.';
       }
-    } catch (error) {
-      this.mensajes[index].texto = 'Error al consultar la IA';
+    } catch (error: any) {
+      const msg = error?.message || JSON.stringify(error);
+      if (msg.includes('Candidate was blocked due to SAFETY')) {
+        this.mensajes[index].texto = 'La IA bloqueó la respuesta por razones de seguridad. Intenta reformular tu pregunta.';
+      } else {
+        this.mensajes[index].texto = 'Error al consultar la IA: ' + msg;
+      }
     }
+
+
 
     this.mensaje = '';
   }

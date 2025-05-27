@@ -19,24 +19,26 @@ export class GeminiService {
         topP: 0.8,
         maxOutputTokens: 4024,
       },
-      safetySettings: [
+      /*safetySettings: [
         {
           category: HarmCategory.HARM_CATEGORY_DANGEROUS_CONTENT,
-          threshold: HarmBlockThreshold.BLOCK_LOW_AND_ABOVE,
+          threshold: HarmBlockThreshold.BLOCK_MEDIUM_AND_ABOVE,
         },
         {
           category: HarmCategory.HARM_CATEGORY_HATE_SPEECH,
-          threshold: HarmBlockThreshold.BLOCK_LOW_AND_ABOVE,
+          threshold: HarmBlockThreshold.BLOCK_MEDIUM_AND_ABOVE,
         },
         {
           category: HarmCategory.HARM_CATEGORY_SEXUALLY_EXPLICIT,
-          threshold: HarmBlockThreshold.BLOCK_LOW_AND_ABOVE,
+          threshold: HarmBlockThreshold.BLOCK_MEDIUM_AND_ABOVE,
         },
         {
           category: HarmCategory.HARM_CATEGORY_HARASSMENT,
-          threshold: HarmBlockThreshold.BLOCK_LOW_AND_ABOVE,
+          threshold: HarmBlockThreshold.BLOCK_MEDIUM_AND_ABOVE,
         },
-      ],
+      ],*/
+
+
     });
   }
 
@@ -45,7 +47,7 @@ export class GeminiService {
    * @param prompt El mensaje del usuario
    * @param onChunk Función callback que se llama con cada fragmento del texto
    */
-  async enviarMensajeStream(prompt: string, onChunk: (chunk: string) => void): Promise<void> {
+  /*async enviarMensajeStream(prompt: string, onChunk: (chunk: string) => void): Promise<void> {
     const stream = await this.model.generateContentStream(prompt);
     for await (const chunk of stream.stream) {
       const part = chunk.text();
@@ -53,5 +55,22 @@ export class GeminiService {
         onChunk(part);
       }
     }
+  }*/
+
+    async enviarMensajeStream(prompt: string, onChunk: (chunk: string) => void): Promise<void> {
+  const stream = await this.model.generateContentStream(prompt);
+  let completo = '';
+
+  for await (const chunk of stream.stream) {
+    const part = chunk.text();
+    if (part) completo += part;
   }
+
+  const limpio = completo.replace(/\s{2,}/g, ' ').replace(/\n/g, '\n\n');
+  onChunk(limpio);
+}
+
+
+  // Si quieres emitir el texto final limpio:
+  // onChunk(buffer.trim());
 }

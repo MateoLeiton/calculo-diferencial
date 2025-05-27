@@ -7,7 +7,11 @@
       [mode]="isHandset ? 'over' : 'side'"
       [opened]="!isHandset"
     >
-      <mat-toolbar color="primary">Menú</mat-toolbar>
+      <mat-toolbar color="primary" class="menu-lateral-titulo">
+        <mat-icon>menu</mat-icon>
+        <span>Menú</span>
+      </mat-toolbar>
+
       
       <mat-nav-list class="custom-nav-list">
         <a mat-button routerLink="/inicio" routerLinkActive="active">Inicio</a>
@@ -22,7 +26,7 @@
     </mat-sidenav>
   
     <mat-sidenav-content>
-      <mat-toolbar color="primary">
+      <mat-toolbar color="primary" class="encabezado-proyecto">
         <button
           type="button"
           aria-label="Toggle sidenav"
@@ -32,8 +36,20 @@
         >
           <mat-icon>menu</mat-icon>
         </button>
-        <span>Proyecto:  Construcción de conceptos en matemática a través de situaciones cotidianas:<br> Industria, innovación e infraestructura en torno a la  inteligencia artificial.</span>
+
+        <!-- Logo a la izquierda -->
+        <img src="assets/img/inicio/Encabezado.png" alt="Logo Proyecto" class="logo-proyecto" />
+
+        <!-- Título centrado/derecha -->
+        <div class="titulo-proyecto">
+          <h1>
+            Proyecto:<br />
+            <span>CONSTRUCCIÓN DE CONCEPTOS EN MATEMÁTICA A TRAVÉS DE SITUACIONES COTIDIANAS:<br/>
+            INDUSTRIA, INNOVACIÓN E INFRAESTRUCTURA EN TORNO A LA INTELIGENCIA ARTIFICIAL.</span>
+          </h1>
+        </div>
       </mat-toolbar>
+
   
       <div class="main-content">
         <router-outlet></router-outlet>

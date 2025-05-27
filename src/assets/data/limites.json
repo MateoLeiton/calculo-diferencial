@@ -23,33 +23,39 @@
           "contenido": [
             {
               "tipo": "texto",
-              "valor": "Límite de la función f(x) = x + 1."
+              "valor": "<b>Ejemplo 1: Límite de la función f(x) = x + 1.</b><br><br>"
+            },
+            {
+              "tipo": "texto",
+              "valor": "Primero analizaremos el dominio de esta función.Rápidamente podemos observar que esta función no tiene ninguna restricción,para cualquier valor real de la variable x existirá un valor f(x), por lo tanto, su domino son todos los números reales: "
+            },
+            {
+              "tipo": "texto",
+              "valor": "Dom: R<br></br>Ahora analicemos el límite cuando x → 1:"
+            },
+            {
+              "tipo":"imagen",
+              "valor":"assets/img/limites/2.png"
+            },
+            {
+              "tipo":"texto",
+              "valor": "En este caso, como no tenemos una restricción en el dominio, sustituimos el valor al cual tiende la variable x en la función:<br></br>Tiene sentido que a medida x → 1 su imagen en el eje y sea 2."
+            },
+            {
+              "tipo":"imagen",
+              "valor": "assets/img/limites/3.png" 
             }
-          ]
+          ],
+          "prompts": {
+            "gemini": "limite de la funcion f(x) = x + 1, cuando x tiende a 1",
+            "symbolab": "limit as x approaches 1 of x+1",
+            "wolfram": "Limit[x + 1, x -> 1]"
+          }
         },
-        {
-          "tipo": "texto",
-        "valor": "Primero analizaremos el dominio de esta función.Rápidamente podemos observar que esta función no tiene ninguna restricción,para cualquier valor real de la variable x existirá un valor f(x), por lo tanto, su domino son todos los números reales: "
-        },
-        {
-          "tipo": "texto",
-          "valor": "Dom: R<br></br>Ahora analicemos el límite cuando x → 1:"
-        },
-        {
-          "tipo":"imagen",
-          "valor":"assets/img/limites/2.png"
-        },
+        
         {
           "tipo":"texto",
-          "valor": "En este caso, como no tenemos una restricción en el dominio, sustituimos el valor al cual tiende la variable x en la función:<br></br>Tiene sentido que a medida x → 1 su imagen en el eje y sea 2."
-        },
-        {
-          "tipo":"imagen",
-          "valor": "assets/img/limites/3.png" 
-        },
-        {
-          "tipo":"texto",
-          "valor": "<b>Propiedades</b><br><br>Estas son algunas propiedades de los límites o como también son conocidas:<br></br>Álgebra de límites:<br></br>El límite de la suma de funciones será igual a la suma del límite de cada función."
+          "valor": "<b>Propiedades</b><br><br>Estas son algunas propiedades de los límites o como también son conocidas:<br></br><b>Álgebra de límites:</b><br></br>El límite de la suma de funciones será igual a la suma del límite de cada función."
         },
         {
           "tipo": "ejemplo",
@@ -58,7 +64,12 @@
               "tipo": "imagen",
               "valor": "assets/img/limites/4.png"
             }
-          ]
+          ],
+          "prompts": {
+            "gemini": "limite de la funcion f(x) = x^3 + x^2 - x, cuando x tiende a 1",
+            "symbolab": "limit as x approaches 1 of x^3 + x^2 - x",
+            "wolfram": "Limit[x^3 + x^2 - x, x -> 1]"
+          }
         },  
         {
           "tipo":"texto",
@@ -68,31 +79,42 @@
           "tipo":"imagen",
           "valor":"assets/img/limites/5.png"
         },
-        {
-          "tipo":"texto",
-          "valor": "El límite de una función elevada a otra función será igual al límite de la función base elevado al límite de la función exponente."
-        },
+        
         {
           "tipo":"ejemplo",
           "contenido": [
             {
+              "tipo":"texto",
+              "valor": "El límite de una función elevada a otra función será igual al límite de la función base elevado al límite de la función exponente."
+            },
+            {
               "tipo": "imagen",
               "valor": "assets/img/limites/6.png"
             }
-          ]
+          ],
+          "prompts": {
+            "gemini": "limite de la funcion f(x) = (x^2 + 2)^x, cuando x tiende a 1",
+            "symbolab": "limit as x approaches 1 of (x^2 + 2)^x",
+            "wolfram": "Limit[(x^2 + 2)^x, x -> 1]"
+          }
         },
         {
           "tipo":"ejemplo",
           "contenido": [
             {
               "tipo": "texto",
-              "valor": "Aplicando las propiedades resolvamos el siguiente límite:"
+              "valor": "<b>Ejemplo 2: Aplicando las propiedades resolvamos el siguiente límite:"
             },
             {
               "tipo": "imagen",
               "valor": "assets/img/limites/7.png"
             }
-          ]
+          ],
+          "prompts": {
+            "gemini": "limite de la funcion f(x) = ((3x+2)/(2x+3))^(5x-1), cuando x tiende a 0",
+            "symbolab": "limit as x approaches 0 of ((3x+2)/(2x+3))^(5x-1)",
+            "wolfram": "Limit[((3x+2)/(2x+3))^(5x-1), x -> 0]"
+          }
         },
         {
           "tipo":"ejemplo",
@@ -107,7 +129,7 @@
             },
             {
               "tipo":"texto",
-            "valor": "Sin embargo, la promoción solo es válida hasta que se alcance un número muy grande de suscriptores.<br></br><strong>PREGUNTAS:</strong><br></br><strong>a)</strong> ¿Cuál es el precio del plan si solo se suscribe un pequeño número de clientes, digamos 100 (es decir, t = 0.1)?<br></br><strong>b)</strong> ¿Qué sucede con el precio del plan a medida que el número de clientes suscritos se vuelve muy grande (tiende a infinito)? ¿Existe un precio límite para este plan?<br></br><strong>c)</strong> Interpreta el significado práctico de este límite en el contexto de la oferta del plan de internet.<br></br><strong>SOLUCION:</strong><br></br>a) Para encontrar el precio cuando t = 0.1 (100 clientes), sustituimos este valor en la función:<br></br>"
+            "valor": "Sin embargo, la promoción solo es válida hasta que se alcance un número muy grande de suscriptores.<br></br><strong>PREGUNTAS:</strong><br></br><strong>a)</strong> ¿Cuál es el precio del plan si solo se suscribe un pequeño número de clientes, digamos 100 (es decir, t = 0.1)?<br></br><strong>b)</strong> ¿Qué sucede con el precio del plan a medida que el número de clientes suscritos se vuelve muy grande (tiende a infinito)? ¿Existe un precio límite para este plan?<br></br><strong>c)</strong> Interpreta el significado práctico de este límite en el contexto de la oferta del plan de internet.<br></br><strong>SOLUCION:</strong><br></br><b>a)</b> Para encontrar el precio cuando t = 0.1 (100 clientes), sustituimos este valor en la función:<br></br>"
             },
             {
               "tipo":"imagen",
@@ -115,7 +137,23 @@
             },
             {
               "tipo": "texto",
-              "valor": "Por lo tanto, si solo se suscriben 100 clientes, el precio del plan sería aproximadamente 54.55 miles de pesos colombianos, o $54,550 COP.<br></br>b) Para determinar qué sucede con el precio a medida que el número de clientes suscritos se vuelve muy grande, necesitamos calcular el límite de la función P(t) cuando t tiende a infinito:"
+              "valor": "Por lo tanto, si solo se suscriben 100 clientes, el precio del plan sería aproximadamente 54.55 miles de pesos colombianos, o $54,550 COP.<br></br>"
+            }
+
+          ],
+          "prompts": {
+            "gemini": "CUANTO ES P(0.1)=100-((50)/(0.1+1))",
+            "symbolab": "P(0.1)=100-((50)/(0.1+1))",
+            "wolfram": "P(0.1)=100-((50)/(0.1+1))"
+          }
+        },
+        {
+          "tipo":"ejemplo",
+          "contenido":[
+
+            {
+              "tipo":"texto",
+              "valor": "<b>b)</b> Para determinar qué sucede con el precio a medida que el número de clientes suscritos se vuelve muy grande, necesitamos calcular el límite de la función P(t) cuando t tiende a infinito:"
             },
             {
               "tipo":"imagen",
@@ -139,13 +177,18 @@
             },
             {
               "tipo":"texto",
-              "valor": "A medida que t se hace muy grande, el término 50/t+1 tiende a 0. Por lo tanto:<br></br>100 – 0 = 100<br></br>El precio del plan tiende a 100 miles de pesos colombianos a medida que el número de clientes suscritos se vuelve muy grande. El precio límite para este plan es de $100,000 COP.<br></br>c) IMPLEMENTACION PRÁCTICA:<br></br>El límite de $100,000 COP representa el precio al que el plan de internet se estabilizará una vez que la promoción de lanzamiento haya atraído a una gran cantidad de suscriptores. Inicialmente, el precio es menor debido al descuento para los primeros clientes. Sin embargo, a medida que la base de clientes crece, el efecto del término 50/t+1 (que representa la disminución del precio por la promoción) se vuelve insignificante, y el precio se acerca cada vez más a su valor normal o de equilibrio de $100,000 COP. Esto sugiere que la promoción es temporal y busca incentivar la adopción temprana del servicio. Una vez que la empresa alcanza una masa crítica de usuarios, el precio se ajusta al valor estándar del plan."
-            },
-            {
-
+              "valor": "A medida que t se hace muy grande, el término 50/t+1 tiende a 0. Por lo tanto:<br></br>100 – 0 = 100<br></br>El precio del plan tiende a 100 miles de pesos colombianos a medida que el número de clientes suscritos se vuelve muy grande. El precio límite para este plan es de $100,000 COP.<br></br>"
             }
-
-          ]
+          ],
+          "prompts": {
+            "gemini": "limite de la funcion f(x) = 100-((50)/(t+1)), cuando t tiende a infinito",
+            "symbolab": "limit as t approaches infinity of 100-((50)/(t+1))",
+            "wolfram": "Limit[100-((50)/(t+1)), t -> infinity]"
+          }
+        },
+        {
+          "tipo":"texto",
+          "valor": "<b>c) IMPLEMENTACION PRÁCTICA:</b><br></br>El límite de $100,000 COP representa el precio al que el plan de internet se estabilizará una vez que la promoción de lanzamiento haya atraído a una gran cantidad de suscriptores. Inicialmente, el precio es menor debido al descuento para los primeros clientes. Sin embargo, a medida que la base de clientes crece, el efecto del término 50/t+1 (que representa la disminución del precio por la promoción) se vuelve insignificante, y el precio se acerca cada vez más a su valor normal o de equilibrio de $100,000 COP. Esto sugiere que la promoción es temporal y busca incentivar la adopción temprana del servicio. Una vez que la empresa alcanza una masa crítica de usuarios, el precio se ajusta al valor estándar del plan."
         }
 
 
@@ -228,12 +271,46 @@
             },
             {
               "tipo":"texto",
-              "valor": "El costo total de producción de 200 almojábanas es de 11 miles de pesos colombianos, o $11,000 COP.<br><br>b) Para encontrar el ingreso total por la venta de 500 almojábanas, usamos q=500/100=5. Sustituyendo en la función de ingreso:<br><br>I(5) = 10(5) = 50<br><br>El ingreso total por la venta de 500 almojábanas es de 50 miles de pesos colombianos, o $50,000 COP.<br><br>c) La función de utilidad diaria, U(q), se calcula restando el costo total del ingreso total:"
+              "valor": "El costo total de producción de 200 almojábanas es de 11 miles de pesos colombianos, o $11,000 COP.<br>"
+            }
+          ],
+          "prompts": {
+            "gemini": "para fabricar q cientos de almojábanas está dado por la función: C(q)=(0.5q^2)+2q+5. Donde q representa la cantidad de cientos de almojábanas producidas en un día (por ejemplo, si q = 3, se producen 300 almojábanas).El precio de venta de cada ciento de almojábanas es de 10 mil pesos colombianos. Por lo tanto, el ingreso total diario (en miles de pesos colombianos) por la venta de q cientos de almojábanas está dado por la función: I(q) = 10q. Preguntas: a) ¿Cuál es el costo total de producción si la panadería produce 200 almojábanas en un día?",
+            "symbolab": "(0.5(2^2))+2(2)+5",
+            "wolfram": "C(2)=(0.5(2^2))+2(2)+5"
+          }
+        },
+        {"tipo":"ejemplo",
+          "contenido":[
+            {
+              "tipo":"texto",
+              "valor": "b) Para encontrar el ingreso total por la venta de 500 almojábanas, usamos q=500/100=5. Sustituyendo en la función de ingreso:<br><br>I(5) = 10(5) = 50<br><br>El ingreso total por la venta de 500 almojábanas es de 50 miles de pesos colombianos, o $50,000 COP.<br>"
+            }
+          ],
+          "prompts":{
+            "gemini": "para fabricar q cientos de almojábanas está dado por la función: C(q)=(0.5q^2)+2q+5. Donde q representa la cantidad de cientos de almojábanas producidas en un día (por ejemplo, si q = 3, se producen 300 almojábanas).El precio de venta de cada ciento de almojábanas es de 10 mil pesos colombianos. Por lo tanto, el ingreso total diario (en miles de pesos colombianos) por la venta de q cientos de almojábanas está dado por la función: I(q) = 10q. Preguntas: b) ¿Cuál es el ingreso total si se venden 500 almojábanas en un día?",
+            "symbolab": "I(5)=10(5)",
+            "wolfram": "I(5)=10(5)"
+          }
+        },
+        { "tipo": "ejemplo",
+          "contenido":[
+            {
+              "tipo":"texto",
+              "valor": "c) La función de utilidad diaria, U(q), se calcula restando el costo total del ingreso total:"
             },
             {
               "tipo": "imagen",
               "valor": "assets/img/limites/21.png"
-            },
+            }],
+          "prompts":{
+            "gemini": "para fabricar q cientos de almojábanas está dado por la función: C(q)=(0.5q^2)+2q+5. Donde q representa la cantidad de cientos de almojábanas producidas en un día (por ejemplo, si q = 3, se producen 300 almojábanas).El precio de venta de cada ciento de almojábanas es de 10 mil pesos colombianos. Por lo tanto, el ingreso total diario (en miles de pesos colombianos) por la venta de q cientos de almojábanas está dado por la función: I(q) = 10q. Preguntas: c) Encuentra la función de utilidad diaria, U(q), que representa la diferencia entre el ingreso total y el costo total.",
+            "symbolab": "U(q)=10q-(0.5q^2)+2q+5",
+            "wolfram": "U(q)=10q-(0.5q^2)+2q+5"
+          }
+        },
+        { "tipo": "ejemplo",
+          "contenido":[
             {
               "tipo":"imagen",
               "valor":"assets/img/limites/22.png"
@@ -242,8 +319,12 @@
               "tipo":"texto",
               "valor": "Esto significa que la panadería puede alcanzar una utilidad de 25 mil pesos colombianos produciendo y vendiendo 600 almojábanas (q = 6) o 1000 almojábanas (q = 10)."
             }
-          ]
-
+          ],
+          "prompts":{
+            "gemini": "La funcion de Utilidad diaria es U(q)= (-0.5q^2)+8q-5. d) Encuentra U(4). e) Resuelve la ecuacion de U(q)=25",
+            "symbolab": "(-0.5(q)^2)+8(q)-5=25",
+            "wolfram": "(-0.5(q)^2)+8(q)-5=25"
+          }
         }
       ]
     },
@@ -368,9 +449,112 @@
             },
             {
               "tipo":"texto",
-              "valor": "Un usuario frecuente de TransSoacha está analizando el costo de sus viajes diarios. <br><br><b>Preguntas: </b><br><br>a) ¿Cuál es el costo de un viaje de exactamente 5 kilómetros? <br><br>b) ¿Cuál es el costo de un viaje de 5.1 kilómetros? <br><br>c) ¿Es la función de costo C(d) continua en d=5? Justifica tu respuesta utilizando la definición de continuidad. <br><br>d) ¿Cuál es el costo de un viaje de exactamente 10 kilómetros? <br><br>e) ¿Cuál es el costo de un viaje de 9.9 kilómetros? <br><br>f) ¿Es la función de costo C(d) continua en d=10? Justifica tu respuesta utilizando la definición de continuidad. <br><br>g) ¿En qué valores de distancia la función de costo C(d) presenta discontinuidades? ¿Qué tipo de discontinuidad es? <br><br>h) ¿Qué implicaciones prácticas tienen estas discontinuidades para los usuarios de TransSoacha? <br><br><b>Solución: </b> <br><br>a) Para un viaje de exactamente 5 kilómetros (d = 5), usamos la primera parte de la función: C(5) = 2 miles de pesos colombianos ($2.000 COP). <br><br>b) Para un viaje de 5.1 kilómetros (d=5.1), usamos la segunda parte de la función: C(5.1) = 2.5 miles de pesos colombianos ($2.500 COP). <br><br>c) Para verificar la continuidad en d = 5, debemos analizar los límites laterales y el valor de la función en ese punto: <br><br><ul><li>Valor de la función en d = 5: C (5) = 2. <br></li><li>Límite por la izquierda (d→5−): limd→5−   C(d)=limd→5−  2 = 2. <br></li><li>Límite por la derecha (d→5+): limd→5+   C(d)=limd→5+    2.5 = 2.5. <br><br></li></ul>Como el límite por la izquierda (2) es diferente del límite por la derecha (2.5), el límite bilateral limd→5C(d) no existe. Por lo tanto, la función C(d) no es continua en d = 5. <br><br>d) Para un viaje de exactamente 10 kilómetros (d = 10), usamos la segunda parte de la función: C(10) = 2.5 miles de pesos colombianos ($2.500 COP). <br><br>e) Para un viaje de 9.9 kilómetros (d = 9.9), usamos la segunda parte de la función: C(9.9) = 2.5 miles de pesos colombianos ($2.500 COP). <br><br>f) Para verificar la continuidad en d = 10: <br><br><ul><li>Valor de la función en d = 10: C(10) = 2.5. <br></li><li>Límite por la izquierda (d→10−): limd→10−   C(d)=limd→10 − 2.5 = 2.5. <br></li><li>Límite por la derecha (d→10+): limd→10+   C(d)=limd→10 + 3 = 3. <br></li></ul>Como el límite por la izquierda (2.5) es diferente del límite por la derecha (3), el límite bilateral limd→10 C(d) no existe. Por lo tanto, la función C(d) no es continua en d = 10. <br><br>g) La función de costo C(d) presenta discontinuidades en d = 5 y d = 10. En ambos casos, se trata de una discontinuidad de salto, ya que el límite por la izquierda y el límite por la derecha existen, pero son diferentes. <br><br>h) <b>Implicaciones Prácticas para los Usuarios: </b><br><br>Las discontinuidades en la función de costo significan que un pequeño cambio en la distancia recorrida alrededor de los puntos de 5 km y 10 km puede resultar en un cambio abrupto en el precio del pasaje. <br><br><ul><li><b>En d = 5 km: </b> Un viaje de justo 5 km costará $2.000, pero un viaje ligeramente más largo, como 5.1 km, costará $2.500. Esto podría generar sorpresa o incluso frustración en los usuarios que viajan distancias cercanas a estos umbrales. <br></li><li><b>En d = 10 km: </b> Un viaje de justo 10 km costará $2.500, pero un viaje ligeramente más largo, como 10.1 km, costará $3.000. De manera similar, esto implica un aumento repentino en el precio al cruzar el umbral de los 10 kilómetros. <br></li></ul>Para los usuarios, es importante ser conscientes de estos puntos de discontinuidad, ya que planificar una ruta ligeramente más larga o más corta podría significar una diferencia en el costo del pasaje. <br><br>La falta de continuidad en estos puntos indica que el precio no aumenta de manera gradual con la distancia en esos umbrales específicos."
+              "valor": "Un usuario frecuente de TransSoacha está analizando el costo de sus viajes diarios. <br><br><b>Preguntas: </b><br><br>a) ¿Cuál es el costo de un viaje de exactamente 5 kilómetros? <br><br>b) ¿Cuál es el costo de un viaje de 5.1 kilómetros? <br><br>c) ¿Es la función de costo C(d) continua en d=5? Justifica tu respuesta utilizando la definición de continuidad. <br><br>d) ¿Cuál es el costo de un viaje de exactamente 10 kilómetros? <br><br>e) ¿Cuál es el costo de un viaje de 9.9 kilómetros? <br><br>f) ¿Es la función de costo C(d) continua en d=10? Justifica tu respuesta utilizando la definición de continuidad. <br><br>g) ¿En qué valores de distancia la función de costo C(d) presenta discontinuidades? ¿Qué tipo de discontinuidad es? <br><br>h) ¿Qué implicaciones prácticas tienen estas discontinuidades para los usuarios de TransSoacha? <br><br><b>Solución: </b> <br><br>a) Para un viaje de exactamente 5 kilómetros (d = 5), usamos la primera parte de la función: C(5) = 2 miles de pesos colombianos ($2.000 COP). <br>"
             }
-          ]
+          ],
+          "prompts":{
+            "gemini": "Tengo la siguiente funcion: C(d)={2 si 0 ≤ d ≤ 5, 2.5 si 5 < d ≤ 10, 3 si d > 10}. Explicame por qué C(5) = 2",
+            "symbolab": "NO VERIFICABLE",
+            "wolfram": "NO VERIFICABLE"
+          }
+        },
+        {
+          "tipo":"ejemplo",
+          "contenido": [
+            {
+              "tipo": "texto",
+              "valor": "b) Para un viaje de 5.1 kilómetros (d=5.1), usamos la segunda parte de la función: C(5.1) = 2.5 miles de pesos colombianos ($2.500 COP). <br>"
+            }
+          ],
+          "prompts":{
+            "gemini": "Tengo la siguiente funcion: C(d)={2 si 0 ≤ d ≤ 5, 2.5 si 5 < d ≤ 10, 3 si d > 10}. Explicame por qué C(5.1) = 2.5",
+            "symbolab": "NO VERIFICABLE",
+            "wolfram": "NO VERIFICABLE"
+          }
+        },
+        {
+          "tipo":"ejemplo",
+          "contenido": [
+            {
+              "tipo": "texto",
+              "valor": "c) Para verificar la continuidad en d = 5, debemos analizar los límites laterales y el valor de la función en ese punto: <br><br><ul><li>Valor de la función en d = 5: C (5) = 2. <br></li><li>Límite por la izquierda (d→5−): limd→5−   C(d)=limd→5−  2 = 2. <br></li><li>Límite por la derecha (d→5+): limd→5+   C(d)=limd→5+    2.5 = 2.5. <br><br></li></ul>Como el límite por la izquierda (2) es diferente del límite por la derecha (2.5), el límite bilateral limd→5C(d) no existe. Por lo tanto, la función C(d) no es continua en d = 5. <br>"
+            }
+          ],
+          "prompts":{
+            "gemini": "Tengo la siguiente funcion: C(d)={2 si 0 ≤ d ≤ 5, 2.5 si 5 < d ≤ 10, 3 si d > 10}. Explicame si C(d) es continua en d=5",
+            "symbolab": "NO VERIFICABLE",
+            "wolfram": "NO VERIFICABLE"
+          }
+        },
+        {
+          "tipo":"ejemplo",
+          "contenido": [
+            {
+              "tipo": "texto",
+              "valor": "d) Para un viaje de exactamente 10 kilómetros (d = 10), usamos la segunda parte de la función: C(10) = 2.5 miles de pesos colombianos ($2.500 COP). <br>"
+            }
+          ],
+          "prompts":{
+            "gemini": "Tengo la siguiente funcion: C(d)={2 si 0 ≤ d ≤ 5, 2.5 si 5 < d ≤ 10, 3 si d > 10}. Explicame que valor tiene C si d=10",
+            "symbolab": "NO VERIFICABLE",
+            "wolfram": "NO VERIFICABLE"
+          }
+        },
+        {
+          "tipo":"ejemplo",
+          "contenido": [
+            {
+              "tipo": "texto",
+              "valor": "e) Para un viaje de 9.9 kilómetros (d = 9.9), usamos la segunda parte de la función: C(9.9) = 2.5 miles de pesos colombianos ($2.500 COP). <br>"
+            }
+          ],
+          "prompts":{
+            "gemini": "Tengo la siguiente funcion: C(d)={2 si 0 ≤ d ≤ 5, 2.5 si 5 < d ≤ 10, 3 si d > 10}. Explicame que valor tiene C si d=9.9",
+            "symbolab": "NO VERIFICABLE",
+            "wolfram": "NO VERIFICABLE"
+          }
+        },
+        {
+          "tipo":"ejemplo",
+          "contenido": [
+            {
+              "tipo": "texto",
+              "valor": "f) Para verificar la continuidad en d = 10: <br><br><ul><li>Valor de la función en d = 10: C(10) = 2.5. <br></li><li>Límite por la izquierda (d→10−): limd→10−   C(d)=limd→10 − 2.5 = 2.5. <br></li><li>Límite por la derecha (d→10+): limd→10+   C(d)=limd→10 + 3 = 3. <br></li></ul>Como el límite por la izquierda (2.5) es diferente del límite por la derecha (3), el límite bilateral limd→10 C(d) no existe. Por lo tanto, la función C(d) no es continua en d = 10. <br>"
+            }
+          ],
+          "prompts":{
+            "gemini": "Tengo la siguiente funcion: C(d)={2 si 0 ≤ d ≤ 5, 2.5 si 5 < d ≤ 10, 3 si d > 10}. Explicame si C(d) es continua en d=10",
+            "symbolab": "NO VERIFICABLE",
+            "wolfram": "NO VERIFICABLE"
+          }
+        },
+        {
+          "tipo":"ejemplo",
+          "contenido": [
+            {
+              "tipo": "texto",
+              "valor": "g) La función de costo C(d) presenta discontinuidades en d = 5 y d = 10. En ambos casos, se trata de una discontinuidad de salto, ya que el límite por la izquierda y el límite por la derecha existen, pero son diferentes. <br>"
+            }
+          ],
+          "prompts":{
+            "gemini": "Tengo la siguiente funcion: C(d)={2 si 0 ≤ d ≤ 5, 2.5 si 5 < d ≤ 10, 3 si d > 10}. Explicame si C(d) presenta discontinuidades en d=5 y d=10",
+            "symbolab": "NO VERIFICABLE",
+            "wolfram": "NO VERIFICABLE"
+          }
+        },
+        {
+          "tipo":"ejemplo",
+          "contenido": [
+            {
+              "tipo": "texto",
+              "valor": "h) <b>Implicaciones Prácticas para los Usuarios: </b><br><br>Las discontinuidades en la función de costo significan que un pequeño cambio en la distancia recorrida alrededor de los puntos de 5 km y 10 km puede resultar en un cambio abrupto en el precio del pasaje. <br><br><ul><li><b>En d = 5 km: </b> Un viaje de justo 5 km costará $2.000, pero un viaje ligeramente más largo, como 5.1 km, costará $2.500. Esto podría generar sorpresa o incluso frustración en los usuarios que viajan distancias cercanas a estos umbrales. <br></li><li><b>En d = 10 km: </b> Un viaje de justo 10 km costará $2.500, pero un viaje ligeramente más largo, como 10.1 km, costará $3.000. De manera similar, esto implica un aumento repentino en el precio al cruzar el umbral de los 10 kilómetros. <br></li></ul>Para los usuarios, es importante ser conscientes de estos puntos de discontinuidad, ya que planificar una ruta ligeramente más larga o más corta podría significar una diferencia en el costo del pasaje. <br><br>La falta de continuidad en estos puntos indica que el precio no aumenta de manera gradual con la distancia en esos umbrales específicos."
+            }
+          ],
+          "prompts":{
+            "gemini": "NO VERIFICABLE",
+            "symbolab": "NO VERIFICABLE",
+            "wolfram": "NO VERIFICABLE"
+          }
         }
         
       ]
