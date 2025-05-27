@@ -18,8 +18,10 @@
           {{ msg.texto }}
         </ng-container>-->
         <ng-container *ngIf="!msg.esImagen && !msg.texto.startsWith('http'); else imagen">
-         <!--{{ msg.texto }}-->
-          <div *ngIf="iaType === 'gemini'; else textoPlano" [innerHTML]="msg.texto"></div>
+         <!--{{ msg.texto }}
+          <div *ngIf="iaType === 'gemini'; else textoPlano" [innerHTML]="msg.texto"></div>-->
+          <div *ngIf="iaType === 'gemini' || iaType === 'symbolab'; else textoPlano" [innerHTML]="msg.texto"></div>
+
           <ng-template #textoPlano>{{ msg.texto }}</ng-template>
         </ng-container>
 

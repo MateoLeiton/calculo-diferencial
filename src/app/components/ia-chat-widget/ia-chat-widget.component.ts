@@ -56,7 +56,9 @@ export class IaChatWidgetComponent {
 
     try {
       if (this.iaType === 'gemini') {
+        this.mensajes[index].texto = "Gemini está generando su respuesta..."
         await this.geminiService.enviarMensajeStream(prompt, (chunk) => {
+          this.mensajes[index].texto = " ";
           this.mensajes[index].texto += marked(chunk);
           
 
@@ -80,7 +82,8 @@ export class IaChatWidgetComponent {
         window.open(url, '_blank');
 
         // Muestra el enlace en el chat
-        this.mensajes[index].texto = `Haz clic en el siguiente enlace para ver el resultado en Symbolab: ${url}`;
+        this.mensajes[index].texto = `Haz clic en el siguiente enlace para ver el resultado en Symbolab: <a href="${url}" target="_blank" rel="noopener noreferrer">${url}</a>`;
+
       }      
       else {
         this.mensajes[index].texto = 'IA no implementada todavía.';

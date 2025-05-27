@@ -30,9 +30,56 @@
               },
               {
                 "tipo":"texto",
-                "valor": "<b>Preguntas: </b><br><br><ol><li><b>Velocidad Promedio: </b>Calcula la velocidad promedio del dron durante los siguientes intervalos de tiempo: <br><ul><li>Entre (t = 0) s y (t = 1) s. </li><li>Entre (t = 1) s y (t = 2) s. </li><li>Entre (t = 2) s y (t = 3) s. </li><li>Entre (t = 1) s y (t = 1.5) s. </li><li>Entre (t = 1.5) s y (t = 2) s. </li></ul><br>¿Qué observas sobre la velocidad promedio a medida que consideramos intervalos de tiempo diferentes? <br><br></li><li><b>Aproximación a la Velocidad Instantánea: </b> Para entender mejor la velocidad del dron en un instante específico, considera el tiempo (t = 2) s. <br><br>Calcula la velocidad promedio del dron durante intervalos de tiempo cada vez más pequeños alrededor de (t = 2) s: <br><br><ul><li>Entre (t = 1.5) s y (t = 2.5) s. </li><li>Entre (t = 1.9) s y (t = 2.1) s (supón que la altura en (t = 1.9) s es (18.05) m y en (t = 2.1) s es (22.05) m). </li><li>Entre (t = 1.99) s y (t = 2.01) s (supón que la altura en (t = 1.99) s es (19.8005) m y en (t = 2.01) s es (20.2005) m). </li><br></ul>¿Qué puedes decir sobre la velocidad del dron en el instante (t = 2) s basándote en estos cálculos? ¿A qué concepto matemático se acerca este proceso? <br><br></li><li><b>Función de Altura: </b>Supón que la altura del dron en función del tiempo está dada por la función (h(t) = 5t^2). Utiliza la definición formal de la derivada para encontrar la velocidad instantánea del dron en cualquier tiempo (t). <br><br></li><li><b>Velocidad Instantánea en t = 2s (Usando la Derivada): </b>Utiliza la función derivada que encontraste en el paso 3 para calcular la velocidad instantánea del dron en (t = 2) s. ¿Cómo se compara este valor con tu aproximación en el paso 2? </li></ol>"
+                "valor": "<b>Preguntas: </b><br><br><b>1. Velocidad Promedio: </b>Calcula la velocidad promedio del dron durante los siguientes intervalos de tiempo: <br><ul><li>Entre (t = 0) s y (t = 1) s. </li><li>Entre (t = 1) s y (t = 2) s. </li><li>Entre (t = 2) s y (t = 3) s. </li><li>Entre (t = 1) s y (t = 1.5) s. </li><li>Entre (t = 1.5) s y (t = 2) s. </li></ul><br>¿Qué observas sobre la velocidad promedio a medida que consideramos intervalos de tiempo diferentes? <br>"
               }
-            ]
+            ],
+            "prompts":{
+              "gemini": "Apliquemos el concepto de derivada a la vida real: Imagina que estás diseñando el software de control para un dron que despega verticalmente. Quieres asegurarte de que el ascenso sea suave y controlado. Durante una prueba, los ingenieros recopilan datos sobre la altura del dron (en metros) en función del tiempo transcurrido (en segundos) desde el despegue. Los datos obtenidos durante los primeros segundos son los siguientes: (Tiempo(S) ->  Altura(m)): 0->0; 0.5->1.25; 1.0->5.00; 1.5->11.25; 2.0->20.00; 2.5->31.25; 3.0->45.00. Preguntas:1. Velocidad Promedio: Calcula la velocidad promedio del dron durante los siguientes intervalos de tiempo: Entre (t = 0) s y (t = 1) s.Entre (t = 1) s y (t = 2) s.Entre (t = 2) s y (t = 3) s.Entre (t = 1) s y (t = 1.5) s.Entre (t = 1.5) s y (t = 2) s.",
+              "symbolab": "NO VERIFICABLE",
+              "wolfram": "NO VERIFICABLE"
+            }
+          },
+          {
+            "tipo":"ejemplo",
+            "contenido":[
+              {
+                "tipo":"texto",
+                "valor": "<b>2. Aproximación a la Velocidad Instantánea: </b> Para entender mejor la velocidad del dron en un instante específico, considera el tiempo (t = 2) s. <br><br>Calcula la velocidad promedio del dron durante intervalos de tiempo cada vez más pequeños alrededor de (t = 2) s: <br><br><ul><li>Entre (t = 1.5) s y (t = 2.5) s. </li><li>Entre (t = 1.9) s y (t = 2.1) s (supón que la altura en (t = 1.9) s es (18.05) m y en (t = 2.1) s es (22.05) m). </li><li>Entre (t = 1.99) s y (t = 2.01) s (supón que la altura en (t = 1.99) s es (19.8005) m y en (t = 2.01) s es (20.2005) m). <br></ul>¿Qué puedes decir sobre la velocidad del dron en el instante (t = 2) s basándote en estos cálculos? ¿A qué concepto matemático se acerca este proceso? <br>"
+              }
+            ],
+            "prompts":{
+              "gemini": "Apliquemos el concepto de derivada a la vida real: Imagina que estás diseñando el software de control para un dron que despega verticalmente. Quieres asegurarte de que el ascenso sea suave y controlado. Durante una prueba, los ingenieros recopilan datos sobre la altura del dron (en metros) en función del tiempo transcurrido (en segundos) desde el despegue. Los datos obtenidos durante los primeros segundos son los siguientes: (Tiempo(S) ->  Altura(m)): 0->0; 0.5->1.25; 1.0->5.00; 1.5->11.25; 2.0->20.00; 2.5->31.25; 3.0->45.00. Preguntas: 2. Aproximación a la Velocidad Instantánea: Para entender mejor la velocidad del dron en un instante específico, considera el tiempo (t = 2) s. Calcula la velocidad promedio del dron durante intervalos de tiempo cada vez más pequeños alrededor de (t = 2) s:Entre (t = 1.5) s y (t = 2.5) s. Entre (t = 1.9) s y (t = 2.1) s (supón que la altura en (t = 1.9) s es (18.05) m y en (t = 2.1) s es (22.05) m).Entre (t = 1.99) s y (t = 2.01) s (supón que la altura en (t = 1.99) s es (19.8005) m y en (t = 2.01) s es (20.2005) m).¿Qué puedes decir sobre la velocidad del dron en el instante (t = 2) s basándote en estos cálculos? ¿A qué concepto matemático se acerca este proceso?",
+              "symbolab": "NO VERIFICABLE",
+              "wolfram": "NO VERIFICABLE"
+            }
+          },
+          {
+            "tipo":"ejemplo",
+            "contenido":[
+              {
+                "tipo":"texto",
+                "valor": "<b>3. Función de Altura: </b>Supón que la altura del dron en función del tiempo está dada por la función (h(t) = 5t^2). Utiliza la definición formal de la derivada para encontrar la velocidad instantánea del dron en cualquier tiempo (t). <br>"
+              }
+            ],
+            "prompts":{
+              "gemini": "Apliquemos el concepto de derivada a la vida real: Imagina que estás diseñando el software de control para un dron que despega verticalmente. Quieres asegurarte de que el ascenso sea suave y controlado. Durante una prueba, los ingenieros recopilan datos sobre la altura del dron (en metros) en función del tiempo transcurrido (en segundos) desde el despegue. Los datos obtenidos durante los primeros segundos son los siguientes: (Tiempo(S) ->  Altura(m)): 0->0; 0.5->1.25; 1.0->5.00; 1.5->11.25; 2.0->20.00; 2.5->31.25; 3.0->45.00. Preguntas: 3. Función de Altura: Supón que la altura del dron en función del tiempo está dada por la función (h(t) = 5t^2). Utiliza la definición formal de la derivada para encontrar la velocidad instantánea del dron en cualquier tiempo (t).",
+              "symbolab": "NO VERIFICABLE",
+              "wolfram": "NO VERIFICABLE"
+            }
+          },
+          {
+            "tipo":"ejemplo",
+            "contenido":[
+              {
+                "tipo":"texto",
+                "valor": "<b>4. Velocidad Instantánea en t = 2s (Usando la Derivada): </b>Utiliza la función derivada que encontraste en el paso 3 para calcular la velocidad instantánea del dron en (t = 2) s. ¿Cómo se compara este valor con tu aproximación en el paso 2?"
+              }
+            ],
+            "prompts":{
+              "gemini": "Apliquemos el concepto de derivada a la vida real: Imagina que estás diseñando el software de control para un dron que despega verticalmente. Quieres asegurarte de que el ascenso sea suave y controlado. Durante una prueba, los ingenieros recopilan datos sobre la altura del dron (en metros) en función del tiempo transcurrido (en segundos) desde el despegue. Los datos obtenidos durante los primeros segundos son los siguientes: (Tiempo(S) ->  Altura(m)): 0->0; 0.5->1.25; 1.0->5.00; 1.5->11.25; 2.0->20.00; 2.5->31.25; 3.0->45.00. Preguntas: 4. Velocidad Instantánea en t = 2s (Usando la Derivada): Utiliza la función derivada que encontraste en el paso 3 para calcular la velocidad instantánea del dron en (t = 2) s. ¿Cómo se compara este valor con tu aproximación en el paso 2?. Basate en la siguiente informacion para responder la pregunta 4: PASO 1: 1. Velocidad Promedio: Se calcula la velocidad promedio del dron durante los siguientes intervalos de tiempo: Entre (t = 0) s y (t = 1) s.Entre (t = 1) s y (t = 2) s.Entre (t = 2) s y (t = 3) s.Entre (t = 1) s y (t = 1.5) s.Entre (t = 1.5) s y (t = 2) s.  PASO 2: 2. Aproximación a la Velocidad Instantánea: Para entender mejor la velocidad del dron en un instante específico, considera el tiempo (t = 2) s. Calcula la velocidad promedio del dron durante intervalos de tiempo cada vez más pequeños alrededor de (t = 2) s:Entre (t = 1.5) s y (t = 2.5) s. Entre (t = 1.9) s y (t = 2.1) s (supón que la altura en (t = 1.9) s es (18.05) m y en (t = 2.1) s es (22.05) m).Entre (t = 1.99) s y (t = 2.01) s (supón que la altura en (t = 1.99) s es (19.8005) m y en (t = 2.01) s es (20.2005) m).¿Qué puedes decir sobre la velocidad del dron en el instante (t = 2) S. PASO 3: Función de Altura: Supón que la altura del dron en función del tiempo está dada por la función (h(t) = 5t^2). Utiliza la definición formal de la derivada para encontrar la velocidad instantánea del dron en cualquier tiempo (t).",
+              "symbolab": "NO VERIFICABLE",
+              "wolfram": "NO VERIFICABLE"
+            }
           }
           
           
@@ -65,12 +112,36 @@
 
               {
                 "tipo":"texto",
-                "valor": "<b>Ejercicio de la vida real sobre Reglas Básicas de Derivación</b><br><br>Imagina que estás supervisando el llenado de un tanque de agua industrial. El volumen de agua en el tanque (en litros) en función del tiempo transcurrido desde que se abrió la llave (en minutos) está dado por la siguiente función: <br><br>V(t) = 10t3 + 50t2 + 100t + 200<br><br>donde (t ≥ 0). <br><br><b>Preguntas: </b><br><br><ol><li>¿Cuál es el volumen de agua en el tanque cuando se abre la llave ((t = 0) minutos)? </li><li>Encuentra la función que representa la tasa de cambio del volumen de agua con respecto al tiempo (es decir, la rapidez con la que el agua está entrando al tanque). </li><li>¿Cuál es la rapidez con la que el agua está entrando al tanque a los (t = 5) minutos? </li><li>¿Cuál es la rapidez con la que la rapidez de llenado está cambiando con respecto al tiempo? </li><br><br></ol><b>Desarrollo: </b><br><br><b>1.Volumen inicial: </b>Para encontrar el volumen de agua en el tanque cuando se abre la llave, simplemente evaluamos la función (V(t)) en (t = 0): <br><br>V(0) = 10(0)3 + 50(0)2 + 100(0) + 200 = 200 litros<br><br>Por lo tanto, al inicio, el tanque ya contenía 200 litros de agua. <br><br><b>2.Función de la tasa de cambio del volumen: </b><br><br>"
+                "valor": "<b>Ejercicio de la vida real sobre Reglas Básicas de Derivación</b><br><br>Imagina que estás supervisando el llenado de un tanque de agua industrial. El volumen de agua en el tanque (en litros) en función del tiempo transcurrido desde que se abrió la llave (en minutos) está dado por la siguiente función: <br><br>V(t) = 10t3 + 50t2 + 100t + 200<br><br>donde (t ≥ 0). <br><br><b>Preguntas: </b><br><br><ol><li>¿Cuál es el volumen de agua en el tanque cuando se abre la llave ((t = 0) minutos)? </li><li>Encuentra la función que representa la tasa de cambio del volumen de agua con respecto al tiempo (es decir, la rapidez con la que el agua está entrando al tanque). </li><li>¿Cuál es la rapidez con la que el agua está entrando al tanque a los (t = 5) minutos? </li><li>¿Cuál es la rapidez con la que la rapidez de llenado está cambiando con respecto al tiempo? </li><br><br></ol><b>Desarrollo: </b><br><br><b>1.Volumen inicial: </b>Para encontrar el volumen de agua en el tanque cuando se abre la llave, simplemente evaluamos la función (V(t)) en (t = 0): <br><br>V(0) = 10(0)3 + 50(0)2 + 100(0) + 200 = 200 litros<br><br>Por lo tanto, al inicio, el tanque ya contenía 200 litros de agua. <br>"
+              }
+            ],
+            "prompts":{
+              "gemini": "Resolver la siguiente ecuacion con t=0: V(t) = 10t^3+50t^2+100t+200",
+              "symbolab": "solve for t=0, V(t) = 10t^3+50t^2+100t+200",
+              "wolfram": "ReplaceAll[10 t^3 + 50 t^2 + 100 t + 200, {t -> 0}]"
+            }
+          },
+          {
+            "tipo":"ejemplo",
+            "contenido":[
+              {
+                "tipo":"texto",
+                "valor": "<b>2.Función de la tasa de cambio del volumen: </b><br>"
               },
               {
                 "tipo":"imagen",
                 "valor": "assets/img/derivadas/Imagen5.png"
-              },
+              }
+            ],
+            "prompts": {
+              "gemini": "NO VERIFICABLE",
+              "symbolab": "NO VERIFICABLE",
+              "wolfram": "NO VERIFICABLE"
+            }
+          },
+          {
+            "tipo":"ejemplo",
+            "contenido":[
               {
                 "tipo":"texto",
                 "valor": "<b>3.Rapidez de llenado a (t = 5) minutos: </b><br><br>Para encontrar la rapidez con la que el agua está entrando al tanque a los (t = 5) minutos, evaluamos la función (V'(t)) en (t = 5): <br><br>"
@@ -81,13 +152,33 @@
               },
               {
                 "tipo":"texto",
-                "valor":"A los 5 minutos, el agua está entrando al tanque a una rapidez de 1350 litros por minuto. <br><br><b>4.Rapidez de cambio de la rapidez de llenado: </b><br>"
+                "valor":"A los 5 minutos, el agua está entrando al tanque a una rapidez de 1350 litros por minuto. <br>"
+              }
+            ],
+            "prompts": {
+              "gemini": "NO VERIFICABLE",
+              "symbolab": "NO VERIFICABLE",
+              "wolfram": "NO VERIFICABLE"
+            }
+          },
+          {
+            "tipo":"ejemplo",
+            "contenido":[
+              {
+                "tipo":"texto",
+                "valor": "<b>4.Rapidez de cambio de la rapidez de llenado: </b><br>"
               },
+              
               {
                 "tipo":"imagen",
                 "valor": "assets/img/derivadas/Imagen7.png"
               }
-            ]
+            ],
+            "prompts": {
+              "gemini": "derivar: V(t)=(30t^2)+(100t)+(100) con respecto a t",
+              "symbolab": "derivative of V(t)=(30t^2)+(100t)+(100)",
+              "wolfram": "derivative of V(t)=(30t^2)+(100t)+(100)"
+            }
           }
         ]
       },
